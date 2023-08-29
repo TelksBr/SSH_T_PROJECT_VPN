@@ -52,7 +52,8 @@
         }
 
         p {
-            color: #7b3bc9;
+            color: #9c61e6;
+            font-size: 1,5rem;
         }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -64,14 +65,14 @@
         }
 
         function updateServerStatus() {
-            fetchServerStatus('http://premium.sshtproject.com:8888/server/online', 'premium1-status');
-            fetchServerStatus('http://premium2.sshtproject.com:8888/server/online', 'premium2-status');
-            fetchServerStatus('http://free1.sshtproject.com:8888/server/online', 'free1-status');
-            fetchServerStatus('http://free2.sshtproject.com:8888/server/online', 'free2-status');
+            fetchServerStatus('http://premium.sshtproject.com:8888/servers/online', 'premium1-status');
+            fetchServerStatus('http://premium2.sshtproject.com:8888/servers/online', 'premium2-status');
+            fetchServerStatus('http://free1.sshtproject.com:8888/servers/online', 'free1-status');
+            fetchServerStatus('http://free2.sshtproject.com:8888/servers/online', 'free2-status');
             fetchServerStatus('http://free3.sshtproject.com:8888/server/online', 'free3-status');
             fetchServerStatus('http://free4.sshtproject.com:8888/server/online', 'free4-status');
-            fetchServerStatus('http://free5.sshtproject.com:8888/server/online', 'free5-status');
-            fetchServerStatus('http://free6.sshtproject.com:8888/server/online', 'free6-status');
+            fetchServerStatus('http://free5.sshtproject.com:8888/servers/online', 'free5-status');
+            fetchServerStatus('http://free6.sshtproject.com:8888/servers/online', 'free6-status');
         }
 
         // Atualizar a cada x segundos
@@ -89,27 +90,27 @@
         <p>Onlines: <span id="premium2-status">Carregando...</span></p>
     </div>
     <div class="server">
-        <h2>Servidor Grátis 1</h2>
+        <h2>Servidor Free 1</h2>
         <p>Onlines: <span id="free1-status">Carregando...</span></p>
     </div>
     <div class="server">
-        <h2>Servidor Grátis 2</h2>
+        <h2>Servidor Free 2</h2>
         <p>Onlines: <span id="free2-status">Carregando...</span></p>
     </div>
     <div class="server">
-        <h2>Servidor Grátis 3</h2>
+        <h2>Servidor Free 3</h2>
         <p>Onlines: <span id="free3-status">Carregando...</span></p>
     </div>
     <div class="server">
-        <h2>Servidor Grátis 4</h2>
+        <h2>Servidor Free 4</h2>
         <p>Onlines: <span id="free4-status">Carregando...</span></p>
     </div>
     <div class="server">
-        <h2>Servidor Grátis 5</h2>
+        <h2>Servidor Free 5</h2>
         <p>Onlines: <span id="free5-status">Carregando...</span></p>
     </div>
     <div class="server">
-        <h2>Servidor Grátis 6</h2>
+        <h2>Servidor Free 6</h2>
         <p>Onlines: <span id="free6-status">Carregando...</span></p>
     </div>
 </body>
