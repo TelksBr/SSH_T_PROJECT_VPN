@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Servidores</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(45deg, #14142c, #14142c 25%, #1210246b 25%, #1210246b 50%, #14142c 50%, #14142c 75%, #1210246b 75%, #1210246b), #14142c;
+            animation: fade-in 1s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;    
+        
+        }
+
+        .server {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #1210246b;
+            color: #b0a8ffff;
+            animation: fade-in 1s ease-in-out;
+            width: 70%;
+            max-width: 400px;
+            min-width: 250px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .premium {
+            background-color: #1210246b;
+        }
+
+        h1 {
+            color: #b0a8ffff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #b0a8ffff;
+        }
+
+        p {
+            color: #7b3bc9;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function fetchServerStatus(serverUrl, elementId) {
+            $.get(serverUrl, function(data) {
+                document.getElementById(elementId).textContent = data;
+            });
+        }
+
+        function updateServerStatus() {
+            fetchServerStatus('/server/premium1', 'premium1-status');
+            fetchServerStatus('/server/premium2', 'premium2-status');
+            fetchServerStatus('/server/free1', 'free1-status');
+            fetchServerStatus('/server/free2', 'free2-status');
+            fetchServerStatus('/server/free3', 'free3-status');
+            fetchServerStatus('http://free4.sshtproject.com:8888/server/online', 'free4-status');
+            fetchServerStatus('/server/free5', 'free5-status');
+            fetchServerStatus('/server/free6', 'free6-status');
+        }
+
+        // Atualizar a cada x segundos
+        setInterval(updateServerStatus, 15000); // Atualiza a cada 15 segundos
+    </script>
+</head>
+<body onload="updateServerStatus()">
+    <h1>Servidores</h1>
+    <div class="server premium">
+        <h2>Servidor Premium 1</h2>
+        <p>Onlines: <span id="premium1-status">Carregando...</span></p>
+    </div>
+    <div class="server premium">
+        <h2>Servidor Premium 2</h2>
+        <p>Onlines: <span id="premium2-status">Carregando...</span></p>
+    </div>
+    <div class="server">
+        <h2>Servidor Grátis 1</h2>
+        <p>Onlines: <span id="free1-status">Carregando...</span></p>
+    </div>
+    <div class="server">
+        <h2>Servidor Grátis 2</h2>
+        <p>Onlines: <span id="free2-status">Carregando...</span></p>
+    </div>
+    <div class="server">
+        <h2>Servidor Grátis 3</h2>
+        <p>Onlines: <span id="free3-status">Carregando...</span></p>
+    </div>
+    <div class="server">
+        <h2>Servidor Grátis 4</h2>
+        <p>Onlines: <span id="free4-status">Carregando...</span></p>
+    </div>
+    <div class="server">
+        <h2>Servidor Grátis 5</h2>
+        <p>Onlines: <span id="free5-status">Carregando...</span></p>
+    </div>
+    <div class="server">
+        <h2>Servidor Grátis 6</h2>
+        <p>Onlines: <span id="free6-status">Carregando...</span></p>
+    </div>
+</body>
+</html>
