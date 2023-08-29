@@ -64,14 +64,14 @@
         }
 
         function updateServerStatus() {
-            fetchServerStatus('/server/premium1', 'premium1-status');
-            fetchServerStatus('/server/premium2', 'premium2-status');
-            fetchServerStatus('/server/free1', 'free1-status');
-            fetchServerStatus('/server/free2', 'free2-status');
-            fetchServerStatus('/server/free3', 'free3-status');
+            fetchServerStatus('http://premium.sshtproject.com:8888/server/online', 'premium1-status');
+            fetchServerStatus('http://premium2.sshtproject.com:8888/server/online', 'premium2-status');
+            fetchServerStatus('http://free1.sshtproject.com:8888/server/online', 'free1-status');
+            fetchServerStatus('http://free2.sshtproject.com:8888/server/online', 'free2-status');
+            fetchServerStatus('http://free3.sshtproject.com:8888/server/online', 'free3-status');
             fetchServerStatus('http://free4.sshtproject.com:8888/server/online', 'free4-status');
-            fetchServerStatus('/server/free5', 'free5-status');
-            fetchServerStatus('/server/free6', 'free6-status');
+            fetchServerStatus('http://free5.sshtproject.com:8888/server/online', 'free5-status');
+            fetchServerStatus('http://free6.sshtproject.com:8888/server/online', 'free6-status');
         }
 
         // Atualizar a cada x segundos
