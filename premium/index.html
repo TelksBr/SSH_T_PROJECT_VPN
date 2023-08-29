@@ -1,0 +1,1763 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SSH T PROJECT VPN PREMIUM</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+
+      box-sizing: border-box;
+
+      /* font-synthesis: none; */
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+      font-family: 'Times New Roman', 'Times New Roman';
+    }
+
+    body {
+      background: #14142c;
+    }
+
+
+    body hr {
+      width: 100%;
+
+      border-style: solid;
+      border-width: 1px;
+      border-image: radial-gradient(circle at center, #4319af, #4319af) 1;
+
+      margin: 10px 0px;
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 1px 2px 0 rgba(98, 4, 222, 0.05);
+      }
+
+      50% {
+        box-shadow: 0 1px 2px 0 rgba(98, 4, 222, 0.5);
+      }
+
+      100% {
+        box-shadow: 0 1px 2px 0 rgba(98, 4, 222, 0.05);
+      }
+    }
+
+    body header {
+      width: 100%;
+      height: 40px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0px 6px;
+
+      border-style: solid;
+      border-top: 0px;
+      border-right: 0px;
+      border-left: 0px;
+      border-color: #6205d5;
+      border: 1;
+
+    }
+
+    body header div.logo {
+      display: flex;
+      align-items: center;
+    }
+
+    body header div.logo svg {
+      width: 30px;
+      height: 30px;
+    }
+
+    .uuid-3e4467da-22a1-4110-ad09-9f22983a7b5b {
+      clip-path: url(#uuid-02fdb136-0252-4364-ab0c-81d34415e2e3);
+    }
+
+    @keyframes pulseLogo {
+      0% {
+        stroke: rgba(103, 1, 222, 0.05);
+      }
+
+      50% {
+        stroke: rgba(103, 1, 222, 0.5);
+      }
+
+      100% {
+        stroke: rgba(103, 1, 222, 0.05);
+      }
+    }
+
+    .uuid-452c689e-2510-494b-929e-1437ac99d8b1 {
+      stroke: rgba(103, 1, 222, 0.5);
+      stroke-miterlimit: 10;
+      stroke-width: 5px;
+
+      /* animation: pulseLogo 2s infinite; */
+    }
+
+    .uuid-452c689e-2510-494b-929e-1437ac99d8b1,
+    .uuid-8c815a18-de92-44fe-96e3-bd97f32f6150 {
+      fill: none;
+    }
+
+    .uuid-15bd90c8-7f5c-4d09-8bea-aa18e7813e92 {
+      clip-path: url(#uuid-4cbafc49-ac7c-42f5-ae56-bf97ce9c967a);
+    }
+
+    @keyframes girar {
+      0% {
+        background-position: left bottom;
+      }
+
+      100% {
+        background-position: right top;
+      }
+    }
+
+    body header div.logo h1 {
+      margin: 0;
+      margin-left: 0.3rem;
+      padding: 0;
+
+      font-family: 'Times New Roman';
+      font-size: 1rem;
+      font-weight: 400;
+      text-stroke: 0.5px #4e03d900;
+      -webkit-text-stroke: 0.5px #4e03d900;
+      /* para compatibilidade com Safari */
+
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: #b0a8ffff;
+      background-image: linear-gradient(to right, #6205dc, #3a05c5);
+
+      /* animation: girar 2s linear infinite; */
+    }
+
+    body section {
+      width: 100%;
+      height: auto;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    body section h1 {
+      width: 100%;
+      height: auto;
+
+      margin: 10px 0px;
+      padding: 0;
+
+      background-image: radial-gradient(circle at center, #3a0cac, #6a05df);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: #b0a8ffff;
+      background-clip: text;
+      text-fill-color: #b0a8ffff;
+
+      font-family: 'Times New Roman';
+      text-align: center;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+    }
+
+    body section h2 {
+      width: 100%;
+      height: auto;
+
+      margin: 0px 0px 10px 0px;
+      padding: 0;
+
+      background-image: radial-gradient(circle at center, #3a0cac, #6a05df);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: #b0a8ffff;
+      background-clip: text;
+      text-fill-color: #b0a8ffff;
+
+      font-family: 'Times New Roman';
+      text-align: center;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+    }
+
+    body section p {
+      width: 98%;
+      height: auto;
+
+      margin: 0px 0px 10px 0px;
+      padding: 0;
+
+      background-image: radial-gradient(circle at center, #3a0cac, #6a05df);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: #b0a8ffff;
+      background-clip: text;
+      text-fill-color: #b0a8ffff;
+
+      font-family: 'Times New Roman';
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    body section div.image-donate {
+      width: 90%;
+      height: auto;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      border-style: solid;
+      border-width: 2px;
+      border-color: #6205d5;
+      border-radius: 5px;
+
+      margin: 0px 0px 10px 0px;
+      padding: 10px;
+    }
+
+    body section div.image-donate img {
+      width: 90%;
+
+      margin-bottom: 10px;
+    }
+
+    body section div.image-donate div.input {
+      width: 80%;
+      height: auto;
+
+      display: flex;
+      align-items: center;
+
+      border: 1px solid #4c03d6;
+      border-radius: 5px;
+
+      padding: 0px 5px;
+    }
+
+    body section div.image-donate div.input i {
+      background-image: radial-gradient(circle at center, #3a0cac, #6a05df);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: #b0a8ffff;
+      background-clip: text;
+      text-fill-color: #b0a8ffff;
+
+      padding: 5px;
+
+      font-size: 1rem;
+    }
+
+    body section div.image-donate div.input input {
+      width: 100%;
+      height: 100%;
+
+      background-color: inherit;
+
+      border: 0;
+      border-left: 2px solid #6205d5;
+
+      outline: none;
+
+      padding-left: 5px;
+
+      color: #6205d5;
+    }
+
+    body section div.links {
+      width: 90%;
+      height: auto;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    body section div.links button {
+      max-width: 50%;
+      height: 35px;
+
+      background-color: inherit;
+
+      border: 1px solid #6205d5;
+      border-radius: 5px;
+
+      padding: 5px;
+
+      display: flex;
+      align-items: center;
+    }
+
+    body section div.links button i {
+      background-image: radial-gradient(circle at center, #3a0cac, #6a05df);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: #b0a8ffff;
+      background-clip: text;
+      text-fill-color: #b0a8ffff;
+
+      font-size: 0.9rem;
+
+      margin-right: 5px;
+    }
+
+    body section div.links button span {
+      margin: 0;
+      padding: 0;
+
+      background-image: radial-gradient(circle at center, #3a0cac, #6a05df);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: #b0a8ffff;
+      background-clip: text;
+      text-fill-color: #b0a8ffff;
+
+      font-size: 0.7rem;
+    }
+
+    body section div.donors {
+      width: 100%;
+      height: auto;
+
+      padding: 0px 10px 40px 10px;
+    }
+
+    body section div.donors ul,
+    body section div.donors ul li body section div.donors ul li {
+      list-style: none;
+    }
+
+    body section div.donors ul {
+      width: 100%;
+      height: auto;
+    }
+
+    body section div.donors ul li {
+      width: 100%;
+      height: auto;
+
+      border: 1px solid #3a0cac;
+      border-radius: 3px;
+
+      margin: 10px 0px;
+      padding: 5px;
+    }
+
+    body section div.donors ul li a {
+      text-decoration: none;
+
+      display: flex;
+      align-items: center;
+    }
+
+    body section div.donors ul li a i {
+      margin-right: 5px;
+    }
+
+    body section div.donors ul li a i,
+    body section div.donors ul li a span {
+      background-image: radial-gradient(circle at center, #3a0cac, #6a05df);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: #b0a8ffff;
+      background-clip: text;
+      text-fill-color: #b0a8ffff;
+
+      font-family: 'Times New Roman';
+
+      font-size: 1.1rem;
+    }
+
+    body section div.helper {
+      width: 100%;
+      height: auto;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      padding: 20px 0px;
+    }
+
+    body section div.helper p {
+      width: 90%;
+      height: auto;
+
+      background-image: radial-gradient(circle at center, #3a0cac, #6a05df);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: #b0a8ffff;
+      background-clip: text;
+      text-fill-color: #b0a8ffff;
+
+      font-size: 1rem;
+    }
+
+    body section div.helper button {
+      margin-top: 10px;
+      padding: 10px;
+
+      background-image: radial-gradient(circle at center, #3a0cac, #6a05df);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: #b0a8ffff;
+      background-clip: text;
+      text-fill-color: #b0a8ffff;
+
+      border: 1px solid #3a0cac;
+      border-radius: 5px;
+    }
+
+    body footer {
+      padding: 20px;
+
+      width: 100%;
+      height: auto;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    body footer span {
+      background-image: radial-gradient(circle at center, #3a0cac, #6a05df);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: #b0a8ffff;
+      background-clip: text;
+      text-fill-color: #b0a8ffff;
+
+      font-size: 0.7rem;
+      font-family: 'Times New Roman';
+    }
+
+    body footer span:last-child {
+      margin-top: 10px;
+    }
+
+    @media (max-width: 320px) {
+      body header {
+        height: 60px;
+      }
+
+      body header div.logo svg {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    @media (max-width: 375px) {
+      body header {
+        height: 60px;
+      }
+
+      body header div.logo svg {
+        width: 50px;
+        height: 50px;
+      }
+
+      body section h1 {
+        font-size: 0.97rem;
+      }
+
+      body section h2 {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (min-width: 425px) and (max-width: 768px) {
+      body header {
+        height: 60px;
+      }
+
+      body header div.logo svg {
+        width: 50px;
+        height: 50px;
+      }
+
+      body section h1 {
+        margin: 30px 0px;
+        font-size: 0.97rem;
+      }
+
+      body section h2 {
+        margin-top: 0px;
+        margin-bottom: 30px;
+
+        font-size: 0.9rem;
+      }
+
+      body section div.links {
+        margin: 20px 0px;
+
+        justify-content: space-evenly;
+      }
+    }
+
+    .qr path {
+      fill: url(#grad);
+
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <svg id="uuid-756bf39e-a723-4ec4-bfca-b084f4c8fbd8" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 143.16 101.43">
+        <defs>
+          <clipPath id="uuid-02fdb136-0252-4364-ab0c-81d34415e2e3">
+            <path class="uuid-8c815a18-de92-44fe-96e3-bd97f32f6150"
+              d="m91.4,70.08c-.26.43-.4.7-.58.95-6.1,8.21-12.19,16.42-18.3,24.62-.78,1.05-1,1.06-1.76.02-5.95-8.07-11.9-16.14-17.84-24.21-.23-.31-.41-.65-.82-1.31,2.1,0,3.92,0,5.74,0,1.12,0,2.24-.1,3.35-.04.99.05,1.3-.31,1.3-1.3-.02-4.39.03-8.79.05-13.18.05-11.22.08-22.45.18-33.67.01-1.21-.31-1.56-1.53-1.56-5.83.02-11.66-.04-17.49-.13-1.08-.02-1.35.33-1.34,1.37.09,9.11.14,18.21.2,27.32,0,.38,0,.76,0,1.49-.49-.6-.76-.91-1.01-1.24-5.64-7.4-11.29-14.8-16.9-22.22-.63-.83-1.28-1.37-2.37-1.26-1.48.15-2.48-.5-3.39-1.71-4.3-5.71-8.7-11.35-13.05-17.02-.27-.36-.47-.77-.83-1.36.66-.04,1.07-.1,1.49-.09,10.75.02,21.49.03,32.24.1.58,0,1.39.33,1.7.78,1.53,2.19,3.52,2.69,6.14,2.68,17.58-.07,35.15.04,52.73.12,1.01,0,1.8-.2,2.33-1.08,1.55-2.55,3.75-3.19,6.72-3.1,9.46.29,18.93.24,28.4.33.39,0,.78.04,1.42.07-.28.56-.42,1-.69,1.35-4.49,5.92-8.97,11.84-13.51,17.72-.32.42-1.06.77-1.58.74-1.78-.1-2.88.64-3.95,2.05-5.26,6.99-10.64,13.88-15.99,20.81-.34.44-.69.86-1.31,1.26,0-.45,0-.89,0-1.34-.06-8.67-.14-17.34-.15-26,0-1.19-.3-1.57-1.54-1.56-5.67.05-11.34.02-17.02-.04-1.07-.01-1.35.32-1.35,1.36-.02,15.7-.06,31.4-.13,47.1,0,.94.27,1.25,1.22,1.23,2.64-.05,5.27,0,7.91,0,.38,0,.77,0,1.33,0Z" />
+          </clipPath>
+
+          <clipPath id="uuid-4cbafc49-ac7c-42f5-ae56-bf97ce9c967a">
+            <rect class="uuid-8c815a18-de92-44fe-96e3-bd97f32f6150" x="0" width="143.16" height="101.43" />
+          </clipPath>
+        </defs>
+
+        <g class="uuid-3e4467da-22a1-4110-ad09-9f22983a7b5b">
+          <g class="uuid-15bd90c8-7f5c-4d09-8bea-aa18e7813e92">
+            <image width="299" height="212" transform="translate(-.26 0) scale(.48)"
+              xlink:href="data:image/png;base64,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" />
+          </g>
+        </g>
+
+        <path class="uuid-452c689e-2510-494b-929e-1437ac99d8b1"
+          d="m91.4,70.08c-.26.43-.4.7-.58.95-6.1,8.21-12.19,16.42-18.3,24.62-.78,1.05-1,1.06-1.76.02-5.95-8.07-11.9-16.14-17.84-24.21-.23-.31-.41-.65-.82-1.31,2.1,0,3.92,0,5.74,0,1.12,0,2.24-.1,3.35-.04.99.05,1.3-.31,1.3-1.3-.02-4.39.03-8.79.05-13.18.05-11.22.08-22.45.18-33.67.01-1.21-.31-1.56-1.53-1.56-5.83.02-11.66-.04-17.49-.13-1.08-.02-1.35.33-1.34,1.37.09,9.11.14,18.21.2,27.32,0,.38,0,.76,0,1.49-.49-.6-.76-.91-1.01-1.24-5.64-7.4-11.29-14.8-16.9-22.22-.63-.83-1.28-1.37-2.37-1.26-1.48.15-2.48-.5-3.39-1.71-4.3-5.71-8.7-11.35-13.05-17.02-.27-.36-.47-.77-.83-1.36.66-.04,1.07-.1,1.49-.09,10.75.02,21.49.03,32.24.1.58,0,1.39.33,1.7.78,1.53,2.19,3.52,2.69,6.14,2.68,17.58-.07,35.15.04,52.73.12,1.01,0,1.8-.2,2.33-1.08,1.55-2.55,3.75-3.19,6.72-3.1,9.46.29,18.93.24,28.4.33.39,0,.78.04,1.42.07-.28.56-.42,1-.69,1.35-4.49,5.92-8.97,11.84-13.51,17.72-.32.42-1.06.77-1.58.74-1.78-.1-2.88.64-3.95,2.05-5.26,6.99-10.64,13.88-15.99,20.81-.34.44-.69.86-1.31,1.26,0-.45,0-.89,0-1.34-.06-8.67-.14-17.34-.15-26,0-1.19-.3-1.57-1.54-1.56-5.67.05-11.34.02-17.02-.04-1.07-.01-1.35.32-1.35,1.36-.02,15.7-.06,31.4-.13,47.1,0,.94.27,1.25,1.22,1.23,2.64-.05,5.27,0,7.91,0,.38,0,.77,0,1.33,0Z" />
+      </svg>
+      <h1 style="text-align: center;">SSH T PROJECT VPN</h1>
+    </div>
+  </header>
+
+  <section>
+    <h1>AJUDE A MANTER O NOSSO PROJETO ATIVO</h1>
+    <h2>COMPRE JÁ SEU LOGIN PREMIUM!!</h2>
+    <hr>
+    <div class="image-donate">
+      <span>
+        <?xml version="1.0" standalone="no"?>
+        <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+        <svg class="qr" version="1.0" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
+          viewBox="0 0 966.000000 966.000000" preserveAspectRatio="xMidYMid meet"
+          style="max-width: 150vw; max-height: 150vh;">
+          <defs>
+            <linearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#6205d5" />
+              <stop offset="100%" stop-color="#3e03d1" />
+            </linearGradient>
+          </defs>
+          <g transform="translate(0.000000,966.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+            <path d="M280 9012 c0 -433 0 -434 89 -523 89 -89 90 -89 523 -89 l368 0 0
+          368 c0 433 0 434 -89 523 -89 89 -90 89 -523 89 l-368 0 0 -368z m720 204 c49
+          -26 69 -45 93 -91 21 -38 22 -57 25 -313 l4 -273 -274 3 c-257 3 -275 4 -313
+          24 -46 25 -65 45 -91 94 -17 31 -19 65 -22 308 l-4 273 274 -3 c244 -3 277 -5
+          308 -22z" />
+            <path d="M725 9041 c-30 -59 -35 -63 -104 -76 -81 -15 -86 -34 -29 -92 l47
+          -48 -6 -67 c-5 -65 -5 -68 16 -68 12 0 44 11 71 25 l50 25 50 -25 c69 -35 90
+          -33 90 8 0 17 -4 48 -10 67 -9 33 -8 37 36 81 63 64 58 81 -26 94 l-65 10 -30
+          57 c-38 73 -56 74 -90 9z" />
+            <path d="M1463 9360 c-58 -35 -64 -61 -61 -246 3 -181 2 -178 68 -144 26 13
+          47 34 61 61 21 42 22 63 7 274 -2 17 1 40 5 53 7 19 5 22 -20 22 -15 0 -42 -9
+          -60 -20z" />
+            <path d="M1743 9360 c-55 -33 -63 -62 -63 -225 0 -173 6 -185 90 -185 l50 0 0
+          -65 0 -65 -123 0 c-147 0 -157 -6 -157 -88 l0 -52 -53 0 c-90 0 -87 13 -87
+          -353 0 -304 1 -318 20 -337 15 -15 33 -20 70 -20 l50 0 0 -275 0 -275 -65 0
+          c-62 0 -66 1 -76 28 -10 26 -8 57 6 95 6 14 2 17 -21 17 -58 0 -124 -64 -124
+          -120 0 -18 -6 -20 -65 -20 l-65 0 0 65 c0 62 1 66 28 76 19 8 39 8 67 1 22 -6
+          41 -9 43 -7 2 2 1 18 -3 35 -10 46 -60 98 -101 106 l-34 6 0 64 c0 61 1 65 28
+          75 19 8 39 8 67 1 22 -6 41 -9 43 -7 2 2 1 18 -3 35 -10 46 -60 98 -101 106
+          -33 6 -34 7 -34 55 0 67 -23 89 -90 89 l-50 0 0 50 c0 37 -5 55 -21 71 -20 20
+          -29 20 -216 17 l-195 -3 6 -34 c12 -74 76 -111 196 -111 l80 0 0 -50 c0 -68
+          22 -90 90 -90 l50 0 0 -65 0 -64 -35 -7 c-19 -3 -51 -3 -71 1 l-37 6 6 -37 c8
+          -46 49 -91 99 -106 l38 -11 0 -189 c0 -240 -8 -228 159 -228 l119 0 7 -30 c4
+          -17 4 -48 0 -70 -8 -48 4 -51 66 -19 31 15 46 32 62 69 l22 50 63 0 62 0 0
+          -50 c0 -81 15 -90 159 -90 l119 0 7 -30 c4 -17 4 -48 0 -70 -8 -48 4 -51 66
+          -19 31 15 46 32 62 69 l22 50 63 0 62 0 0 -190 c0 -242 -8 -230 160 -230 l120
+          0 2 -87 c2 -49 2 -112 1 -140 -2 -61 5 -65 68 -32 31 15 46 32 62 69 l22 50
+          113 0 c106 0 114 1 137 25 19 18 25 35 25 70 0 40 3 47 28 56 19 8 39 8 67 1
+          22 -6 42 -9 44 -6 11 10 -22 83 -49 109 -29 28 -38 30 -116 34 -108 4 -124 -7
+          -124 -86 l0 -53 -65 0 -65 0 0 205 0 205 45 0 c35 0 52 6 70 25 24 23 25 30
+          25 140 l0 115 64 0 c64 0 65 0 71 -30 4 -17 4 -48 0 -70 -8 -48 4 -51 66 -19
+          31 15 46 32 62 69 l22 50 63 0 62 0 0 -65 0 -65 -53 0 c-85 0 -87 -4 -87 -213
+          0 -227 -7 -217 160 -217 l120 0 0 -65 0 -64 -35 -7 c-19 -3 -51 -3 -71 1 l-37
+          6 6 -37 c12 -73 76 -114 177 -114 80 0 110 26 110 95 l0 45 66 0 c37 0 84 5
+          104 11 28 9 46 9 71 0 39 -14 43 -11 34 29 -10 46 -60 98 -101 106 -33 6 -34
+          7 -34 55 0 80 -15 89 -160 89 l-120 0 0 65 0 65 45 0 c35 0 52 6 70 25 23 22
+          25 31 25 125 0 123 -11 140 -90 140 l-50 0 0 50 c0 37 -5 55 -20 70 -19 19
+          -33 20 -210 20 l-190 0 0 50 c0 82 -15 90 -160 90 l-120 0 0 50 c0 37 -5 55
+          -20 70 -19 19 -33 20 -210 20 l-190 0 0 65 c0 62 1 66 28 76 19 8 39 8 67 1
+          22 -6 42 -9 44 -6 11 10 -22 83 -49 109 -29 28 -38 30 -116 34 -128 5 -124 12
+          -124 -226 l0 -193 -135 0 -135 0 0 205 0 205 115 0 c110 0 117 1 140 25 19 18
+          25 35 25 70 l0 45 45 0 c36 0 52 6 72 26 24 24 25 29 19 92 -11 104 -11 125
+          -3 150 7 19 5 22 -18 22 -58 0 -125 -63 -125 -117 0 -21 -5 -23 -53 -23 -70 0
+          -87 -18 -87 -88 l0 -52 -135 0 -135 0 0 135 0 135 45 0 c63 0 95 32 95 95 l0
+          45 115 0 c110 0 117 1 140 25 25 24 25 27 25 195 0 157 -2 172 -20 190 -15 15
+          -33 20 -69 20 l-49 0 -6 88 c-4 48 -7 101 -9 117 -1 17 2 40 6 53 7 19 5 22
+          -20 22 -15 0 -42 -9 -60 -20z m637 -1720 c0 -68 22 -90 90 -90 l50 0 0 -65 0
+          -65 -52 0 c-70 0 -88 -17 -88 -87 l0 -53 -205 0 -205 0 -11 28 c-10 26 -8 57
+          6 95 6 14 2 17 -21 17 -58 0 -124 -64 -124 -120 0 -18 -6 -20 -65 -20 l-65 0
+          0 65 0 65 45 0 c63 0 95 32 95 95 l0 45 65 0 65 0 0 -50 c0 -82 15 -90 161
+          -90 67 0 139 5 159 11 28 9 46 9 71 0 18 -6 34 -9 37 -6 12 11 -20 83 -48 110
+          -30 28 -36 30 -131 33 l-99 4 0 64 0 64 135 0 135 0 0 -50z m0 -715 l0 -65
+          -65 0 -65 0 0 65 0 65 65 0 65 0 0 -65z" />
+            <path d="M2163 9360 c-34 -20 -63 -66 -63 -99 0 -24 -51 -37 -106 -26 l-37 6
+          6 -37 c12 -73 76 -114 177 -114 52 0 65 4 87 26 24 24 25 29 19 92 -11 104
+          -11 125 -3 150 7 19 5 22 -20 22 -15 0 -42 -9 -60 -20z" />
+            <path d="M2397 9362 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M2677 9362 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M2957 9362 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M3237 9362 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M3517 9362 c-11 -12 -17 -35 -17 -70 l0 -52 -53 0 c-70 0 -87 -18
+          -87 -88 l0 -52 -87 -2 c-49 -2 -112 -2 -142 -2 l-53 1 6 -35 c12 -75 76 -112
+          196 -112 l80 0 0 -65 0 -65 -53 0 c-70 0 -87 -18 -87 -88 l0 -52 -53 0 c-83 0
+          -88 -10 -85 -163 3 -141 3 -140 69 -106 31 15 46 32 62 69 21 48 23 50 65 50
+          60 0 92 33 92 95 l0 45 65 0 65 0 0 -50 c0 -37 5 -55 20 -70 15 -15 33 -20 70
+          -20 l50 0 0 -345 0 -345 -53 0 c-70 0 -87 -18 -87 -88 l0 -52 -53 0 c-83 0
+          -88 -10 -85 -163 3 -141 3 -140 69 -106 31 15 46 32 62 69 21 48 23 50 65 50
+          60 0 92 33 92 95 l0 45 45 0 c35 0 52 6 70 25 25 24 25 26 25 210 l0 185 65 0
+          65 0 2 -87 c2 -49 2 -112 1 -140 -2 -61 5 -65 67 -33 58 30 80 79 80 180 l0
+          80 115 0 c110 0 117 1 140 25 25 24 25 26 25 210 l0 185 65 0 65 0 0 -190 c0
+          -177 1 -191 20 -210 15 -15 33 -20 70 -20 l50 0 0 -65 0 -64 -35 -7 c-19 -3
+          -51 -3 -71 1 l-37 6 6 -37 c8 -46 49 -91 99 -106 43 -13 54 -42 43 -108 -8
+          -48 4 -51 65 -20 68 35 80 73 80 250 l0 150 134 0 134 0 7 -30 c4 -17 4 -48 0
+          -70 -6 -33 -4 -40 10 -40 36 0 95 41 115 80 19 37 20 58 20 330 l0 290 135 0
+          135 0 0 -50 c0 -37 5 -55 20 -70 15 -15 33 -20 70 -20 l50 0 0 -190 c0 -177 1
+          -191 20 -210 23 -23 93 -27 162 -9 60 16 93 1 102 -45 8 -40 60 -91 104 -101
+          l30 -6 4 -327 c2 -180 2 -335 -1 -344 -2 -10 -12 -18 -25 -18 -51 0 -116 -67
+          -116 -119 0 -24 -51 -37 -106 -26 l-37 6 6 -37 c12 -73 76 -114 177 -114 81 0
+          110 26 110 99 0 27 -5 62 -11 78 -6 15 -8 42 -4 60 5 27 14 36 61 57 48 22 58
+          32 77 75 l22 51 64 0 c35 0 81 5 101 11 28 9 46 9 71 0 39 -14 43 -11 34 29
+          -10 46 -60 98 -101 106 -33 6 -34 7 -34 55 0 67 -23 89 -90 89 l-50 0 0 135 0
+          135 28 11 c19 8 39 8 67 1 22 -6 42 -9 44 -6 11 11 -22 83 -50 109 l-30 30
+          -157 1 c-86 1 -162 2 -169 3 -6 0 -14 15 -18 32 -10 45 -60 97 -101 105 l-34
+          6 0 134 0 134 45 0 c36 0 52 6 71 25 25 26 26 26 20 163 -3 75 -7 151 -8 167
+          -1 17 1 40 5 53 7 19 5 22 -18 22 -39 0 -83 -27 -105 -63 -16 -26 -20 -50 -20
+          -124 l0 -93 -65 0 -65 0 0 50 c0 37 -5 55 -20 70 -15 15 -33 20 -70 20 l-50 0
+          0 135 0 135 45 0 c36 0 52 6 72 26 24 24 25 29 19 92 -11 104 -11 125 -3 150
+          7 19 5 22 -18 22 -58 0 -125 -63 -125 -117 0 -22 -4 -23 -65 -23 l-65 0 0 50
+          c0 37 -5 55 -20 70 -20 20 -33 20 -618 20 -568 0 -600 -1 -615 -18 -15 -16
+          -17 -46 -17 -210 l0 -192 -123 0 c-161 0 -157 4 -157 -158 l0 -122 -65 0 -65
+          0 0 50 c0 68 -22 90 -90 90 l-50 0 0 135 0 135 45 0 c63 0 95 32 95 95 l0 45
+          66 0 c37 0 84 5 104 11 28 9 46 9 71 0 18 -6 34 -9 37 -6 12 11 -20 83 -48
+          110 l-31 30 -157 3 c-144 3 -159 2 -175 -16z m963 -197 l0 -65 -52 0 c-81 0
+          -88 -12 -88 -142 0 -132 10 -148 90 -148 l50 0 0 -65 0 -65 -122 0 c-168 0
+          -158 15 -158 -227 l0 -193 -65 0 -65 0 0 275 0 275 45 0 c35 0 52 6 70 25 25
+          24 25 26 25 210 l0 185 135 0 135 0 0 -65z m420 15 c0 -37 5 -55 20 -70 19
+          -19 33 -20 210 -20 l190 0 0 -135 0 -135 -204 0 -204 0 -6 88 c-4 48 -7 101
+          -9 117 -1 17 2 40 6 53 7 19 5 22 -20 22 -15 0 -42 -9 -60 -20 -50 -30 -63
+          -66 -63 -170 l0 -90 -65 0 -65 0 0 135 0 135 45 0 c63 0 95 32 95 95 l0 45 65
+          0 65 0 0 -50z m140 -715 l0 -205 -205 0 -205 0 0 205 0 205 205 0 205 0 0
+          -205z m-1120 0 l0 -65 -65 0 -65 0 0 65 0 65 65 0 65 0 0 -65z" />
+            <path d="M4777 8522 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M5803 9360 c-47 -28 -63 -67 -63 -155 0 -110 7 -115 159 -115 l119 0
+          7 -30 c4 -17 4 -48 0 -70 -8 -48 4 -51 65 -20 55 28 80 80 80 165 0 99 -10
+          105 -160 105 l-120 0 -11 28 c-10 26 -8 57 6 95 10 24 -40 23 -82 -3z" />
+            <path d="M6164 9341 c12 -75 92 -121 174 -101 65 16 97 3 106 -44 8 -41 60
+          -91 105 -101 35 -7 47 -42 36 -105 -8 -48 4 -51 66 -19 32 16 46 32 65 74 21
+          46 30 55 57 60 18 4 45 1 61 -5 16 -6 31 -8 34 -5 12 11 -20 83 -49 110 l-30
+          30 -157 1 c-86 1 -162 2 -168 3 -6 0 -16 18 -22 39 -6 21 -25 51 -42 67 -31
+          29 -34 30 -137 30 l-105 0 6 -34z" />
+            <path d="M7157 9362 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M7997 9362 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M8590 9363 c-28 -10 -66 -37 -101 -72 -89 -89 -89 -90 -89 -523 l0
+          -368 368 0 c433 0 434 0 523 89 89 89 89 90 89 523 l0 368 -372 -1 c-314 0
+          -380 -3 -418 -16z m648 -395 c-3 -243 -5 -277 -22 -308 -26 -49 -45 -69 -91
+          -94 -38 -20 -56 -21 -313 -24 l-274 -3 4 273 c3 243 5 277 22 308 34 63 73 94
+          141 111 17 4 144 7 283 8 l254 1 -4 -272z" />
+            <path d="M8845 9041 c-30 -59 -35 -63 -104 -76 -81 -15 -86 -34 -29 -92 l47
+          -48 -6 -67 c-5 -65 -5 -68 16 -68 12 0 44 11 71 25 l50 25 50 -25 c69 -35 90
+          -33 90 8 0 17 -4 48 -10 67 -9 33 -8 37 36 81 63 64 58 81 -26 94 l-65 10 -30
+          57 c-38 73 -56 74 -90 9z" />
+            <path d="M7063 9220 c-59 -36 -63 -54 -63 -310 l0 -230 -157 -2 c-87 -2 -182
+          -2 -212 -2 l-53 1 6 -35 c7 -44 49 -89 98 -104 43 -13 54 -42 43 -108 -8 -48
+          4 -51 66 -19 31 15 46 32 62 69 l22 50 62 0 c60 0 62 -1 68 -30 4 -17 4 -48 0
+          -70 -8 -48 4 -51 65 -20 68 35 80 73 80 250 l0 150 28 11 c19 8 39 8 67 1 22
+          -6 41 -9 43 -7 2 2 1 18 -3 35 -10 45 -60 98 -100 106 l-33 6 -6 86 c-4 48 -7
+          101 -9 117 -1 17 2 40 6 53 7 19 5 22 -20 22 -15 0 -42 -9 -60 -20z" />
+            <path d="M7437 9222 c-14 -15 -17 -40 -17 -125 0 -144 3 -147 140 -147 94 0
+          103 2 125 25 23 22 25 31 25 125 0 137 -3 140 -148 140 -93 0 -111 -3 -125
+          -18z" />
+            <path d="M8183 9220 c-51 -30 -62 -63 -60 -173 2 -108 3 -109 67 -77 26 13 47
+          34 61 62 19 38 20 47 9 92 -9 37 -9 59 -1 79 6 16 11 30 11 33 0 12 -59 1 -87
+          -16z" />
+            <path d="M2397 9082 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M7903 9080 c-47 -28 -63 -67 -63 -155 0 -96 15 -115 91 -115 29 0 69
+          5 89 11 28 9 46 9 71 0 39 -14 43 -11 34 29 -10 46 -60 98 -101 106 -51 9 -65
+          57 -39 127 10 24 -40 23 -82 -3z" />
+            <path d="M2863 8940 c-34 -20 -63 -66 -63 -100 0 -18 -7 -20 -87 -22 -49 -2
+          -112 -2 -142 -2 l-53 1 6 -35 c3 -19 16 -46 28 -60 40 -43 77 -52 218 -52 127
+          0 132 1 157 26 24 24 25 29 19 92 -11 104 -11 125 -3 150 7 19 5 22 -20 22
+          -15 0 -42 -9 -60 -20z" />
+            <path d="M6164 8921 c12 -74 94 -123 171 -101 33 9 52 10 76 1 18 -6 34 -9 37
+          -6 12 11 -20 83 -48 110 -31 29 -34 30 -137 30 l-105 0 6 -34z" />
+            <path d="M6737 8942 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M2117 8802 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M6083 8800 c-50 -30 -67 -72 -59 -147 8 -81 0 -113 -28 -113 -31 0
+          -83 -35 -100 -68 -19 -37 -18 -222 2 -222 34 0 93 43 113 82 19 38 20 47 10
+          89 -18 71 -8 94 54 123 43 19 58 33 76 67 19 39 20 47 9 93 -9 37 -9 59 -1 79
+          6 16 11 30 11 33 0 12 -59 1 -87 -16z" />
+            <path d="M7436 8801 c-17 -19 -18 -32 -13 -119 7 -115 2 -142 -25 -142 -32 0
+          -78 -29 -98 -63 -29 -47 -29 -178 0 -207 23 -23 98 -27 160 -9 28 9 46 9 71 0
+          39 -14 43 -11 34 29 -10 46 -60 98 -101 106 -41 8 -59 40 -49 91 5 27 14 36
+          61 57 49 22 58 31 80 80 21 47 30 56 57 61 18 4 45 1 61 -5 16 -6 31 -8 34 -5
+          12 11 -20 83 -48 110 -29 28 -38 30 -118 33 -78 3 -89 2 -106 -17z" />
+            <path d="M8137 8802 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M2257 8662 c-15 -16 -17 -36 -15 -145 3 -141 3 -140 69 -106 32 16
+          46 32 65 74 21 46 30 55 57 60 18 4 45 1 61 -5 16 -6 31 -8 34 -5 12 11 -20
+          83 -48 110 -29 28 -38 30 -118 33 -76 3 -89 1 -105 -16z" />
+            <path d="M7903 8660 c-56 -34 -63 -60 -63 -239 l0 -160 -35 -7 c-19 -3 -51 -3
+          -71 1 l-37 6 6 -37 c8 -46 49 -91 99 -106 l38 -11 0 -64 0 -63 -87 -2 c-49 -2
+          -112 -2 -142 -2 l-53 1 6 -35 c12 -75 76 -112 196 -112 l80 0 0 -50 c0 -68 22
+          -90 90 -90 27 0 69 5 92 11 60 16 94 1 102 -44 7 -37 46 -80 89 -96 16 -6 55
+          -11 88 -11 50 0 64 4 84 25 24 23 25 30 25 140 l0 115 28 11 c19 8 39 8 67 1
+          22 -6 42 -9 44 -6 11 10 -22 83 -49 109 -30 28 -36 30 -131 33 l-99 4 0 49 c0
+          80 -15 89 -160 89 l-120 0 0 65 c0 62 1 66 28 76 19 8 39 8 67 1 22 -6 41 -9
+          43 -7 2 2 1 18 -3 35 -10 45 -60 98 -100 106 l-33 6 -6 86 c-4 48 -7 101 -9
+          117 -1 17 2 40 6 53 7 19 5 22 -20 22 -15 0 -42 -9 -60 -20z m217 -740 c0 -37
+          5 -55 20 -70 15 -15 33 -20 70 -20 l50 0 0 -64 c0 -70 -6 -76 -75 -76 -39 0
+          -49 8 -64 50 -16 47 -58 89 -98 96 l-33 6 0 64 0 64 65 0 65 0 0 -50z" />
+            <path d="M1697 8522 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M2583 8520 c-51 -30 -62 -63 -60 -173 2 -108 3 -109 67 -77 26 13 47
+          34 61 62 19 38 20 47 9 92 -9 37 -9 59 -1 79 6 16 11 30 11 33 0 12 -59 1 -87
+          -16z" />
+            <path d="M2817 8522 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M3423 8520 c-51 -30 -62 -63 -60 -173 2 -108 3 -109 67 -77 26 13 47
+          34 61 62 19 38 20 47 9 92 -9 37 -9 59 -1 79 6 16 11 30 11 33 0 12 -59 1 -87
+          -16z" />
+            <path d="M5337 8522 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M6223 8520 c-51 -30 -62 -63 -60 -173 2 -108 3 -109 67 -77 26 13 47
+          34 61 62 19 38 20 47 9 92 -9 37 -9 59 -1 79 6 16 11 30 11 33 0 12 -59 1 -87
+          -16z" />
+            <path d="M6457 8522 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M7577 8522 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M8137 8522 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M6597 8382 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M1137 8242 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M2723 8240 c-34 -20 -63 -66 -63 -100 0 -18 -7 -20 -87 -22 -49 -2
+          -112 -2 -142 -2 l-53 1 6 -35 c7 -44 49 -89 98 -104 43 -13 54 -42 43 -108 -8
+          -48 4 -51 66 -19 31 15 46 32 62 69 l22 50 183 0 c183 0 183 0 209 26 24 24
+          25 29 19 92 -11 104 -11 125 -3 150 7 19 5 22 -20 22 -57 0 -123 -64 -123
+          -120 0 -18 -6 -20 -65 -20 -62 0 -66 1 -76 28 -10 26 -8 57 6 95 10 24 -40 23
+          -82 -3z" />
+            <path d="M5337 8242 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M6304 8221 c7 -44 50 -88 98 -103 l38 -11 0 -64 0 -63 -53 0 c-83 0
+          -88 -10 -85 -163 3 -141 3 -140 69 -106 31 15 46 32 62 69 l22 50 134 0 c73 0
+          151 5 171 11 28 9 46 9 71 0 39 -14 43 -11 34 29 -10 46 -60 98 -101 106 -33
+          6 -34 7 -34 55 0 67 -23 89 -90 89 l-50 0 0 50 c0 37 -5 55 -20 70 -19 19 -31
+          20 -146 18 l-126 -3 6 -34z" />
+            <path d="M6724 8221 c12 -74 76 -111 195 -111 l79 0 7 -30 c4 -17 4 -48 0 -70
+          -8 -48 4 -51 65 -20 55 28 80 80 80 165 0 53 -4 69 -21 86 -20 20 -29 20 -216
+          17 l-195 -3 6 -34z" />
+            <path d="M8264 8221 c12 -74 76 -111 195 -111 l79 0 7 -30 c4 -17 4 -48 0 -70
+          -8 -48 4 -51 65 -20 55 28 80 80 80 165 0 53 -4 69 -21 86 -20 20 -29 20 -216
+          17 l-195 -3 6 -34z" />
+            <path d="M8964 8221 c6 -40 39 -78 83 -97 39 -17 181 -18 233 -3 28 9 46 9 71
+          0 18 -6 34 -9 37 -6 12 11 -20 83 -48 110 l-31 30 -176 0 -175 0 6 -34z" />
+            <path d="M3237 8103 c-11 -13 -17 -36 -17 -71 0 -50 0 -51 -35 -58 -19 -3 -51
+          -3 -71 1 l-37 6 6 -37 c12 -73 76 -114 177 -114 80 0 110 26 110 95 0 40 3 47
+          28 56 19 8 39 8 67 1 22 -6 42 -9 44 -6 11 10 -22 83 -49 109 -29 28 -38 30
+          -118 33 -76 3 -90 1 -105 -15z" />
+            <path d="M297 7962 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M577 7962 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M5337 7962 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M5617 7963 c-11 -13 -17 -36 -17 -71 l0 -52 -53 0 c-82 0 -92 -15
+          -84 -138 7 -117 2 -142 -27 -142 -32 0 -83 -35 -101 -69 -9 -19 -15 -57 -15
+          -106 0 -96 15 -115 91 -115 29 0 69 5 89 11 28 9 46 9 71 0 39 -14 43 -11 34
+          29 -10 46 -60 98 -101 106 -41 8 -59 40 -49 91 5 27 14 36 61 57 48 22 58 32
+          77 75 21 49 23 51 65 51 60 0 92 33 92 95 0 40 3 47 28 56 19 8 39 8 67 1 22
+          -6 42 -9 44 -6 11 10 -22 83 -49 109 -29 28 -38 30 -118 33 -76 3 -90 1 -105
+          -15z" />
+            <path d="M8697 7963 c-15 -17 -17 -43 -17 -211 l0 -191 -35 -7 c-19 -3 -51 -3
+          -71 1 l-37 6 6 -37 c8 -46 49 -91 99 -106 37 -11 38 -12 38 -60 0 -66 23 -88
+          90 -88 27 0 69 5 92 11 60 16 94 1 102 -44 7 -37 46 -80 89 -96 16 -6 64 -11
+          108 -11 l79 0 0 -65 0 -65 -135 0 -135 0 -11 28 c-10 26 -8 57 6 95 6 13 2 17
+          -19 17 -59 0 -126 -62 -126 -117 0 -21 -5 -23 -53 -23 -85 0 -87 -4 -87 -213
+          0 -164 2 -179 20 -197 15 -15 33 -20 70 -20 l50 0 0 -65 0 -65 -53 0 c-85 0
+          -87 -4 -87 -213 0 -164 2 -179 20 -197 23 -23 98 -27 160 -9 28 9 46 9 71 0
+          39 -14 43 -11 34 29 -10 46 -60 98 -101 106 l-34 6 0 64 0 64 64 0 c64 0 65 0
+          71 -30 4 -17 4 -48 0 -70 -8 -48 4 -51 66 -19 31 15 46 32 62 69 21 48 23 50
+          65 50 32 0 49 6 67 25 25 24 25 27 25 195 0 157 -2 172 -20 190 -15 15 -33 20
+          -70 20 l-50 0 0 65 0 65 64 0 c64 0 65 0 71 -30 4 -17 4 -48 0 -70 -6 -33 -4
+          -40 10 -40 36 0 95 41 115 80 19 37 20 58 20 385 0 423 16 387 -166 383 l-126
+          -3 6 -34 c7 -44 50 -88 98 -103 l38 -11 0 -62 0 -62 -120 -6 c-67 -3 -127 -4
+          -135 -1 -7 3 -17 19 -20 36 -10 44 -61 96 -101 104 l-34 6 0 64 c0 61 1 65 28
+          75 19 8 39 8 67 1 22 -6 41 -9 43 -7 2 2 1 18 -3 35 -10 46 -60 98 -101 106
+          l-34 6 0 64 c0 61 1 65 28 75 19 8 39 8 67 1 22 -6 42 -9 44 -6 11 10 -22 83
+          -49 109 -29 28 -38 30 -118 33 -76 3 -90 1 -105 -15z m403 -1458 l0 -65 -65 0
+          -65 0 0 65 0 65 65 0 65 0 0 -65z" />
+            <path d="M9104 7941 c12 -74 94 -123 171 -101 33 9 52 10 76 1 18 -6 34 -9 37
+          -6 12 11 -20 83 -48 110 -31 29 -34 30 -137 30 l-105 0 6 -34z" />
+            <path d="M4217 7822 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M4904 7801 c12 -74 76 -111 195 -111 l79 0 7 -30 c4 -17 4 -48 0 -70
+          -8 -48 4 -51 65 -20 55 28 80 80 80 165 0 53 -4 69 -21 86 -20 20 -29 20 -216
+          17 l-195 -3 6 -34z" />
+            <path d="M6877 7822 c-11 -12 -17 -36 -17 -70 l0 -52 -87 -2 c-49 -2 -112 -2
+          -142 -2 l-53 1 6 -35 c3 -19 16 -46 28 -60 40 -43 77 -52 218 -52 126 0 132 1
+          155 25 19 18 25 35 25 70 l0 45 135 0 135 0 0 -65 0 -65 -87 -2 c-49 -2 -112
+          -2 -142 -2 l-53 1 6 -35 c3 -19 16 -46 28 -60 41 -44 76 -52 238 -52 l150 0 2
+          -87 c2 -49 2 -112 1 -140 -2 -61 5 -65 68 -32 32 16 46 32 65 74 21 46 30 55
+          57 60 51 10 83 -8 91 -49 8 -41 60 -91 105 -101 31 -7 31 -7 31 -71 l0 -64
+          -53 0 c-70 0 -87 -18 -87 -88 l0 -52 -65 0 c-62 0 -66 1 -76 28 -10 26 -8 57
+          6 95 6 13 2 17 -19 17 -39 0 -84 -27 -106 -63 -15 -24 -20 -50 -20 -109 0 -98
+          15 -118 90 -118 l50 0 0 -65 0 -65 -123 0 c-147 0 -157 -6 -157 -88 l0 -52
+          -65 0 -65 0 0 120 c0 163 2 162 -166 158 l-126 -3 6 -34 c7 -44 50 -88 98
+          -103 l38 -11 0 -189 c0 -175 1 -189 20 -208 15 -15 33 -20 69 -20 l48 0 6
+          -115 c6 -134 3 -155 -27 -155 -51 0 -116 -67 -116 -119 0 -24 -51 -37 -106
+          -26 l-37 6 6 -37 c8 -46 49 -91 99 -106 43 -13 54 -42 43 -108 -8 -48 4 -51
+          65 -20 59 30 80 79 80 184 0 47 -5 97 -11 113 -6 15 -8 42 -4 60 5 27 14 36
+          60 57 73 33 95 75 95 186 l0 80 45 0 c35 0 52 6 70 25 19 18 25 35 25 70 l0
+          45 45 0 c35 0 52 6 70 25 19 18 25 35 25 70 l0 45 45 0 c63 0 95 32 95 95 l0
+          45 65 0 65 0 0 -50 c0 -37 5 -55 20 -70 19 -19 33 -20 210 -20 l190 0 2 -157
+          c2 -87 2 -182 1 -210 -2 -61 5 -65 67 -33 58 30 80 79 80 180 0 79 1 81 28 91
+          19 8 39 8 67 1 22 -6 41 -9 43 -7 2 2 1 18 -3 35 -10 46 -60 98 -101 106 -33
+          6 -34 7 -34 55 0 80 -15 89 -160 89 l-120 0 0 205 0 205 28 11 c19 8 39 8 67
+          1 22 -6 42 -9 44 -6 11 10 -22 83 -49 109 -30 28 -36 30 -131 33 l-99 4 0 64
+          c0 61 1 65 28 75 19 8 39 8 67 1 22 -6 41 -9 43 -7 2 2 1 18 -3 35 -10 46 -60
+          98 -101 106 -51 9 -65 57 -39 127 10 24 -40 23 -82 -3 -49 -30 -63 -66 -63
+          -168 0 -99 -2 -102 -75 -102 -39 0 -49 8 -64 50 -16 47 -58 89 -98 96 -32 6
+          -33 8 -33 55 0 67 -23 89 -90 89 l-50 0 0 65 c0 62 1 66 28 76 19 8 39 8 67 1
+          22 -6 42 -9 44 -6 11 10 -22 83 -49 109 l-31 30 -298 3 c-280 3 -298 2 -314
+          -16z" />
+            <path d="M8977 7822 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M284 7661 c12 -74 94 -123 171 -101 33 9 52 10 76 1 18 -6 34 -9 37
+          -6 12 11 -20 83 -48 110 -31 29 -34 30 -137 30 l-105 0 6 -34z" />
+            <path d="M4357 7683 c-14 -16 -17 -40 -17 -141 l0 -122 -65 0 c-62 0 -66 1
+          -76 28 -10 26 -8 57 6 95 6 13 2 17 -19 17 -59 0 -126 -62 -126 -117 0 -23 -2
+          -23 -135 -23 l-135 0 -11 28 c-10 26 -8 57 6 95 6 14 2 17 -21 17 -58 0 -124
+          -64 -124 -119 0 -24 -51 -37 -106 -26 l-37 6 6 -37 c8 -46 49 -91 99 -106 l38
+          -11 0 -189 c0 -175 1 -189 20 -208 15 -15 33 -20 70 -20 l50 0 0 -50 c0 -67
+          22 -90 89 -90 47 0 50 -2 56 -30 4 -17 4 -48 0 -70 -8 -48 4 -51 66 -19 31 15
+          46 32 62 69 21 48 23 50 65 50 60 0 92 33 92 95 0 40 3 47 28 56 19 8 39 8 67
+          1 22 -6 42 -9 44 -6 11 10 -22 83 -49 109 -30 29 -36 30 -131 33 -98 4 -100 5
+          -110 30 -10 26 -8 58 6 95 6 14 2 17 -21 17 -58 0 -124 -64 -124 -120 0 -18
+          -6 -20 -65 -20 l-65 0 0 65 0 65 45 0 c63 0 95 32 95 95 l0 45 134 0 134 0 7
+          -30 c4 -17 4 -48 0 -70 -8 -48 4 -51 66 -19 31 15 46 32 62 69 l22 50 63 0 62
+          0 0 -50 c0 -67 22 -90 89 -90 47 0 50 -2 56 -30 4 -17 4 -48 0 -70 -8 -48 4
+          -51 66 -19 31 15 46 32 62 69 l22 50 63 0 62 0 0 -50 c0 -37 5 -55 20 -70 15
+          -15 33 -20 70 -20 l50 0 2 -87 c2 -49 2 -112 1 -140 -2 -61 5 -65 68 -32 31
+          15 46 32 62 69 21 48 23 50 65 50 60 0 92 33 92 95 l0 45 65 0 65 0 0 -50 c0
+          -68 22 -90 91 -90 29 0 69 5 89 11 28 9 46 9 71 0 39 -14 43 -11 34 29 -10 46
+          -60 98 -101 106 -33 6 -34 7 -34 55 0 36 -5 54 -20 69 -19 19 -33 20 -280 20
+          l-260 0 0 65 c0 62 1 66 28 76 19 8 39 8 67 1 22 -6 42 -9 44 -6 11 10 -22 83
+          -49 109 -29 28 -38 30 -116 34 -108 4 -124 -7 -124 -86 l0 -53 -65 0 -65 0 0
+          50 c0 82 -15 90 -160 90 l-120 0 0 65 c0 62 1 66 28 76 19 8 39 8 67 1 22 -6
+          42 -9 44 -6 11 10 -22 83 -49 109 -29 28 -38 30 -118 33 -76 3 -90 1 -105 -15z" />
+            <path d="M4823 7680 c-51 -30 -62 -63 -60 -173 2 -108 3 -109 67 -77 26 13 47
+          34 61 62 19 38 20 47 9 92 -9 37 -9 59 -1 79 6 16 11 30 11 33 0 12 -59 1 -87
+          -16z" />
+            <path d="M437 7402 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M763 7400 c-34 -20 -63 -66 -63 -99 0 -24 -51 -37 -106 -26 l-37 6 6
+          -37 c7 -43 39 -81 84 -100 39 -17 181 -18 233 -3 28 9 46 9 71 0 39 -14 43
+          -11 34 29 -10 46 -60 98 -101 106 -51 9 -65 57 -39 127 10 24 -40 23 -82 -3z" />
+            <path d="M6877 7402 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M8264 7381 c12 -74 94 -123 171 -101 33 9 52 10 76 1 18 -6 34 -9 37
+          -6 12 11 -20 83 -48 110 -31 29 -34 30 -137 30 l-105 0 6 -34z" />
+            <path d="M5617 7262 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M6597 7262 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M7017 7262 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M296 7121 c-16 -17 -17 -58 -15 -495 2 -528 -3 -493 70 -455 32 16
+          46 32 65 74 21 46 30 55 57 60 51 10 83 -8 91 -49 8 -41 60 -91 105 -101 30
+          -6 31 -9 31 -56 0 -67 23 -89 90 -89 l50 0 0 -120 c0 -107 2 -122 20 -140 23
+          -23 93 -27 162 -9 60 16 93 1 102 -45 8 -41 60 -91 105 -101 31 -7 31 -7 31
+          -71 l0 -64 -345 0 -345 0 0 50 c0 68 -22 90 -90 90 -46 0 -51 3 -61 28 -10 26
+          -8 57 6 95 6 13 2 17 -19 17 -39 0 -84 -27 -106 -63 -19 -30 -20 -52 -20 -319
+          0 -275 1 -289 20 -308 19 -19 33 -20 210 -20 l190 0 0 -65 0 -65 -193 0 c-243
+          0 -228 11 -225 -163 3 -141 3 -140 69 -106 31 15 46 32 62 69 l22 50 203 0
+          202 0 0 -120 c0 -145 8 -160 90 -160 l50 0 0 -65 0 -65 -65 0 -65 0 0 50 c0
+          68 -22 90 -90 90 l-50 0 0 50 c0 37 -5 55 -20 70 -19 19 -31 20 -146 18 l-126
+          -3 6 -34 c7 -44 50 -88 98 -103 l38 -11 0 -64 0 -63 -53 0 c-83 0 -88 -10 -85
+          -163 3 -141 3 -140 69 -106 31 15 46 32 62 69 l22 50 63 0 62 0 0 -190 c0
+          -177 1 -191 20 -210 23 -23 98 -27 160 -9 28 9 46 9 71 0 39 -14 43 -11 34 29
+          -10 46 -60 98 -101 106 l-34 6 0 64 0 64 45 0 c63 0 95 32 95 95 l0 45 206 0
+          c125 0 222 4 244 11 28 9 46 9 71 0 39 -14 43 -11 34 29 -10 46 -60 98 -101
+          106 l-34 6 0 64 0 64 45 0 c63 0 95 32 95 95 l0 45 65 0 65 0 0 -190 c0 -177
+          1 -191 20 -210 15 -15 33 -20 70 -20 l50 0 2 -227 c2 -126 2 -252 1 -280 -2
+          -61 5 -65 67 -33 26 13 47 34 60 60 18 36 20 58 20 260 l0 220 28 11 c19 8 39
+          8 67 1 22 -6 42 -9 44 -6 11 10 -22 83 -49 109 -30 28 -36 30 -131 33 l-99 4
+          0 134 0 134 64 0 c64 0 65 0 71 -30 4 -17 4 -48 0 -70 -8 -48 4 -51 66 -19 32
+          16 46 32 65 74 21 46 30 55 57 60 18 4 45 1 61 -5 36 -13 40 -9 31 30 -10 46
+          -60 98 -101 106 -33 6 -34 7 -34 55 0 67 -23 89 -90 89 l-50 0 0 135 0 135 45
+          0 c63 0 95 32 95 95 l0 45 65 0 65 0 0 -120 c0 -145 8 -160 90 -160 l50 0 0
+          -65 0 -64 -35 -7 c-19 -3 -51 -3 -71 1 l-37 6 6 -37 c8 -46 49 -91 99 -106 43
+          -13 54 -42 43 -108 -8 -48 4 -51 66 -19 31 15 46 32 62 69 l22 50 113 0 c106
+          0 114 1 137 25 23 22 25 31 25 125 0 123 -11 140 -90 140 l-50 0 0 50 c0 68
+          -22 90 -90 90 l-50 0 0 65 c0 62 1 66 28 76 19 8 39 8 67 1 22 -6 41 -9 43 -7
+          2 2 1 18 -3 35 -10 46 -60 98 -101 106 l-34 6 0 64 0 64 64 0 c64 0 65 0 71
+          -30 4 -17 4 -48 0 -70 -8 -48 4 -51 65 -20 55 28 80 80 80 165 0 99 -10 105
+          -160 105 l-120 0 0 65 c0 62 1 66 28 76 19 8 39 8 67 1 22 -6 42 -9 44 -6 11
+          10 -22 83 -49 109 -29 28 -38 30 -116 34 -122 5 -124 2 -124 -156 l0 -123 -65
+          0 -65 0 0 190 c0 242 8 230 -159 230 l-119 0 -6 88 c-4 48 -7 101 -9 117 -1
+          17 2 40 6 53 7 19 5 22 -20 22 -15 0 -42 -9 -60 -20 -50 -30 -63 -66 -63 -169
+          l0 -90 -35 -7 c-19 -3 -51 -3 -71 1 l-37 6 6 -37 c13 -77 76 -114 197 -114
+          l80 0 0 -50 c0 -68 22 -90 90 -90 l50 0 0 -120 c0 -161 -1 -160 160 -160 l120
+          0 0 -65 0 -65 -193 0 c-226 0 -227 -1 -227 -88 l0 -52 -275 0 -275 0 0 65 0
+          65 45 0 c63 0 95 32 95 95 l0 45 64 0 c64 0 65 0 71 -30 4 -17 4 -48 0 -70 -8
+          -48 4 -51 65 -20 55 28 80 80 80 165 0 105 0 105 -230 105 l-190 0 -11 28
+          c-10 26 -8 57 6 95 6 14 2 17 -21 17 -58 0 -124 -64 -124 -118 0 -21 -25 -32
+          -75 -32 -39 0 -49 8 -64 50 -16 47 -58 89 -98 96 l-33 6 0 134 0 134 206 0
+          c125 0 222 4 244 11 28 9 46 9 71 0 39 -14 43 -11 34 29 -10 46 -60 98 -101
+          106 l-34 6 0 64 0 64 115 0 c110 0 117 1 140 25 19 18 25 35 25 70 l0 45 45 0
+          c35 0 52 6 70 25 23 22 25 31 25 125 0 123 -11 140 -90 140 l-50 0 0 50 c0 68
+          -22 90 -90 90 -46 0 -51 3 -61 28 -10 26 -8 57 6 95 10 24 -40 23 -82 -3 -55
+          -33 -63 -62 -63 -225 0 -173 6 -185 90 -185 l50 0 0 -65 0 -65 -65 0 c-62 0
+          -66 1 -76 28 -10 26 -8 57 6 95 6 14 2 17 -21 17 -58 0 -124 -64 -124 -119 0
+          -24 -51 -37 -106 -26 l-37 6 6 -37 c8 -46 49 -91 99 -106 l38 -11 0 -64 0 -63
+          -134 0 -134 0 -6 88 c-4 48 -7 101 -9 117 -1 17 2 40 6 53 7 19 5 22 -20 22
+          -57 0 -123 -64 -123 -120 0 -18 -6 -20 -53 -20 -69 0 -87 -18 -87 -87 0 -55
+          -9 -63 -75 -63 -39 0 -49 8 -64 50 -16 47 -58 89 -98 96 l-33 6 0 204 0 204
+          64 0 c64 0 65 0 71 -30 4 -17 4 -48 0 -70 -8 -48 4 -51 65 -20 55 28 80 80 80
+          165 0 84 -18 105 -90 105 l-50 0 0 50 c0 80 -16 90 -148 90 -94 0 -111 -3
+          -126 -19z m264 -1876 l0 -65 -65 0 -65 0 0 65 0 65 65 0 65 0 0 -65z m280 0
+          l0 -65 -65 0 -65 0 0 65 0 65 65 0 65 0 0 -65z m420 0 l0 -65 -135 0 -135 0 0
+          65 0 65 135 0 135 0 0 -65z m560 -210 l0 -135 -135 0 -135 0 0 65 0 65 45 0
+          c63 0 95 32 95 95 l0 45 65 0 65 0 0 -135z m-420 -210 l0 -205 -205 0 -205 0
+          0 205 0 205 205 0 205 0 0 -205z m-140 -420 l0 -65 -65 0 -65 0 0 65 0 65 65
+          0 65 0 0 -65z" />
+            <path d="M1137 4882 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M1137 7122 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M4357 7122 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M6177 7122 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M7577 7122 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M8404 7101 c12 -74 94 -123 171 -101 33 9 52 10 76 1 18 -6 34 -9 37
+          -6 12 11 -20 83 -48 110 -31 29 -34 30 -137 30 l-105 0 6 -34z" />
+            <path d="M997 6982 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M4497 6982 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M4777 6982 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M6597 6982 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M6864 6961 c12 -74 94 -123 171 -101 33 9 52 10 76 1 18 -6 34 -9 37
+          -6 12 11 -20 83 -48 110 -31 29 -34 30 -137 30 l-105 0 6 -34z" />
+            <path d="M8277 6982 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M1137 6842 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M5383 6840 c-34 -20 -63 -66 -63 -99 0 -24 -51 -37 -106 -26 l-37 6
+          6 -37 c12 -73 76 -114 177 -114 52 0 65 4 87 26 24 24 25 29 19 92 -11 104
+          -11 125 -3 150 7 19 5 22 -20 22 -15 0 -42 -9 -60 -20z" />
+            <path d="M5757 6842 c-11 -12 -17 -36 -17 -70 l0 -52 -53 0 c-70 0 -87 -18
+          -87 -88 l0 -52 -53 0 c-70 0 -87 -18 -87 -88 l0 -52 -123 0 c-147 0 -157 -6
+          -157 -87 0 -55 -9 -63 -75 -63 -40 0 -50 8 -64 51 -6 20 -25 49 -42 65 -29 27
+          -36 29 -130 32 l-99 4 0 119 c0 173 23 161 -307 157 l-265 -3 6 -34 c7 -44 50
+          -88 98 -103 l38 -11 0 -64 0 -63 -87 -2 c-49 -2 -112 -2 -142 -2 l-53 1 6 -35
+          c12 -75 76 -112 196 -112 l80 0 0 -50 c0 -79 17 -90 140 -90 94 0 103 2 125
+          25 19 18 25 35 25 70 l0 45 135 0 c74 0 154 5 177 11 60 16 94 1 102 -44 7
+          -37 46 -80 89 -96 16 -6 55 -11 88 -11 79 0 109 26 109 95 l0 45 64 0 c64 0
+          65 0 71 -30 4 -17 4 -48 0 -70 -8 -48 4 -51 66 -19 31 15 46 32 62 69 l22 50
+          63 0 62 0 0 -50 c0 -68 22 -90 91 -90 29 0 69 5 89 11 28 9 46 9 71 0 39 -14
+          43 -11 34 29 -10 46 -60 98 -101 106 -33 6 -34 7 -34 55 0 67 -23 89 -90 89
+          l-50 0 0 65 0 65 136 0 c75 0 154 5 174 11 28 9 46 9 71 0 39 -14 43 -11 34
+          29 -10 46 -60 98 -101 106 -33 6 -34 7 -34 55 0 79 -17 89 -148 89 -93 0 -111
+          -3 -125 -18z" />
+            <path d="M7157 6842 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M8463 6840 c-51 -30 -62 -63 -60 -173 2 -108 3 -109 67 -77 26 13 47
+          34 61 62 19 38 20 47 9 92 -9 37 -9 59 -1 79 6 16 11 30 11 33 0 12 -59 1 -87
+          -16z" />
+            <path d="M717 6702 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M3657 6702 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M4917 6702 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M1964 6541 c7 -44 50 -88 98 -103 37 -11 38 -12 38 -60 0 -66 23 -88
+          91 -88 29 0 69 5 89 11 28 9 46 9 71 0 39 -14 43 -11 34 29 -10 46 -60 98
+          -101 106 -33 6 -34 7 -34 55 0 36 -5 54 -20 69 -19 19 -31 20 -146 18 l-126
+          -3 6 -34z" />
+            <path d="M2863 6560 c-34 -20 -63 -66 -63 -100 0 -18 -6 -20 -53 -20 -80 0
+          -87 -12 -87 -143 0 -130 10 -147 89 -147 47 0 50 -2 56 -30 4 -17 4 -48 0 -70
+          -8 -48 4 -51 65 -20 58 30 80 79 80 180 l0 80 65 0 65 0 0 -120 c0 -162 -2
+          -160 161 -160 67 0 139 5 159 11 28 9 46 9 71 0 39 -14 43 -11 34 29 -10 46
+          -60 98 -101 106 -33 6 -34 7 -34 55 0 67 -23 89 -90 89 l-50 0 0 50 c0 82 -15
+          90 -160 90 l-120 0 -11 28 c-10 26 -8 57 6 95 10 24 -40 23 -82 -3z" />
+            <path d="M3517 6562 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M3797 6562 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M6457 6563 c-11 -13 -17 -36 -17 -71 l0 -52 -157 -2 c-87 -2 -182 -2
+          -212 -2 l-53 1 6 -35 c3 -19 16 -46 28 -60 43 -47 72 -52 288 -52 200 0 201 0
+          225 25 19 18 25 35 25 70 0 40 3 47 28 56 19 8 39 8 67 1 22 -6 42 -9 44 -6
+          11 10 -22 83 -49 109 -29 28 -38 30 -118 33 -76 3 -90 1 -105 -15z" />
+            <path d="M8557 6562 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M3377 6422 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M3703 6420 c-34 -20 -63 -66 -63 -99 0 -24 -51 -37 -106 -26 l-37 6
+          6 -37 c12 -73 76 -114 177 -114 52 0 65 4 87 26 24 24 25 29 19 92 -11 104
+          -11 125 -3 150 7 19 5 22 -20 22 -15 0 -42 -9 -60 -20z" />
+            <path d="M7763 6420 c-56 -34 -63 -60 -63 -239 l0 -160 -35 -7 c-19 -3 -51 -3
+          -71 1 l-37 6 6 -37 c3 -20 17 -48 29 -62 40 -43 77 -52 218 -52 126 0 132 1
+          155 25 25 24 25 27 25 195 0 157 -2 172 -20 190 -15 15 -33 20 -70 20 -46 0
+          -51 3 -61 28 -10 26 -8 57 6 95 10 24 -40 23 -82 -3z" />
+            <path d="M9303 6280 c-34 -20 -63 -66 -63 -99 0 -24 -51 -37 -106 -26 l-37 6
+          6 -37 c8 -46 49 -91 99 -106 31 -9 39 -17 44 -44 10 -51 -4 -94 -29 -94 -33 0
+          -84 -35 -102 -69 -12 -23 -15 -65 -15 -191 l0 -160 -65 0 -65 0 0 190 c0 240
+          7 230 -148 230 -149 0 -142 10 -142 -213 0 -164 2 -179 20 -197 15 -15 33 -20
+          70 -20 l50 0 0 -65 0 -65 -53 0 c-70 0 -87 -18 -87 -88 l0 -52 -204 0 -204 0
+          -6 88 c-4 48 -7 101 -9 117 -1 17 2 40 6 53 7 19 5 22 -20 22 -57 0 -123 -64
+          -123 -119 0 -24 -51 -37 -106 -26 l-37 6 6 -37 c8 -46 49 -91 99 -106 l38 -11
+          0 -133 0 -133 -35 -7 c-19 -3 -51 -3 -71 1 l-37 6 6 -37 c8 -46 49 -91 99
+          -106 l38 -11 0 -134 0 -133 -64 0 -64 0 -6 88 c-4 48 -7 101 -9 117 -1 17 2
+          40 6 53 7 19 5 22 -20 22 -15 0 -42 -9 -60 -20 -55 -33 -63 -62 -63 -225 0
+          -173 6 -185 89 -185 47 0 50 -2 56 -30 4 -17 4 -48 0 -70 -8 -48 4 -51 66 -19
+          31 15 46 32 62 69 l22 50 113 0 c106 0 114 1 137 25 19 18 25 35 25 70 l0 45
+          64 0 c64 0 65 0 71 -30 4 -17 4 -48 0 -70 -8 -48 4 -51 66 -19 31 15 46 32 62
+          69 l22 50 113 0 c106 0 114 1 137 25 19 18 25 35 25 70 l0 45 136 0 c75 0 154
+          5 174 11 28 9 46 9 71 0 18 -6 34 -9 37 -6 12 11 -20 83 -48 110 -30 29 -36
+          30 -131 33 -98 4 -100 5 -110 30 -6 15 -8 41 -4 59 5 27 14 36 60 57 74 33 95
+          75 95 186 0 79 1 81 28 91 19 8 39 8 67 1 22 -6 41 -9 43 -7 2 2 1 18 -3 35
+          -10 46 -60 98 -101 106 l-34 6 0 134 0 134 28 11 c19 8 39 8 67 1 22 -6 41 -9
+          43 -7 2 2 1 18 -3 35 -10 46 -60 98 -101 106 -41 8 -59 40 -49 91 5 27 14 36
+          60 57 42 19 58 33 75 67 22 43 23 62 8 274 -2 17 1 40 5 53 7 19 5 22 -20 22
+          -15 0 -42 -9 -60 -20z m-203 -1035 l0 -65 -65 0 -65 0 0 65 0 65 65 0 65 0 0
+          -65z m-420 -420 l0 -205 -205 0 -205 0 0 205 0 205 205 0 205 0 0 -205z m426
+          171 c9 -51 -3 -96 -27 -96 -53 0 -119 -66 -119 -117 0 -22 -4 -23 -65 -23
+          l-65 0 0 135 0 135 135 0 134 0 7 -34z" />
+            <path d="M8417 4882 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M483 6140 c-51 -30 -62 -63 -60 -173 2 -108 3 -109 67 -77 26 13 47
+          34 61 62 19 38 20 47 9 92 -9 37 -9 59 -1 79 6 16 11 30 11 33 0 12 -59 1 -87
+          -16z" />
+            <path d="M6177 6142 c-15 -16 -17 -36 -15 -145 3 -141 3 -140 69 -106 32 16
+          46 32 65 74 21 46 30 55 57 60 18 4 45 1 61 -5 16 -6 31 -8 34 -5 12 11 -20
+          83 -48 110 -29 28 -38 30 -118 33 -76 3 -89 1 -105 -16z" />
+            <path d="M6643 6140 c-61 -37 -63 -47 -63 -380 l0 -300 -193 0 c-243 0 -228
+          11 -225 -163 3 -141 3 -140 69 -106 31 15 46 32 62 69 l22 50 63 0 62 0 0 -65
+          0 -64 -35 -7 c-19 -3 -51 -3 -71 1 l-37 6 6 -37 c12 -73 76 -114 177 -114 51
+          0 65 4 85 25 24 23 25 30 25 140 l0 115 45 0 c64 0 95 31 95 95 0 40 3 47 28
+          56 19 8 39 8 67 1 22 -6 41 -9 43 -7 2 2 1 18 -3 35 -10 45 -60 98 -100 106
+          l-34 6 -5 227 c-3 124 -6 240 -8 256 -1 17 1 40 5 53 7 19 5 22 -20 22 -15 0
+          -42 -9 -60 -20z" />
+            <path d="M1137 6002 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M1404 5981 c12 -74 94 -123 171 -101 33 9 52 10 76 1 18 -6 34 -9 37
+          -6 12 11 -20 83 -48 110 -31 29 -34 30 -137 30 l-105 0 6 -34z" />
+            <path d="M3003 6000 c-61 -37 -65 -55 -61 -316 2 -185 5 -234 16 -234 7 0 31
+          9 53 21 31 15 46 32 62 69 l22 50 113 0 c106 0 114 1 137 25 23 22 25 31 25
+          125 0 139 -2 140 -160 140 l-120 0 -11 28 c-10 26 -8 57 6 95 10 24 -40 23
+          -82 -3z" />
+            <path d="M6877 6002 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M8977 6002 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M577 5862 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M1837 5862 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M6317 5862 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M7284 5841 c7 -44 50 -88 98 -103 l38 -11 0 -204 0 -203 -53 0 c-69
+          0 -87 -18 -87 -88 0 -50 0 -51 -35 -58 -19 -3 -51 -3 -71 1 l-37 6 6 -37 c7
+          -43 39 -81 84 -100 42 -18 595 -20 653 -3 28 9 46 9 71 0 39 -14 43 -11 34 29
+          -10 46 -60 98 -101 106 -41 8 -59 40 -49 91 5 27 14 36 61 57 48 22 58 32 77
+          75 21 49 23 51 65 51 32 0 49 6 67 25 23 22 25 31 25 125 0 144 7 140 -218
+          140 -222 0 -212 7 -212 -143 0 -130 10 -147 90 -147 48 0 49 -1 56 -34 9 -53
+          -3 -96 -29 -96 -52 0 -117 -67 -117 -120 0 -18 -6 -20 -65 -20 l-65 0 0 330
+          c0 406 15 372 -166 368 l-126 -3 6 -34z" />
+            <path d="M8124 5841 c12 -74 94 -123 171 -101 33 9 52 10 76 1 18 -6 34 -9 37
+          -6 12 11 -20 83 -48 110 -31 29 -34 30 -137 30 l-105 0 6 -34z" />
+            <path d="M6177 5722 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M8264 5561 c12 -74 94 -123 171 -101 33 9 52 10 76 1 18 -6 34 -9 37
+          -6 12 11 -20 83 -48 110 -31 29 -34 30 -137 30 l-105 0 6 -34z" />
+            <path d="M3237 5442 c-11 -12 -17 -36 -17 -70 l0 -52 -53 0 c-89 0 -87 6 -87
+          -298 l0 -261 -35 -7 c-19 -3 -51 -3 -71 1 l-37 6 6 -37 c3 -20 17 -48 29 -62
+          41 -44 76 -52 238 -52 l150 0 2 -157 c2 -87 2 -182 1 -210 -2 -61 5 -65 67
+          -33 26 13 47 34 60 61 20 38 21 52 16 352 -3 172 -6 326 -8 342 -1 17 1 40 5
+          53 7 19 5 22 -20 22 -15 0 -42 -9 -60 -20 -50 -30 -63 -66 -63 -170 l0 -90
+          -65 0 -65 0 0 205 0 205 115 0 c110 0 117 1 140 25 23 22 25 31 25 125 0 137
+          -3 140 -148 140 -93 0 -111 -3 -125 -18z" />
+            <path d="M6877 5442 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M8557 5442 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M5214 5376 l-16 -26 -363 0 c-349 0 -363 1 -380 20 -17 19 -31 20
+          -233 20 l-214 0 18 -27 c9 -16 51 -72 93 -125 53 -68 82 -98 97 -98 15 0 52
+          -41 135 -149 l114 -150 3 180 2 179 125 0 125 0 0 -300 0 -300 -22 -5 c-13 -2
+          -42 -6 -65 -7 l-42 -3 115 -157 c64 -87 119 -158 124 -158 5 0 61 71 125 158
+          l117 157 -59 5 -58 5 -3 303 -2 302 120 0 120 0 0 -176 c0 -149 2 -175 14
+          -165 7 6 60 72 117 146 77 100 109 135 125 135 16 0 45 31 113 122 50 67 90
+          122 88 123 -1 1 -95 5 -209 9 l-207 7 -17 -25z" />
+            <path d="M2677 5302 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M6737 5302 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M2817 5162 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M6877 5162 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M6737 5022 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M6457 4882 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M6923 4880 c-34 -20 -63 -66 -63 -100 0 -18 -7 -20 -87 -22 -49 -2
+          -112 -2 -142 -2 l-53 1 6 -35 c3 -19 16 -46 28 -60 41 -44 76 -52 237 -52
+          l149 0 7 -30 c4 -17 4 -48 0 -70 -8 -48 4 -51 66 -19 32 16 46 32 65 74 21 46
+          30 55 57 60 18 4 45 1 61 -5 16 -6 31 -8 34 -5 12 11 -20 83 -48 110 -30 29
+          -36 30 -131 33 -98 4 -100 5 -110 30 -10 26 -8 58 6 95 10 24 -40 23 -82 -3z" />
+            <path d="M7437 4882 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M6223 4740 c-58 -35 -64 -61 -61 -246 3 -181 2 -178 68 -144 26 13
+          47 34 61 61 21 42 22 63 7 274 -2 17 1 40 5 53 7 19 5 22 -20 22 -15 0 -42 -9
+          -60 -20z" />
+            <path d="M2257 4602 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M2817 4602 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M6457 4602 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M7483 4600 c-59 -36 -63 -54 -63 -310 l0 -230 -64 0 -64 0 -6 88 c-4
+          48 -7 101 -9 117 -1 17 2 40 6 53 7 19 5 22 -20 22 -57 0 -123 -64 -123 -120
+          0 -18 -7 -20 -87 -22 -49 -2 -112 -2 -142 -2 l-53 1 6 -35 c12 -75 76 -112
+          196 -112 l80 0 0 -65 0 -64 -35 -7 c-19 -3 -51 -3 -71 1 l-37 6 6 -37 c8 -46
+          49 -91 99 -106 l38 -11 0 -64 0 -63 -53 0 c-83 0 -88 -10 -85 -163 3 -141 3
+          -140 69 -106 31 15 46 32 62 69 21 48 23 50 65 50 60 0 92 33 92 95 l0 45 65
+          0 65 0 0 -50 c0 -82 15 -90 160 -90 l120 0 0 -65 0 -65 -87 -2 c-49 -2 -112
+          -2 -142 -2 l-53 1 6 -35 c3 -19 16 -46 28 -60 47 -50 62 -52 428 -52 l341 0
+          24 25 c19 18 25 35 25 70 l0 45 66 0 c37 0 84 5 104 11 28 9 46 9 71 0 18 -6
+          34 -9 37 -6 12 11 -20 83 -48 110 -30 28 -36 30 -131 33 l-99 4 0 49 c0 67
+          -23 89 -90 89 l-50 0 0 50 c0 68 -22 90 -90 90 -46 0 -51 3 -61 28 -10 26 -8
+          57 6 95 6 13 2 17 -19 17 -39 0 -84 -27 -106 -63 -16 -26 -20 -50 -20 -124 l0
+          -93 -135 0 -135 0 0 50 c0 68 -22 90 -90 90 l-50 0 0 65 0 65 66 0 c37 0 84 5
+          104 11 28 9 46 9 71 0 39 -14 43 -11 34 29 -10 46 -60 98 -101 106 l-34 6 0
+          64 0 64 66 0 c37 0 84 5 104 11 28 9 46 9 71 0 18 -6 34 -9 37 -6 12 11 -20
+          83 -48 110 -30 28 -36 30 -130 33 l-98 4 -6 86 c-4 48 -7 101 -9 117 -1 17 2
+          40 6 53 7 19 5 22 -20 22 -15 0 -42 -9 -60 -20z m637 -1175 l0 -65 -65 0 -65
+          0 0 65 0 65 65 0 65 0 0 -65z" />
+            <path d="M2117 4462 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M2537 4462 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M6877 4462 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M9023 4460 c-51 -30 -62 -63 -60 -173 2 -108 3 -109 67 -77 26 13 47
+          34 61 62 19 38 20 47 9 92 -9 37 -9 59 -1 79 6 16 11 30 11 33 0 12 -59 1 -87
+          -16z" />
+            <path d="M2817 4322 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M3143 4320 c-34 -20 -63 -66 -63 -100 0 -18 -6 -20 -53 -20 -81 0
+          -87 -11 -87 -158 l0 -121 -35 -7 c-19 -3 -51 -3 -71 1 l-37 6 6 -37 c12 -73
+          76 -114 177 -114 51 0 65 4 85 25 24 23 25 30 25 140 l0 115 45 0 c36 0 52 6
+          72 26 24 24 25 29 19 92 -11 104 -11 125 -3 150 7 19 5 22 -20 22 -15 0 -42
+          -9 -60 -20z" />
+            <path d="M6643 4320 c-34 -20 -63 -66 -63 -100 0 -19 -6 -20 -157 -22 -87 -2
+          -182 -2 -212 -2 l-53 1 6 -35 c3 -19 16 -46 28 -60 41 -44 76 -52 238 -52
+          l150 0 0 -65 0 -65 -123 0 c-147 0 -157 -6 -157 -88 0 -50 0 -51 -35 -58 -19
+          -3 -51 -3 -71 1 l-37 6 6 -37 c8 -46 49 -91 99 -106 l38 -11 2 -86 c2 -47 2
+          -110 1 -138 -2 -61 5 -65 68 -32 31 15 46 32 62 69 l22 50 113 0 c107 0 114 1
+          138 25 l25 25 -5 347 c-3 192 -6 362 -8 378 -1 17 1 40 5 53 7 19 5 22 -20 22
+          -15 0 -42 -9 -60 -20z m-63 -615 l0 -65 -65 0 -65 0 0 65 0 65 65 0 65 0 0
+          -65z" />
+            <path d="M8697 4322 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M2303 4180 c-47 -28 -63 -67 -63 -155 0 -95 16 -115 90 -115 l50 0 0
+          -50 c0 -67 22 -90 89 -90 47 0 50 -2 56 -30 4 -17 4 -48 0 -70 -8 -48 4 -51
+          65 -20 66 34 80 74 80 235 0 179 3 175 -160 175 l-120 0 -11 28 c-10 26 -8 57
+          6 95 10 24 -40 23 -82 -3z" />
+            <path d="M7857 4182 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M8277 4182 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M8557 4182 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M9104 4161 c12 -74 94 -123 171 -101 33 9 52 10 76 1 18 -6 34 -9 37
+          -6 12 11 -20 83 -48 110 -31 29 -34 30 -137 30 l-105 0 6 -34z" />
+            <path d="M1124 4021 c6 -40 39 -78 83 -97 39 -17 181 -18 233 -3 28 9 46 9 71
+          0 18 -6 34 -9 37 -6 12 11 -20 83 -48 110 l-31 30 -176 0 -175 0 6 -34z" />
+            <path d="M3237 4042 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M7997 4042 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M8417 4042 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M8697 4043 c-15 -17 -17 -43 -17 -196 0 -164 2 -179 20 -197 23 -23
+          98 -27 160 -9 28 9 46 9 71 0 39 -14 43 -11 34 29 -10 46 -60 98 -101 106
+          l-34 6 0 64 c0 61 1 65 28 75 19 8 39 8 67 1 22 -6 42 -9 44 -6 11 10 -22 83
+          -49 109 -29 28 -38 30 -118 33 -76 3 -90 1 -105 -15z" />
+            <path d="M297 3902 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M1603 3900 c-34 -20 -63 -66 -63 -100 0 -18 -6 -20 -53 -20 -70 0
+          -87 -18 -87 -88 l0 -52 -53 0 c-70 0 -87 -18 -87 -88 l0 -52 -65 0 -65 0 0 50
+          c0 37 -5 55 -20 70 -19 19 -31 20 -146 18 l-126 -3 6 -34 c7 -44 50 -88 98
+          -103 l38 -11 2 -86 c2 -47 2 -110 1 -138 -2 -61 5 -65 68 -32 31 15 46 32 62
+          69 l22 50 113 0 c106 0 114 1 137 25 19 18 25 35 25 70 l0 45 45 0 c63 0 95
+          32 95 95 l0 45 45 0 c36 0 52 6 72 26 24 24 25 29 19 92 -11 104 -11 125 -3
+          150 7 19 5 22 -20 22 -15 0 -42 -9 -60 -20z" />
+            <path d="M3423 3900 c-34 -20 -63 -66 -63 -100 0 -18 -6 -20 -53 -20 -70 0
+          -87 -18 -87 -88 l0 -52 -193 0 c-243 0 -228 11 -225 -163 3 -141 3 -140 69
+          -106 31 15 46 32 62 69 l22 50 63 0 62 0 0 -65 0 -65 -53 0 c-70 0 -87 -18
+          -87 -88 l0 -52 -135 0 -135 0 0 120 c0 145 -8 160 -90 160 l-50 0 0 50 c0 37
+          -5 55 -21 71 -20 20 -28 21 -286 17 l-265 -3 6 -34 c7 -44 50 -88 98 -103 37
+          -11 38 -12 38 -60 0 -65 23 -88 89 -88 47 0 50 -2 56 -30 4 -17 4 -48 0 -70
+          -8 -48 4 -51 66 -19 31 15 46 32 62 69 l22 50 63 0 62 0 0 -120 c0 -145 9
+          -160 89 -160 47 0 50 -2 56 -30 4 -17 4 -48 0 -70 -8 -48 4 -51 66 -19 31 15
+          46 32 62 69 l22 50 62 0 c60 0 62 -1 68 -30 4 -17 4 -48 0 -70 -8 -48 4 -51
+          65 -20 58 30 80 79 80 180 l0 80 45 0 c63 0 95 32 95 95 l0 45 115 0 c110 0
+          117 1 141 25 l25 25 -5 208 c-3 114 -6 221 -8 237 -1 17 1 40 5 53 7 19 5 22
+          -20 22 -15 0 -42 -9 -60 -20z" />
+            <path d="M8124 3881 c7 -43 50 -88 98 -103 43 -13 54 -42 43 -108 -8 -48 4
+          -51 65 -20 55 28 80 80 80 165 0 101 -9 106 -166 103 l-126 -3 6 -34z" />
+            <path d="M577 3762 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M1137 3762 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M6877 3762 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M9104 3741 c7 -44 50 -88 98 -103 l38 -11 0 -64 0 -63 -53 0 c-83 0
+          -88 -10 -85 -163 3 -141 3 -140 69 -106 31 15 46 32 62 69 21 48 23 50 65 50
+          32 0 49 6 67 25 25 24 25 27 25 195 0 221 8 212 -166 208 l-126 -3 6 -34z" />
+            <path d="M343 3620 c-51 -30 -62 -63 -60 -173 2 -108 3 -109 67 -77 26 13 47
+          34 61 62 19 38 20 47 9 92 -9 37 -9 59 -1 79 6 16 11 30 11 33 0 12 -59 1 -87
+          -16z" />
+            <path d="M8557 3622 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M1603 3480 c-34 -20 -63 -66 -63 -100 0 -18 -6 -20 -53 -20 -83 0
+          -88 -10 -85 -163 3 -141 3 -140 69 -106 31 15 46 32 62 69 l22 50 134 0 c73 0
+          151 5 171 11 28 9 46 9 71 0 18 -6 34 -9 37 -6 12 11 -20 83 -48 110 -30 29
+          -36 30 -131 33 -98 4 -100 5 -110 30 -10 26 -8 58 6 95 10 24 -40 23 -82 -3z" />
+            <path d="M3644 3461 c12 -74 94 -123 171 -101 33 9 52 10 76 1 18 -6 34 -9 37
+          -6 12 11 -20 83 -48 110 -31 29 -34 30 -137 30 l-105 0 6 -34z" />
+            <path d="M4077 3483 c-11 -13 -17 -36 -17 -71 l0 -52 -53 0 c-69 0 -87 -18
+          -87 -88 0 -50 0 -51 -35 -58 -19 -3 -51 -3 -71 1 l-37 6 6 -37 c8 -46 49 -91
+          99 -106 l38 -11 0 -63 0 -63 -35 -7 c-19 -3 -51 -3 -71 1 l-37 6 6 -37 c8 -46
+          49 -91 99 -106 37 -11 38 -12 38 -60 0 -77 18 -88 140 -88 94 0 103 2 125 25
+          19 18 25 35 25 70 l0 45 45 0 c63 0 95 32 95 95 l0 45 64 0 c64 0 65 0 71 -30
+          4 -17 4 -48 0 -70 -8 -48 4 -51 65 -20 55 28 80 80 80 165 0 108 9 105 -300
+          105 l-260 0 0 65 0 65 45 0 c64 0 95 31 95 95 0 40 3 47 28 56 19 8 39 8 67 1
+          22 -6 42 -9 44 -6 11 10 -22 83 -49 109 -29 28 -38 30 -118 33 -76 3 -90 1
+          -105 -15z" />
+            <path d="M4963 3480 c-34 -20 -63 -66 -63 -100 0 -18 -6 -20 -53 -20 -69 0
+          -87 -18 -87 -88 0 -50 0 -51 -35 -58 -19 -3 -51 -3 -71 1 l-37 6 6 -37 c13
+          -77 76 -114 196 -114 l79 0 7 -30 c4 -17 4 -48 0 -70 -8 -48 4 -51 66 -19 31
+          15 46 32 62 69 l22 50 62 0 c60 0 62 -1 68 -30 4 -17 4 -48 0 -70 -8 -48 4
+          -51 65 -20 26 13 47 34 61 61 19 38 20 52 15 212 -3 95 -7 186 -8 202 -1 17 1
+          40 5 53 7 19 5 22 -20 22 -57 0 -123 -64 -123 -120 0 -18 -6 -20 -65 -20 -62
+          0 -66 1 -76 28 -10 26 -8 57 6 95 10 24 -40 23 -82 -3z" />
+            <path d="M5617 3482 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M5897 3482 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M7297 3482 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M437 3343 c-11 -13 -17 -36 -17 -71 0 -50 0 -51 -35 -58 -19 -3 -51
+          -3 -71 1 l-37 6 6 -37 c12 -73 76 -114 177 -114 80 0 110 26 110 95 0 40 3 47
+          28 56 19 8 39 8 67 1 22 -6 42 -9 44 -6 11 10 -22 83 -49 109 -29 28 -38 30
+          -118 33 -76 3 -90 1 -105 -15z" />
+            <path d="M5523 3340 c-47 -28 -63 -67 -63 -155 0 -110 7 -115 161 -115 67 0
+          139 5 159 11 28 9 46 9 71 0 18 -6 34 -9 37 -6 12 11 -20 83 -48 110 -30 29
+          -36 30 -131 33 -98 4 -100 5 -110 30 -10 26 -8 58 6 95 10 24 -40 23 -82 -3z" />
+            <path d="M6177 3342 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M6444 3321 c3 -19 16 -45 28 -59 41 -44 76 -52 238 -52 l150 0 0 -50
+          c0 -68 22 -90 90 -90 l50 0 0 -65 0 -65 -193 0 c-243 0 -228 11 -225 -163 3
+          -141 3 -140 69 -106 31 15 46 32 62 69 l22 50 63 0 62 0 0 -65 0 -64 -35 -7
+          c-19 -3 -51 -3 -71 1 l-37 6 6 -37 c8 -46 49 -91 99 -106 37 -11 38 -12 38
+          -60 0 -66 23 -88 91 -88 29 0 69 5 89 11 28 9 46 9 71 0 39 -14 43 -11 34 29
+          -10 46 -60 98 -101 106 l-34 6 0 134 0 134 45 0 c35 0 52 6 70 25 25 24 25 27
+          25 195 0 157 -2 172 -20 190 -15 15 -33 20 -70 20 l-50 0 0 50 c0 37 -5 55
+          -21 71 -20 20 -28 21 -286 17 l-265 -3 6 -34z" />
+            <path d="M8557 3342 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M857 3202 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M1137 3202 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M3377 3202 c-14 -15 -17 -41 -17 -140 l0 -122 -53 0 c-86 0 -87 -2
+          -87 -228 l0 -192 -123 0 c-107 0 -126 -2 -140 -18 -15 -16 -17 -46 -17 -210
+          l0 -192 -65 0 c-62 0 -66 1 -76 28 -10 26 -8 57 6 95 6 13 2 17 -19 17 -59 0
+          -126 -62 -126 -117 0 -22 -4 -23 -65 -23 l-65 0 0 190 c0 240 7 230 -148 230
+          -142 0 -142 0 -142 -143 0 -130 10 -147 90 -147 l50 0 0 -65 0 -65 -134 0
+          -134 0 -6 88 c-4 48 -7 101 -9 117 -1 17 2 40 6 53 7 19 5 22 -20 22 -57 0
+          -123 -64 -123 -120 0 -18 -6 -20 -65 -20 l-65 0 0 50 c0 68 -22 90 -90 90
+          l-50 0 0 50 c0 82 -15 90 -160 90 l-120 0 0 65 0 65 66 0 c37 0 84 5 104 11
+          28 9 46 9 71 0 18 -6 34 -9 37 -6 12 11 -20 83 -48 110 l-31 30 -156 3 c-185
+          4 -193 1 -193 -83 0 -57 -9 -65 -75 -65 -39 0 -49 8 -64 50 -16 48 -58 89 -98
+          96 -50 9 -64 58 -38 127 6 13 2 17 -19 17 -39 0 -84 -27 -106 -63 -16 -26 -20
+          -50 -20 -124 l0 -93 -53 0 c-69 0 -87 -18 -87 -88 0 -50 0 -51 -35 -58 -19 -3
+          -51 -3 -71 1 l-37 6 6 -37 c8 -46 49 -91 99 -106 37 -11 38 -12 38 -60 0 -66
+          23 -88 90 -88 l50 0 0 -190 c0 -177 1 -191 20 -210 15 -15 33 -20 70 -20 l50
+          0 0 -50 c0 -37 5 -55 20 -70 19 -19 33 -20 210 -20 l190 0 0 -50 c0 -82 15
+          -90 160 -90 l120 0 0 -65 0 -65 -87 -2 c-49 -2 -112 -2 -142 -2 l-53 1 6 -35
+          c7 -44 49 -89 98 -104 43 -13 54 -42 43 -108 -8 -48 4 -51 66 -19 31 15 46 32
+          62 69 21 48 23 50 65 50 32 0 49 6 67 25 24 23 25 30 25 140 l0 115 45 0 c64
+          0 95 31 95 95 0 40 3 47 28 56 19 8 39 8 67 1 22 -6 42 -9 44 -6 11 10 -22 83
+          -49 109 l-31 30 -156 3 c-186 4 -193 1 -193 -85 l0 -53 -65 0 -65 0 0 135 0
+          135 28 11 c19 8 39 8 67 1 22 -6 41 -9 43 -7 2 2 1 18 -3 35 -10 46 -60 98
+          -101 106 -51 9 -65 57 -39 127 6 13 2 17 -19 17 -39 0 -84 -27 -106 -63 -18
+          -28 -20 -51 -20 -194 l0 -163 -135 0 -135 0 0 50 c0 68 -22 90 -90 90 l-50 0
+          0 65 0 65 45 0 c63 0 95 32 95 95 l0 45 115 0 c110 0 117 1 140 25 19 18 25
+          35 25 70 l0 45 65 0 65 0 0 -50 c0 -68 22 -90 90 -90 l50 0 0 -50 c0 -68 22
+          -90 90 -90 l50 0 0 -50 c0 -82 15 -90 160 -90 l120 0 0 -50 c0 -67 22 -90 89
+          -90 47 0 50 -2 56 -30 4 -17 4 -48 0 -70 -8 -48 4 -51 66 -19 31 15 46 32 62
+          69 l22 50 203 0 202 0 0 -65 0 -65 -157 -2 c-87 -2 -182 -2 -212 -2 l-53 1 6
+          -35 c7 -44 49 -89 98 -104 37 -11 38 -12 38 -60 0 -65 23 -88 89 -88 47 0 50
+          -2 56 -30 4 -17 4 -48 0 -70 -8 -48 4 -51 65 -20 58 30 80 79 80 180 l0 80 45
+          0 c35 0 52 6 70 25 25 24 25 26 25 210 l0 185 45 0 c35 0 52 6 70 25 25 24 25
+          26 25 210 l0 185 64 0 c64 0 65 0 71 -30 4 -17 4 -48 0 -70 -8 -48 4 -51 65
+          -20 58 30 80 79 80 180 l0 80 115 0 c110 0 117 1 140 25 19 18 25 35 25 70 0
+          40 3 47 28 56 19 8 39 8 67 1 22 -6 41 -9 43 -7 2 2 1 18 -3 35 -10 46 -60 98
+          -101 106 l-34 6 0 189 c0 239 6 229 -148 229 -93 0 -111 -3 -125 -18z m123
+          -477 l0 -65 -65 0 -65 0 0 65 0 65 65 0 65 0 0 -65z m-2407 -64 c17 -7 26 -20
+          31 -45 8 -41 60 -91 105 -101 31 -7 31 -7 31 -71 l0 -64 -65 0 c-62 0 -66 1
+          -76 28 -10 26 -8 57 6 95 6 14 2 17 -21 17 -58 0 -124 -64 -124 -120 0 -18 -6
+          -20 -65 -20 l-65 0 0 65 0 65 45 0 c64 0 95 31 95 95 0 38 4 47 23 55 29 12
+          51 12 80 1z" />
+            <path d="M6083 3200 c-34 -20 -63 -66 -63 -100 0 -18 -6 -20 -53 -20 -70 0
+          -87 -18 -87 -88 l0 -52 -193 0 c-175 0 -196 -2 -210 -18 -15 -16 -17 -46 -17
+          -210 l0 -192 -135 0 -135 0 0 120 c0 172 21 160 -288 160 -287 0 -282 2 -282
+          -88 0 -50 0 -51 -35 -58 -19 -3 -51 -3 -71 1 l-37 6 6 -37 c12 -73 76 -114
+          177 -114 80 0 110 26 110 95 l0 45 65 0 65 0 0 -65 0 -64 -35 -7 c-19 -3 -51
+          -3 -71 1 l-37 6 6 -37 c3 -20 17 -48 29 -62 41 -44 76 -52 237 -52 l149 0 7
+          -30 c4 -17 4 -48 0 -70 -8 -48 4 -51 66 -19 31 15 46 32 62 69 l22 50 113 0
+          c106 0 114 1 137 25 19 18 25 35 25 70 l0 45 45 0 c63 0 95 32 95 95 l0 45 45
+          0 c63 0 95 32 95 95 l0 45 205 0 205 0 2 -87 c2 -49 2 -112 1 -140 -2 -61 5
+          -65 67 -33 68 35 80 73 80 250 l0 150 28 11 c19 8 39 8 67 1 22 -6 41 -9 43
+          -7 2 2 1 18 -3 35 -10 46 -60 98 -101 106 -51 9 -65 57 -39 127 10 24 -40 23
+          -82 -3 -50 -30 -63 -66 -63 -170 l0 -90 -64 0 -64 0 -6 88 c-4 48 -7 101 -9
+          117 -1 17 2 40 6 53 7 19 5 22 -20 22 -15 0 -42 -9 -60 -20z" />
+            <path d="M8323 3200 c-55 -33 -63 -62 -63 -225 0 -173 6 -185 90 -185 l50 0 0
+          -50 c0 -68 22 -90 90 -90 l50 0 0 -50 c0 -67 22 -90 89 -90 47 0 50 -2 56 -30
+          4 -17 4 -48 0 -70 -8 -48 4 -51 66 -19 31 15 46 32 62 69 21 48 23 50 65 50
+          33 0 49 6 69 26 24 24 25 29 19 92 -11 104 -11 125 -3 150 7 19 5 22 -18 22
+          -58 0 -125 -63 -125 -117 0 -22 -4 -23 -65 -23 l-65 0 0 50 c0 37 -5 55 -20
+          70 -15 15 -33 20 -70 20 l-50 0 0 50 c0 67 -22 90 -89 90 l-49 0 -6 88 c-4 48
+          -7 101 -9 117 -1 17 2 40 6 53 7 19 5 22 -20 22 -15 0 -42 -9 -60 -20z" />
+            <path d="M8743 3200 c-47 -28 -63 -67 -63 -155 0 -110 7 -115 160 -115 66 0
+          139 5 162 11 60 16 93 1 102 -45 8 -41 60 -91 105 -101 16 -3 47 -1 69 6 30 9
+          48 9 73 0 18 -6 34 -9 37 -6 12 11 -20 83 -48 110 -30 28 -36 30 -118 31 -113
+          0 -107 -2 -120 42 -6 21 -25 51 -42 67 -30 29 -36 30 -131 33 -98 4 -100 5
+          -110 30 -10 26 -8 58 6 95 10 24 -40 23 -82 -3z" />
+            <path d="M623 3060 c-50 -30 -67 -72 -59 -147 8 -81 0 -113 -28 -113 -32 0
+          -83 -36 -102 -71 -13 -25 -15 -47 -10 -96 8 -81 0 -113 -28 -113 -32 0 -83
+          -35 -101 -70 -14 -28 -16 -72 -14 -336 3 -337 -1 -320 70 -283 31 15 46 32 62
+          69 l22 50 63 0 62 0 0 -120 c0 -145 9 -160 89 -160 47 0 50 -2 56 -30 4 -17 4
+          -48 0 -70 -8 -48 4 -51 65 -20 55 28 80 80 80 165 0 84 -18 105 -90 105 l-50
+          0 0 120 c0 145 -8 160 -90 160 l-50 0 0 120 c0 145 -8 160 -90 160 -46 0 -51
+          3 -61 27 -6 15 -8 42 -4 60 5 27 14 36 60 57 43 19 58 33 76 67 19 39 20 48
+          10 90 -18 71 -8 94 54 123 43 19 58 33 76 67 19 39 20 47 9 93 -9 37 -9 59 -1
+          79 6 16 11 30 11 33 0 12 -59 1 -87 -16z" />
+            <path d="M997 3062 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M1277 3062 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M1684 3042 c3 -19 16 -46 28 -60 41 -44 76 -52 237 -52 l149 0 7 -30
+          c4 -17 4 -48 0 -70 -8 -48 4 -51 66 -19 31 15 46 32 62 69 l22 50 63 0 62 0 0
+          -120 c0 -145 8 -160 90 -160 l50 0 0 -50 c0 -67 22 -90 89 -90 47 0 50 -2 56
+          -30 4 -17 4 -48 0 -70 -8 -48 4 -51 65 -20 55 28 80 80 80 165 0 84 -18 105
+          -90 105 l-50 0 0 120 c0 145 -8 160 -90 160 l-50 0 0 50 c0 37 -5 55 -21 71
+          -20 20 -27 20 -426 18 l-405 -3 6 -34z" />
+            <path d="M7577 3062 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M7997 3062 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M297 2922 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M1137 2922 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M2817 2922 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M7437 2922 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M7704 2901 c7 -43 50 -88 98 -103 43 -13 54 -42 43 -108 -8 -48 4
+          -51 65 -20 55 28 80 80 80 165 0 101 -9 106 -166 103 l-126 -3 6 -34z" />
+            <path d="M1837 2782 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M4357 2782 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M8137 2782 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M2117 2642 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M8043 2640 c-34 -20 -63 -66 -63 -100 0 -18 -6 -20 -53 -20 -80 0
+          -87 -12 -87 -143 0 -130 10 -147 89 -147 47 0 50 -2 56 -30 4 -17 4 -48 0 -70
+          -8 -48 4 -51 65 -20 58 30 80 79 80 180 l0 80 115 0 c111 0 117 1 142 26 24
+          24 25 29 19 92 -11 104 -11 125 -3 150 7 19 5 22 -20 22 -57 0 -123 -64 -123
+          -120 0 -18 -6 -20 -65 -20 -62 0 -66 1 -76 28 -10 26 -8 57 6 95 10 24 -40 23
+          -82 -3z" />
+            <path d="M1837 2502 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M3924 2481 c7 -44 50 -88 98 -103 31 -9 39 -17 44 -44 10 -51 -4 -94
+          -29 -94 -32 0 -84 -35 -101 -68 -19 -37 -18 -222 2 -222 34 0 93 43 113 82 19
+          38 20 47 10 89 -19 71 -8 94 56 123 47 22 57 32 76 75 l22 51 63 0 62 0 2 -87
+          c2 -49 2 -112 1 -140 -2 -61 5 -65 67 -33 66 34 80 74 80 235 0 192 25 178
+          -307 173 l-265 -3 6 -34z" />
+            <path d="M5897 2502 c-11 -12 -17 -35 -17 -70 l0 -52 -53 0 c-80 0 -87 -12
+          -87 -143 0 -144 3 -147 140 -147 94 0 103 2 125 25 24 23 25 30 25 140 l0 115
+          66 0 c37 0 84 5 104 11 28 9 46 9 71 0 18 -6 34 -9 37 -6 12 11 -20 83 -48
+          110 l-31 30 -157 3 c-144 3 -159 2 -175 -16z" />
+            <path d="M6643 2500 c-51 -30 -62 -63 -60 -173 2 -108 3 -109 67 -77 26 13 47
+          34 61 62 19 38 20 47 9 92 -9 37 -9 59 -1 79 6 16 11 30 11 33 0 12 -59 1 -87
+          -16z" />
+            <path d="M7284 2481 c7 -43 50 -88 98 -103 43 -13 54 -42 43 -108 -8 -48 4
+          -51 65 -20 55 28 80 80 80 165 0 101 -9 106 -166 103 l-126 -3 6 -34z" />
+            <path d="M3517 2362 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M3797 2362 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M4683 2360 c-50 -30 -63 -66 -63 -169 l0 -90 -35 -7 c-19 -3 -51 -3
+          -71 1 l-37 6 6 -37 c12 -73 76 -114 177 -114 80 0 110 26 110 95 l0 45 136 0
+          c75 0 154 5 174 11 28 9 46 9 71 0 18 -6 34 -9 37 -6 12 11 -20 83 -48 110
+          l-31 30 -170 3 -170 3 -10 27 c-10 26 -8 58 6 95 10 24 -40 23 -82 -3z" />
+            <path d="M8417 2362 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M9257 2362 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M3377 2222 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M3703 2220 c-50 -30 -63 -66 -63 -169 l0 -90 -35 -7 c-19 -3 -51 -3
+          -71 1 l-37 6 6 -37 c12 -73 76 -114 177 -114 52 0 65 4 86 25 25 26 26 26 20
+          163 -3 75 -7 151 -8 167 -1 17 1 40 5 53 7 19 5 22 -20 22 -15 0 -42 -9 -60
+          -20z" />
+            <path d="M5337 2222 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M7017 2222 c-15 -16 -17 -36 -15 -145 3 -141 3 -140 69 -106 32 16
+          46 32 65 74 21 46 30 55 57 60 18 4 45 1 61 -5 16 -6 31 -8 34 -5 12 11 -20
+          83 -48 110 -29 28 -38 30 -118 33 -76 3 -89 1 -105 -16z" />
+            <path d="M7717 2222 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M8544 2201 c12 -74 94 -123 171 -101 33 9 52 10 76 1 18 -6 34 -9 37
+          -6 12 11 -20 83 -48 110 -31 29 -34 30 -137 30 l-105 0 6 -34z" />
+            <path d="M9117 2222 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M1137 2082 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M5197 2082 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M5464 2061 c7 -44 50 -88 98 -103 l38 -11 0 -64 0 -63 -263 0 c-305
+          0 -297 2 -297 -88 l0 -52 -65 0 -65 0 0 65 c0 62 1 66 28 76 19 8 39 8 67 1
+          22 -6 42 -9 44 -6 11 10 -22 83 -49 109 -29 28 -38 30 -116 34 -108 4 -124 -7
+          -124 -85 0 -53 0 -53 -35 -60 -19 -3 -51 -3 -71 1 l-37 6 6 -37 c8 -46 49 -91
+          99 -106 l38 -11 0 -64 0 -63 -123 0 c-147 0 -157 -6 -157 -88 l0 -52 -87 -2
+          c-49 -2 -112 -2 -142 -2 l-53 1 6 -35 c7 -44 49 -89 98 -104 l38 -11 0 -64 0
+          -63 -65 0 -65 0 0 50 c0 82 -15 90 -160 90 l-120 0 0 50 c0 37 -5 55 -20 70
+          -19 19 -31 20 -146 18 l-126 -3 6 -34 c7 -44 50 -88 98 -103 l38 -11 0 -63 0
+          -63 -35 -7 c-19 -3 -51 -3 -71 1 l-37 6 6 -37 c12 -73 76 -114 177 -114 80 0
+          110 26 110 95 l0 45 65 0 65 0 0 -50 c0 -82 15 -90 160 -90 l120 0 0 -50 c0
+          -37 5 -55 20 -70 19 -19 33 -20 280 -20 l260 0 2 -157 c2 -87 2 -182 1 -210
+          -2 -61 5 -65 67 -33 58 30 80 79 80 180 l0 80 45 0 c63 0 95 32 95 95 l0 45
+          64 0 c64 0 65 0 71 -30 4 -17 4 -48 0 -70 -8 -48 4 -51 65 -20 58 30 80 79 80
+          180 l0 80 64 0 c64 0 65 0 71 -30 4 -17 4 -48 0 -70 -8 -48 4 -51 66 -19 31
+          15 46 32 62 69 l22 50 132 0 131 0 7 -30 c4 -17 4 -48 0 -70 -8 -48 4 -51 66
+          -19 31 15 46 32 62 69 21 48 23 50 65 50 33 0 49 6 69 26 24 24 25 29 19 92
+          -11 104 -11 125 -3 150 7 19 5 22 -20 22 -57 0 -123 -64 -123 -120 0 -20 -4
+          -20 -275 -20 l-275 0 0 50 c0 37 -5 55 -20 70 -19 19 -33 20 -210 20 l-190 0
+          0 135 0 135 45 0 c63 0 95 32 95 95 l0 45 135 0 135 0 0 -190 c0 -177 1 -191
+          20 -210 19 -19 33 -20 260 -20 l241 0 24 25 c19 18 25 35 25 70 l0 45 45 0
+          c35 0 52 6 70 25 19 18 25 35 25 70 l0 45 65 0 65 0 0 -50 c0 -68 22 -90 90
+          -90 l50 0 2 -87 c2 -49 2 -112 1 -140 -2 -61 5 -65 67 -33 68 35 80 73 80 250
+          l0 150 64 0 c64 0 65 0 71 -30 4 -17 4 -48 0 -70 -8 -48 4 -51 66 -19 32 16
+          46 32 65 74 21 46 30 55 57 60 18 4 45 1 61 -5 36 -13 40 -9 31 30 -10 46 -60
+          98 -101 106 -51 9 -65 57 -39 127 6 14 2 17 -21 17 -58 0 -124 -64 -124 -120
+          0 -18 -6 -20 -64 -20 l-64 0 -6 88 c-4 48 -7 101 -9 117 -1 17 2 40 6 53 7 19
+          5 22 -20 22 -15 0 -42 -9 -60 -20 -50 -30 -63 -66 -63 -170 l0 -90 -135 0
+          -135 0 0 50 c0 68 -22 90 -90 90 l-50 0 0 50 c0 37 -5 55 -20 70 -19 19 -33
+          20 -210 20 l-190 0 0 50 c0 37 -5 55 -20 70 -19 19 -31 20 -146 18 l-126 -3 6
+          -34z m556 -316 l0 -65 -135 0 -135 0 0 65 0 65 135 0 135 0 0 -65z m0 -280 l0
+          -65 -135 0 -135 0 0 65 0 65 135 0 135 0 0 -65z m-980 -280 l0 -205 -205 0
+          -205 0 0 205 0 205 205 0 205 0 0 -205z m280 -140 l0 -65 -65 0 -65 0 0 65 0
+          65 65 0 65 0 0 -65z" />
+            <path d="M4777 1242 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M6304 2061 c12 -74 94 -123 171 -101 33 9 52 10 76 1 18 -6 34 -9 37
+          -6 12 11 -20 83 -48 110 -31 29 -34 30 -137 30 l-105 0 6 -34z" />
+            <path d="M7483 2080 c-61 -37 -63 -49 -63 -365 0 -352 -13 -325 159 -325 l119
+          0 7 -30 c4 -17 4 -48 0 -70 -8 -48 4 -51 66 -19 31 15 46 32 62 69 l22 50 133
+          0 132 0 0 -65 0 -65 -87 -2 c-49 -2 -112 -2 -142 -2 l-53 1 6 -35 c7 -44 49
+          -89 98 -104 37 -11 38 -12 38 -60 0 -66 23 -88 90 -88 l50 0 0 -120 c0 -167
+          -9 -160 210 -160 168 0 171 0 195 25 19 18 25 35 25 70 l0 45 115 0 c110 0
+          117 1 140 25 19 18 25 35 25 70 l0 45 65 0 65 0 2 -227 c2 -126 2 -252 1 -280
+          -2 -61 5 -65 68 -32 31 15 46 32 62 69 21 48 23 50 65 50 32 0 49 6 67 25 23
+          22 25 31 25 125 0 123 -11 140 -90 140 l-50 0 0 65 0 65 64 0 c64 0 65 0 71
+          -30 4 -17 4 -48 0 -70 -8 -48 4 -51 65 -20 26 13 47 34 61 61 21 42 22 63 7
+          274 -2 17 1 40 5 53 7 19 5 22 -20 22 -57 0 -123 -64 -123 -120 0 -19 -5 -20
+          -205 -20 l-205 0 0 135 0 135 28 11 c19 8 39 8 67 1 22 -6 41 -9 43 -7 2 2 1
+          18 -3 35 -10 46 -60 98 -101 106 -41 8 -59 40 -49 91 5 27 14 36 60 57 70 32
+          95 77 95 171 0 101 -9 106 -166 103 l-126 -3 6 -34 c7 -44 50 -88 98 -103 31
+          -9 39 -17 44 -44 10 -51 -4 -94 -29 -94 -52 0 -117 -67 -117 -120 0 -19 -6
+          -20 -135 -20 l-135 0 0 65 0 65 66 0 c37 0 84 5 104 11 28 9 46 9 71 0 18 -6
+          34 -9 37 -6 12 11 -20 83 -48 110 -30 28 -36 30 -131 33 l-99 4 0 64 c0 61 1
+          65 28 75 19 8 39 8 67 1 22 -6 42 -9 44 -6 11 10 -22 83 -49 109 -29 28 -38
+          30 -116 34 -108 4 -124 -7 -124 -86 l0 -53 -53 0 c-70 0 -87 -18 -87 -88 l0
+          -52 -123 0 c-161 0 -157 4 -157 -158 l0 -122 -135 0 -135 0 0 65 0 65 45 0
+          c64 0 95 31 95 95 0 40 3 47 28 56 19 8 39 8 67 1 22 -6 42 -9 44 -6 11 10
+          -22 83 -49 109 -30 29 -36 30 -131 33 -98 4 -100 5 -110 30 -10 26 -8 58 6 95
+          10 24 -40 23 -82 -3z m777 -475 l0 -65 -135 0 -135 0 0 65 0 65 135 0 135 0 0
+          -65z m420 -420 l0 -205 -205 0 -205 0 0 205 0 205 205 0 205 0 0 -205z" />
+            <path d="M8417 1242 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M3283 1940 c-34 -20 -63 -66 -63 -99 0 -24 -51 -37 -106 -26 l-37 6
+          6 -37 c12 -73 76 -114 177 -114 52 0 65 4 87 26 24 24 25 29 19 92 -11 104
+          -11 125 -3 150 7 19 5 22 -20 22 -15 0 -42 -9 -60 -20z" />
+            <path d="M9303 1940 c-34 -20 -63 -66 -63 -100 0 -18 -6 -20 -53 -20 -69 0
+          -87 -18 -87 -88 0 -50 0 -51 -35 -58 -19 -3 -51 -3 -71 1 l-37 6 6 -37 c13
+          -77 76 -114 196 -114 l79 0 7 -30 c4 -17 4 -48 0 -70 -8 -48 4 -51 65 -20 26
+          13 47 34 61 61 19 38 20 52 15 212 -3 95 -7 186 -8 202 -1 17 1 40 5 53 7 19
+          5 22 -20 22 -15 0 -42 -9 -60 -20z" />
+            <path d="M3797 1802 c-11 -12 -17 -36 -17 -70 l0 -52 -157 -2 c-87 -2 -182 -2
+          -212 -2 l-53 1 6 -35 c3 -19 16 -46 28 -60 45 -49 67 -52 358 -52 l271 0 24
+          25 c19 18 25 35 25 70 l0 45 65 0 65 0 0 -50 c0 -68 22 -90 91 -90 29 0 69 5
+          89 11 28 9 46 9 71 0 39 -14 43 -11 34 29 -10 46 -60 98 -101 106 -33 6 -34 7
+          -34 55 0 36 -5 54 -20 69 -19 19 -33 20 -268 20 -228 0 -250 -2 -265 -18z" />
+            <path d="M297 1662 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M424 1501 c12 -74 94 -123 171 -101 33 9 52 10 76 1 18 -6 34 -9 37
+          -6 12 11 -20 83 -48 110 -31 29 -34 30 -137 30 l-105 0 6 -34z" />
+            <path d="M857 1522 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M1137 1522 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M1977 1522 c-14 -15 -17 -39 -17 -125 0 -144 3 -147 140 -147 94 0
+          103 2 125 25 19 18 25 35 25 70 0 40 3 47 28 56 19 8 39 8 67 1 22 -6 42 -9
+          44 -6 11 10 -22 83 -49 109 l-31 30 -157 3 c-144 3 -159 2 -175 -16z" />
+            <path d="M3143 1520 c-51 -30 -62 -63 -60 -173 2 -108 3 -109 67 -77 26 13 47
+          34 61 62 19 38 20 47 9 92 -9 37 -9 59 -1 79 6 16 11 30 11 33 0 12 -59 1 -87
+          -16z" />
+            <path d="M4077 1522 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M5337 1522 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M7157 1522 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M7063 1380 c-34 -20 -63 -66 -63 -99 0 -24 -51 -37 -106 -26 l-37 6
+          6 -37 c8 -46 49 -91 99 -106 37 -11 38 -12 38 -60 0 -79 16 -88 160 -88 66 0
+          139 5 162 11 60 16 93 1 102 -45 8 -41 60 -91 105 -101 16 -3 47 -1 69 6 30 9
+          48 9 73 0 18 -6 34 -9 37 -6 12 11 -20 83 -48 110 -30 28 -36 30 -118 31 -113
+          0 -109 -1 -117 35 -10 45 -60 97 -101 105 -33 6 -34 7 -34 55 0 67 -23 89 -90
+          89 -46 0 -51 3 -61 28 -10 26 -8 57 6 95 10 24 -40 23 -82 -3z" />
+            <path d="M470 1243 c-28 -10 -66 -37 -101 -72 -89 -89 -89 -90 -89 -523 l0
+          -368 368 0 c433 0 434 0 523 89 89 89 89 90 89 523 l0 368 -372 -1 c-314 0
+          -380 -3 -418 -16z m648 -395 c-3 -243 -5 -277 -22 -308 -26 -49 -45 -69 -91
+          -94 -38 -20 -56 -21 -313 -24 l-274 -3 4 273 c3 243 5 277 22 308 34 63 73 94
+          141 111 17 4 144 7 283 8 l254 1 -4 -272z" />
+            <path d="M725 921 c-30 -59 -35 -63 -104 -76 -81 -15 -86 -34 -29 -92 l47 -48
+          -6 -67 c-5 -65 -5 -68 16 -68 12 0 44 11 71 25 l50 25 50 -25 c69 -35 90 -33
+          90 8 0 17 -4 48 -10 67 -9 33 -8 37 36 81 63 64 58 81 -26 94 l-65 10 -30 57
+          c-38 73 -56 74 -90 9z" />
+            <path d="M2244 1221 c12 -74 94 -123 171 -101 33 9 52 10 76 1 18 -6 34 -9 37
+          -6 12 11 -20 83 -48 110 -31 29 -34 30 -137 30 l-105 0 6 -34z" />
+            <path d="M2804 1221 c12 -74 94 -123 171 -101 33 9 52 10 76 1 18 -6 34 -9 37
+          -6 12 11 -20 83 -48 110 -31 29 -34 30 -137 30 l-105 0 6 -34z" />
+            <path d="M3237 1242 c-15 -16 -17 -36 -15 -145 3 -141 3 -140 69 -106 32 16
+          46 32 65 74 21 46 30 55 57 60 18 4 45 1 61 -5 16 -6 31 -8 34 -5 12 11 -20
+          83 -48 110 -29 28 -38 30 -118 33 -76 3 -89 1 -105 -16z" />
+            <path d="M2163 1100 c-50 -30 -63 -66 -63 -170 l0 -90 -65 0 -65 0 0 50 c0 37
+          -5 55 -20 70 -19 19 -33 20 -268 20 -228 0 -250 -2 -265 -18 -15 -16 -17 -45
+          -17 -195 0 -164 2 -179 20 -197 15 -15 33 -20 69 -20 47 0 50 -2 56 -30 4 -17
+          4 -48 0 -70 -8 -48 4 -51 65 -20 58 30 80 79 80 180 l0 80 65 0 65 0 0 -50 c0
+          -68 22 -90 90 -90 l50 0 0 -65 0 -65 -87 -2 c-49 -2 -112 -2 -142 -2 l-53 1 6
+          -35 c6 -41 38 -79 83 -98 41 -17 318 -19 373 -3 28 9 46 9 71 0 39 -14 43 -11
+          34 29 -10 46 -60 98 -101 106 l-34 6 0 134 0 134 185 0 c184 0 186 0 210 25
+          19 18 25 35 25 70 0 40 3 47 28 56 19 8 39 8 67 1 22 -6 42 -9 44 -6 11 10
+          -22 83 -49 109 l-31 30 -170 3 -170 3 -10 27 c-10 26 -8 58 6 95 10 24 -40 23
+          -82 -3z" />
+            <path d="M6783 1100 c-34 -20 -63 -66 -63 -100 0 -19 -6 -20 -157 -22 -87 -2
+          -182 -2 -212 -2 l-53 1 6 -35 c7 -44 49 -89 98 -104 43 -13 54 -42 43 -108 -8
+          -48 4 -51 66 -19 31 15 46 32 62 69 l22 50 63 0 62 0 0 -50 c0 -68 22 -90 90
+          -90 l50 0 0 -50 c0 -79 17 -90 140 -90 94 0 103 2 125 25 19 18 25 35 25 70
+          l0 45 66 0 c37 0 84 5 104 11 28 9 46 9 71 0 18 -6 34 -9 37 -6 12 11 -20 83
+          -48 110 l-31 30 -239 3 -238 3 -6 87 c-4 48 -7 101 -9 117 -1 17 2 40 6 53 7
+          19 5 22 -20 22 -15 0 -42 -9 -60 -20z" />
+            <path d="M7717 1102 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M2817 962 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M3097 962 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M3517 962 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M3983 960 c-34 -20 -63 -66 -63 -99 0 -24 -51 -37 -106 -26 l-37 6 6
+          -37 c7 -43 39 -81 84 -100 39 -17 181 -18 233 -3 28 9 46 9 71 0 39 -14 43
+          -11 34 29 -10 46 -60 98 -101 106 -51 9 -65 57 -39 127 10 24 -40 23 -82 -3z" />
+            <path d="M7857 962 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M3377 822 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M5757 823 c-15 -17 -17 -43 -17 -196 0 -164 2 -179 20 -197 23 -23
+          98 -27 160 -9 28 9 46 9 71 0 39 -14 43 -11 34 29 -10 46 -60 98 -101 106
+          l-34 6 0 64 c0 61 1 65 28 75 19 8 39 8 67 1 22 -6 42 -9 44 -6 11 10 -22 83
+          -49 109 -29 28 -38 30 -118 33 -76 3 -90 1 -105 -15z" />
+            <path d="M7717 822 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M3097 682 c-11 -12 -17 -36 -17 -70 l0 -52 -53 0 c-69 0 -87 -18 -87
+          -88 0 -50 0 -51 -35 -58 -19 -3 -51 -3 -71 1 l-37 6 6 -37 c12 -73 76 -114
+          177 -114 80 0 110 26 110 95 l0 45 65 0 65 0 0 -50 c0 -68 22 -90 91 -90 29 0
+          69 5 89 11 28 9 46 9 71 0 39 -14 43 -11 34 29 -10 46 -60 98 -101 106 l-34 6
+          0 119 c0 159 0 159 -148 159 -93 0 -111 -3 -125 -18z" />
+            <path d="M4263 680 c-34 -20 -63 -66 -63 -100 0 -20 -5 -20 -263 -20 -243 0
+          -265 -1 -280 -18 -14 -15 -17 -40 -17 -125 0 -159 -28 -147 350 -147 l311 0
+          25 25 c25 26 26 26 20 163 -3 75 -7 151 -8 167 -1 17 1 40 5 53 7 19 5 22 -20
+          22 -15 0 -42 -9 -60 -20z" />
+            <path d="M4683 680 c-34 -20 -63 -66 -63 -100 0 -18 -6 -20 -53 -20 -80 0 -87
+          -12 -87 -143 0 -147 0 -147 161 -147 67 0 139 5 159 11 28 9 46 9 71 0 39 -14
+          43 -11 34 29 -10 45 -60 98 -100 106 l-33 6 -6 86 c-4 48 -7 101 -9 117 -1 17
+          2 40 6 53 7 19 5 22 -20 22 -15 0 -42 -9 -60 -20z" />
+            <path d="M6037 682 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M6317 682 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M6597 682 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M7997 682 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M8557 682 c-14 -15 -17 -40 -17 -125 0 -144 3 -147 140 -147 140 0
+          150 10 150 150 0 137 -3 140 -148 140 -93 0 -111 -3 -125 -18z" />
+            <path d="M2244 521 c12 -74 94 -123 171 -101 33 9 52 10 76 1 18 -6 34 -9 37
+          -6 12 11 -20 83 -48 110 -31 29 -34 30 -137 30 l-105 0 6 -34z" />
+            <path d="M6737 542 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M7424 521 c7 -43 49 -88 98 -103 43 -13 54 -42 43 -108 -8 -48 4 -51
+          66 -19 32 16 46 32 65 74 21 46 30 55 57 60 51 10 83 -8 91 -49 8 -41 60 -91
+          105 -101 16 -3 47 -1 69 6 30 9 48 9 73 0 18 -6 34 -9 37 -6 12 11 -20 83 -48
+          110 -30 28 -36 30 -118 31 -113 0 -107 -2 -120 42 -6 21 -25 51 -42 67 l-31
+          30 -176 0 -175 0 6 -34z" />
+            <path d="M2537 402 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M5057 402 c-21 -23 -22 -86 -1 -106 38 -38 104 -28 125 18 13 28 6
+          68 -17 90 -22 22 -87 21 -107 -2z" />
+            <path d="M5464 381 c12 -74 94 -123 171 -101 33 9 52 10 76 1 18 -6 34 -9 37
+          -6 12 11 -20 83 -48 110 -31 29 -34 30 -137 30 l-105 0 6 -34z" />
+            <path d="M6164 382 c6 -41 39 -79 83 -98 41 -17 318 -19 373 -3 28 9 46 9 71
+          0 18 -6 34 -9 37 -6 12 11 -20 83 -48 110 l-31 30 -246 0 -245 1 6 -34z" />
+            <path d="M7017 402 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M8417 402 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M8837 402 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+            <path d="M9117 402 c-21 -23 -22 -86 -1 -106 22 -23 62 -30 90 -17 46 21 56
+          87 18 125 -22 22 -87 21 -107 -2z" />
+          </g>
+        </svg>
+      </span>
+
+      <div class="input">
+        <i class="bi bi-qr-code-scan"></i>
+
+        <input style="color: #b0a8ffff;" type="text"
+          value="SSHTPROJECT@PROTON.ME"
+          readonly>
+      </div>
+    </div>
+    <div class="links">
+      <button>
+        <i class="bi bi-megaphone"></i>
+
+        <span>CANAL OFICIAL</span>
+      </button>
+
+      <button id="telks">
+        <?xml version="1.0" encoding="utf-8"?>
+        <svg fill="#b0a8ffff" width="25px" height="25px" viewBox="0 0 30 27" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M21.928 11.607c-.202-.488-.635-.605-.928-.633V8c0-1.103-.897-2-2-2h-6V4.61c.305-.274.5-.668.5-1.11a1.5 1.5 0 0 0-3 0c0 .442.195.836.5 1.11V6H5c-1.103 0-2 .897-2 2v2.997l-.082.006A1 1 0 0 0 1.99 12v2a1 1 0 0 0 1 1H3v5c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5a1 1 0 0 0 1-1v-1.938a1.006 1.006 0 0 0-.072-.455zM5 20V8h14l.001 3.996L19 12v2l.001.005.001 5.995H5z" />
+          <ellipse cx="8.5" cy="12" rx="1.5" ry="2" />
+          <ellipse cx="15.5" cy="12" rx="1.5" ry="2" />
+          <path d="M8 16h8v2H8z" />
+        </svg>
+
+        <span>BOT TELEGRAM</span>
+      </button>
+      <button>
+        <i class="bi bi-people"></i>
+
+        <span>GRUPO OFICIAL</span>
+      </button>
+    </div>
+    <hr>
+    <div class="helper">
+      <p>Clique no botão abaixo para saber mais sobre as doações!!</p>
+
+      <button>Saiba mais</button>
+    </div>
+  </section>
+  <hr>
+
+  <footer>
+    <span>© SSH T PROJECT VPN</span>
+  </footer>
+
+  <script>
+    const qrCodeImage = document.querySelector('.image-donate svg')
+    const qrCodeCopy = document.querySelector('body section div.image-donate div.input')
+    const qrCodeInputValue = document.querySelector('body section div.image-donate div.input input')
+    const channelButton = document.querySelector('.links button:first-child')
+    const botButton = document.getElementById("telks");
+    const groupButton = document.querySelector('.links button:last-child')
+    const donors = document.querySelector('.helper button')
+
+
+    /* qrCodeImage.addEventListener('click', (e) => {
+      window.location.href = 'https://mpago.la/1LTWD8t'
+    }) */
+
+    qrCodeCopy.addEventListener('click', (e) => {
+      qrCodeInputValue.select()
+      document.execCommand('copy')
+      alert('Pix copiado.')
+    })
+
+    channelButton.addEventListener('click', (e) => {
+      window.location.href = 'http://t.me/ssh_t_project'
+    })
+
+    groupButton.addEventListener('click', (e) => {
+      window.location.href = 'http://t.me/ssh_t_project_grupo'
+    })
+    botButton.addEventListener('click', (e) => {
+      window.location.href = 'http://t.me/ssh_t_project_vip_bot'
+    })
+
+    donors.addEventListener('click', (e) => {
+      window.location.href = 'https://t.me/ssh_t_project_grupo/508/37503'
+    })
+  </script>
+</body>
+
+</html>
