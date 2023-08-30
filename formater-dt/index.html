@@ -35,6 +35,8 @@
             max-width: 600px;
             box-sizing: border-box;
             padding: 5px;
+            word-wrap: break-word; /* Permita que as palavras se quebrem automaticamente */
+            overflow-wrap: break-word; /* Fallback para navegadores mais antigos */
         }
 
         #ipInput {
@@ -83,12 +85,23 @@
     </script> 
 </head>
 <body>
-    <h1>Formatar e Copiar Lista de IPs</h1>
-    <p>Digite os IPs ou domínios, um por linha:</p>
-    <textarea id="ipInput" rows="5" placeholder="Digite os IPs ou domínios..." required></textarea><br>
-    <button onclick="formatIPList()">Formatar</button>
-    <button id="copyButton" style="display: none;" onclick="copyFormattedList()">Copiar Lista Formatada</button>
-    <p>Copie a lista formatada abaixo:</p>
-    <pre id="formattedOutput"></pre>
+    <div>
+        <h1>Formatar e Copiar Lista de IPs</h1>
+    </div>
+    <div>
+        <p>Digite os IPs ou domínios, um por linha:</p>
+        <textarea id="ipInput" rows="5" placeholder="Digite os IPs ou domínios..." required></textarea><br>
+        <button onclick="formatIPList()">Formatar</button>
+    </div>
+    <div>
+        <div>
+            <pre id="formattedOutput"></pre>
+        </div>
+        <button id="copyButton" style="display: none;" onclick="copyFormattedList()">Copiar Lista Formatada</button>
+    </div>
+    
+   
+    
+    
 </body>
 </html>
