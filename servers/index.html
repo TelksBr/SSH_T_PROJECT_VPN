@@ -43,6 +43,16 @@
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         }
 
+        .button{
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #6305d541;
+            background-color: #14142c;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
 
 
         h1 {
@@ -94,7 +104,7 @@
 
 <body onload="updateServerStatus()" class="background">
     <h1>Servidores</h1>
-    <button class="server" id="refresh-button" style="color: #b0a8ffff;">Atualizar</button>
+    <button id="refresh-button" class="button" style="color: #b0a8ffff; margin: 10px;">Atualizar</button>
     <div class="server">
         <h2> Premium 1</h2>
         <hr>
@@ -138,7 +148,7 @@
 </body>
 <script>
     document.getElementById("refresh-button").addEventListener("click", function () {
-        updateServerStatus(); // Call the function to update server status
-    });
+            updateServerStatus(); // Call the function to update server status
+        });
 </script>
 </html>
