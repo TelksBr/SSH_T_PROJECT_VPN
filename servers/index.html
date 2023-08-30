@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Servidores</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,31 +9,31 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Times New Roman', sans-serif;
+            font-family: sans-serif;
         }
 
         body {
-            
+
             animation: fade-in 1s ease-in-out;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             width: 100%;
-            height: 100%;    
-        
+            height: 100%;
+
         }
 
-        .background{
-        background-color: #14142c;
-    }
+        .background {
+            background-color: #14142c;
+        }
 
         .server {
             margin: 10px;
             padding: 10px;
-            border: 1px solid #d09ff871;
+            border: 1px solid #6305d541;
             background-color: #14142c;
-            color: #b0a8ffff;
+
             animation: fade-in 1s ease-in-out;
             width: 70%;
             max-width: 400px;
@@ -55,14 +56,21 @@
         }
 
         p {
-            color: #9c61e6;
-            font-size: 1,5rem;
+            color: rgb(185, 177, 255);
+            font-size: 17px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #b0a8ffff;
+            margin: 7px 0;
+            
         }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         function fetchServerStatus(serverUrl, elementId) {
-            $.get(serverUrl, function(data) {
+            $.get(serverUrl, function (data) {
                 document.getElementById(elementId).textContent = data;
             });
         }
@@ -82,39 +90,49 @@
         setInterval(updateServerStatus, 15000); // Atualiza a cada 15 segundos
     </script>
 </head>
+
 <body onload="updateServerStatus()" class="background">
     <h1>Servidores</h1>
     <div class="server">
-        <h2>Servidor Premium 1</h2>
+        <h2> Premium 1</h2>
+        <hr>
         <p>Onlines: <span id="premium1-status">Carregando...</span></p>
     </div>
     <div class="server">
-        <h2>Servidor Premium 2</h2>
+        <h2> Premium 2</h2>
+        <hr>
         <p>Onlines: <span id="premium2-status">Carregando...</span></p>
     </div>
     <div class="server">
-        <h2>Servidor Free 1</h2>
+        <h2> Free 1</h2>
+        <hr>
         <p>Onlines: <span id="free1-status">Carregando...</span></p>
     </div>
     <div class="server">
-        <h2>Servidor Free 2</h2>
+        <h2> Free 2</h2>
+        <hr>
         <p>Onlines: <span id="free2-status">Carregando...</span></p>
     </div>
     <div class="server">
-        <h2>Servidor Free 3</h2>
+        <h2> Free 3</h2>
+        <hr>
         <p>Onlines: <span id="free3-status">Carregando...</span></p>
     </div>
     <div class="server">
-        <h2>Servidor Free 4</h2>
+        <h2> Free 4</h2>
+        <hr>
         <p>Onlines: <span id="free4-status">Carregando...</span></p>
     </div>
     <div class="server">
-        <h2>Servidor Free 5</h2>
+        <h2> Free 5</h2>
+        <hr>
         <p>Onlines: <span id="free5-status">Carregando...</span></p>
     </div>
     <div class="server">
-        <h2>Servidor Free 6</h2>
+        <h2> Free 6</h2>
+        <hr>
         <p>Onlines: <span id="free6-status">Carregando...</span></p>
     </div>
 </body>
+
 </html>
