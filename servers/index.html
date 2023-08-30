@@ -64,7 +64,7 @@
             border: none;
             border-top: 1px solid #b0a8ffff;
             margin: 7px 0;
-            
+
         }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -89,10 +89,12 @@
         // Atualizar a cada x segundos
         setInterval(updateServerStatus, 15000); // Atualiza a cada 15 segundos
     </script>
+
 </head>
 
 <body onload="updateServerStatus()" class="background">
     <h1>Servidores</h1>
+    <button class="server" id="refresh-button" style="color: #b0a8ffff;">Atualizar</button>
     <div class="server">
         <h2> Premium 1</h2>
         <hr>
@@ -134,5 +136,9 @@
         <p>Onlines: <span id="free6-status">Carregando...</span></p>
     </div>
 </body>
-
+<script>
+    document.getElementById("refresh-button").addEventListener("click", function () {
+        updateServerStatus(); // Call the function to update server status
+    });
+</script>
 </html>
