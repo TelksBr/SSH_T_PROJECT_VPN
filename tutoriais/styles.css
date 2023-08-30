@@ -6,7 +6,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #14142c;
-    min-height: 100vh;
+    
     flex-direction: column;
     display: flex;
 }
@@ -158,4 +158,5 @@ hr {
     max-width: 100%;
     border: 2px solid #b0a8ffff;
     border-radius: 10px;
+    padding-right: 2px;
 }
