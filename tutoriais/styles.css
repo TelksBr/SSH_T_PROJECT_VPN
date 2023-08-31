@@ -40,7 +40,7 @@ main {
     border-radius: 5px;
     color: #b0a8ffff;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    max-width: 100rem;
+    max-width: 40rem;
 }
 
 .footer-text {
@@ -132,3 +132,13 @@ hr {
     border: 2px solid #b0a8ffff;
     border-radius: 10px;
 }
+
+.gif-hotspot {
+    width: 80%;
+    height: 90%;
+    border: 2px solid #b0a8ffff;
+    border-radius: 10px;
+    padding-right: 2px;
+    
+}
+
