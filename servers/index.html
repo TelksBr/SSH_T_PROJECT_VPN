@@ -80,31 +80,54 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         function fetchServerStatus(serverUrl, elementId) {
-            $.get(serverUrl, function (data) {
-                document.getElementById(elementId).textContent = data;
+            return new Promise((resolve, reject) => {
+                $.get(serverUrl, function (data) {
+                    document.getElementById(elementId).textContent = `Onlines: ${data}`;
+                    resolve(parseInt(data));
+                });
             });
         }
-
-        function updateServerStatus() {
-            fetchServerStatus('http://premium.sshtproject.com:8888/servers/online', 'premium1-status');
-            fetchServerStatus('http://premium2.sshtproject.com:8888/servers/online', 'premium2-status');
-            fetchServerStatus('http://free1.sshtproject.com:8888/servers/online', 'free1-status');
-            fetchServerStatus('http://free2.sshtproject.com:8888/servers/online', 'free2-status');
-            fetchServerStatus('http://free3.sshtproject.com:8888/server/online', 'free3-status');
-            fetchServerStatus('http://free4.sshtproject.com:8888/server/online', 'free4-status');
-            fetchServerStatus('http://free5.sshtproject.com:8888/servers/online', 'free5-status');
-            fetchServerStatus('http://free6.sshtproject.com:8888/servers/online', 'free6-status');
+    
+        async function updateServerStatus() {
+            const serverStatusElements = [
+                { url: 'http://premium.sshtproject.com:8888/servers/online', elementId: 'premium1-status' },
+                { url: 'http://premium2.sshtproject.com:8888/servers/online', elementId: 'premium2-status' },
+                { url: 'http://free1.sshtproject.com:8888/servers/online', elementId: 'free1-status' },
+                { url: 'http://free2.sshtproject.com:8888/servers/online', elementId: 'free2-status' },
+                { url: 'http://free3.sshtproject.com:8888/server/online', elementId: 'free3-status' },
+                { url: 'http://free4.sshtproject.com:8888/server/online', elementId: 'free4-status' },
+                { url: 'http://free5.sshtproject.com:8888/servers/online', elementId: 'free5-status' },
+                { url: 'http://free6.sshtproject.com:8888/servers/online', elementId: 'free6-status' }
+            ];
+    
+            let totalOnline = 0;
+    
+            for (const server of serverStatusElements) {
+                const onlineCount = await fetchServerStatus(server.url, server.elementId);
+                totalOnline += onlineCount;
+            }
+    
+            document.getElementById('total-status').textContent = `${totalOnline}`;
         }
-
-        // Atualizar a cada x segundos
-        setInterval(updateServerStatus, 15000); // Atualiza a cada 15 segundos
+    
+        // Update the server status when the button is clicked
+        document.getElementById("refresh-button").addEventListener("click", function () {
+            updateServerStatus();
+        });
+    
+        // Initial update when the page loads
+        updateServerStatus();
     </script>
+    
 
 </head>
 
 <body onload="updateServerStatus()" class="background">
     <h1>Servidores</h1>
     <button id="refresh-button" class="button" style="color: #b0a8ffff; margin: 10px;">Atualizar</button>
+    <div class="server">
+        <h2>TOTAL:  <span id="total-status">Carregando...</span></h2>
+    </div>
     <div class="server">
         <h2> Premium 1</h2>
         <hr>
