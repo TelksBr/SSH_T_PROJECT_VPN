@@ -46,6 +46,9 @@
         .button{
             margin: 10px;
             padding: 10px;
+            width: 70%;
+            max-width: 400px;
+            min-width: 250px;
             border: 1px solid #6305d541;
             background-color: #14142c;
             text-align: center;
@@ -124,10 +127,11 @@
 
 <body onload="updateServerStatus()" class="background">
     <h1>Servidores</h1>
-    <button id="refresh-button" class="button" style="color: #b0a8ffff; margin: 10px;">Atualizar</button>
+    
     <div class="server">
         <h2>TOTAL:  <span id="total-status">Carregando...</span></h2>
     </div>
+    <button id="refresh-button" class="button" style="color: #b0a8ffff; margin: 10px;">Atualizar</button>
     <div class="server">
         <h2> Premium 1</h2>
         <hr>
