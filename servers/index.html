@@ -3,7 +3,8 @@
 
 <head>
     <title>USUARIOS ONLINE</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <script src="prototype.js"></script>
     <style>
         * {
             margin: 0;
@@ -43,7 +44,7 @@
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         }
 
-        .button{
+        .button {
             margin: 10px;
             padding: 10px;
             width: 70%;
@@ -90,52 +91,73 @@
                 });
             });
         }
-    
+
         async function updateServerStatus() {
-            const serverStatusElements = [
-                { url: 'http://premium.sshtproject.com:8888/servers/online', elementId: 'premium1-status' },
-                { url: 'http://premium2.sshtproject.com:8888/servers/online', elementId: 'premium2-status' },
-                { url: 'http://free1.sshtproject.com:8888/servers/online', elementId: 'free1-status' },
-                { url: 'http://free2.sshtproject.com:8888/servers/online', elementId: 'free2-status' },
-                { url: 'http://free3.sshtproject.com:8888/server/online', elementId: 'free3-status' },
-                { url: 'http://free4.sshtproject.com:8888/server/online', elementId: 'free4-status' },
-                { url: 'http://free5.sshtproject.com:8888/servers/online', elementId: 'free5-status' },
-                { url: 'http://free6.sshtproject.com:8888/servers/online', elementId: 'free6-status' }
+            const serverStatusElements = [{
+                    url: 'http://premium.sshtproject.com:8888/servers/online',
+                    elementId: 'premium1-status'
+                },
+                {
+                    url: 'http://premium2.sshtproject.com:8888/servers/online',
+                    elementId: 'premium2-status'
+                },
+                {
+                    url: 'http://free1.sshtproject.com:8888/servers/online',
+                    elementId: 'free1-status'
+                },
+                {
+                    url: 'http://free2.sshtproject.com:8888/servers/online',
+                    elementId: 'free2-status'
+                },
+                {
+                    url: 'http://free3.sshtproject.com:8888/server/online',
+                    elementId: 'free3-status'
+                },
+                {
+                    url: 'http://free4.sshtproject.com:8888/server/online',
+                    elementId: 'free4-status'
+                },
+                {
+                    url: 'http://free5.sshtproject.com:8888/servers/online',
+                    elementId: 'free5-status'
+                },
+                {
+                    url: 'http://free6.sshtproject.com:8888/servers/online',
+                    elementId: 'free6-status'
+                }
             ];
-    
+
             let totalOnline = 0;
-    
+
             for (const server of serverStatusElements) {
                 const onlineCount = await fetchServerStatus(server.url, server.elementId);
                 totalOnline += onlineCount;
             }
-    
+
             document.getElementById('total-status').textContent = `${totalOnline}`;
+
         }
-    
-        // Update the server status when the button is clicked
-        document.getElementById("refresh-button").addEventListener("click", function () {
-            updateServerStatus();
-        });
-    
+
         // Initial update when the page loads
         updateServerStatus();
     </script>
-    
+
 
 </head>
 
 <body onload="updateServerStatus()" class="background">
     <h1>Servidores</h1>
-    
+
     <div class="server">
-        <h2>TOTAL:  <span id="total-status">Carregando...</span></h2>
+        <h2>TOTAL: <span id="total-status">Carregando...</span></h2>
     </div>
     <button id="refresh-button" class="button" style="color: #b0a8ffff; margin: 10px;">Atualizar</button>
     <div class="server">
         <h2> Premium 1</h2>
         <hr>
         <p>Onlines: <span id="premium1-status">Carregando...</span></p>
+        <hr>
+        <p id="statusDescription">porta:</p>
     </div>
     <div class="server">
         <h2> Premium 2</h2>
@@ -174,8 +196,26 @@
     </div>
 </body>
 <script>
-    document.getElementById("refresh-button").addEventListener("click", function () {
-            updateServerStatus(); // Call the function to update server status
+            // Update the server status when the button is clicked
+            document.getElementById("refresh-button").addEventListener("click", function () {
+            updateServerStatus();
         });
 </script>
+<script>
+
+    var ajaxUpdater = new Ajax.Request('', {});
+    function checkPort(remoteAddress, portNumber) {
+        document.getElementById('statusDescription').innerHTML =
+            "<p>Obtaining port status...</p>";
+        var div = "statusDescription";
+        var url = "https://ports.yougetsignal.com/check-port.php";
+        var parameters = "remoteAddress=" + remoteAddress + "&portNumber=" + portNumber;
+        ajaxUpdater.transport.abort(); // Cancel the previous request
+        ajaxUpdater = new Ajax.Updater(div, url, {
+            method: "post",
+            postBody: parameters
+        });
+    }
+</script>
+
 </html>
