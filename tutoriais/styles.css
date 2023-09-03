@@ -40,7 +40,7 @@ main {
     border-radius: 5px;
     color: #b0a8ffff;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    max-width: 40rem;
+    max-width: 600px;
 }
 
 .footer-text {
