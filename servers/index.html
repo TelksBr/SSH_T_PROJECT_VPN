@@ -101,55 +101,55 @@
         <h2> Premium 1</h2>
         <p>Onlines: <span id="premium1-status">Carregando...</span></p>
         <p><span id="port-1">Carregando...</span></p>
-        
+
     </div>
     <div class="server">
         <h2> Premium 2</h2>
-        
+
         <p>Onlines: <span id="premium2-status">Carregando...</span></p>
         <p><span id="port-2">Carregando...</span></p>
-        
+
     </div>
     <div class="server">
         <h2> Free 1</h2>
-        
+
         <p>Onlines: <span id="free1-status">Carregando...</span></p>
-        
+
         <p><span id="port-3">Carregando...</span></p>
     </div>
     <div class="server">
         <h2> Free 2</h2>
-        
+
         <p>Onlines: <span id="free2-status">Carregando...</span></p>
-        
+
         <p><span id="port-4">Carregando...</span></p>
     </div>
     <div class="server">
         <h2> Free 3</h2>
-        
+
         <p>Onlines: <span id="free3-status">Carregando...</span></p>
-        
+
         <p><span id="port-5">Carregando...</span></p>
     </div>
     <div class="server">
         <h2> Free 4</h2>
-        
+
         <p>Onlines: <span id="free4-status">Carregando...</span></p>
-        
+
         <p><span id="port-6">Carregando...</span></p>
     </div>
     <div class="server">
         <h2> Free 5</h2>
-        
+
         <p>Onlines: <span id="free5-status">Carregando...</span></p>
-        
+
         <p><span id="port-7">Carregando...</span></p>
     </div>
     <div class="server">
         <h2> Free 6</h2>
-        
+
         <p>Onlines: <span id="free6-status">Carregando...</span></p>
-        
+
         <p><span id="port-8">Carregando...</span></p>
     </div>
 </body>
@@ -189,7 +189,7 @@
 
             if (portElement) {
                 portElement.textContent =
-                `Portas: ${portStatusText.join(' - ')}`; // Atualize o conteúdo da porta
+                    `Portas: ${portStatusText.join(' - ')}`; // Atualize o conteúdo da porta
             }
         });
     }
@@ -211,48 +211,56 @@
     async function updateServerStatus() {
         const serverStatusElements = [{
                 url: 'http://premium.sshtproject.com:8888/servers/online',
-                elementId: 'premium1-status'
+                elementId: 'premium1-status',
             },
             {
                 url: 'http://premium2.sshtproject.com:8888/servers/online',
-                elementId: 'premium2-status'
+                elementId: 'premium2-status',
             },
             {
                 url: 'http://free1.sshtproject.com:8888/servers/online',
-                elementId: 'free1-status'
+                elementId: 'free1-status',
             },
             {
                 url: 'http://free2.sshtproject.com:8888/servers/online',
-                elementId: 'free2-status'
+                elementId: 'free2-status',
             },
             {
                 url: 'http://free3.sshtproject.com:8888/server/online',
-                elementId: 'free3-status'
+                elementId: 'free3-status',
             },
             {
                 url: 'http://free4.sshtproject.com:8888/server/online',
-                elementId: 'free4-status'
+                elementId: 'free4-status',
             },
             {
                 url: 'http://free5.sshtproject.com:8888/servers/online',
-                elementId: 'free5-status'
+                elementId: 'free5-status',
             },
             {
                 url: 'http://free6.sshtproject.com:8888/servers/online',
-                elementId: 'free6-status'
-            }
+                elementId: 'free6-status',
+            },
         ];
 
         let totalOnline = 0;
 
-        for (const server of serverStatusElements) {
-            const onlineCount = await fetchServerStatus(server.url, server.elementId);
-            totalOnline += onlineCount;
-        }
+        // Crie uma lista de promessas para buscar o status de cada servidor
+        const serverStatusPromises = serverStatusElements.map(async (server) => {
+            try {
+                const onlineCount = await fetchServerStatus(server.url, server.elementId);
+                totalOnline += onlineCount;
+            } catch (error) {
+                console.error(`Erro ao buscar dados do servidor (${server.url}):`, error);
+            }
+        });
+
+        // Aguarde que todas as promessas sejam resolvidas
+        await Promise.all(serverStatusPromises);
 
         document.getElementById('total-status').textContent = `${totalOnline}`;
-
     }
+
 
     updateServerStatus();
 
