@@ -41,12 +41,13 @@ main {
     color: #b0a8ffff;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     max-width: 600px;
+    background-color: #1f1c3a6b;
 }
 
 .footer-text {
     text-align: center;
     padding: 1rem 0;
-    background-color: #2521476b;
+    background-color: #201d3d6b;
     color: #b0a8ffff;
 }
 
