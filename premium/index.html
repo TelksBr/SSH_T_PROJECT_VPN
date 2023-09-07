@@ -23,12 +23,11 @@
     }
 
     .container {
-      margin: 10px;
+      margin: 7px;
       padding: 10px;
       border: 1px solid #b0a8ffff;
       border-radius: 5px;
       background-color: #14142c;
-      animation: fade-in 1s ease-in-out;
       width: 70%;
       max-width: 400px;
       min-width: 250px;
@@ -65,8 +64,8 @@
     .subscribe-button {
       margin: 0 auto;
       display: block;
-      background-color: #2521476b;
-      color: #b0a8ffff;
+      background-color: rgba(177, 168, 255, 0.788);
+      color: #241f47e0;
       border: none;
       padding: 0.5rem 4rem;
       border-radius: 5px;
@@ -77,53 +76,45 @@
 </head>
 
 <body>
-  <h1>Planos VPN</h1>
+  <h1>SSH T PROJECT PREMIUM</h1>
   <div class="container">
     <div class="plan">
-      <h2>30 dias</h2>
-      <h3>1 conexão</h3>
-      <p class="price">R$ 4,00</p>
+      <h2>30 DIAS - 1 CONEXÂO</h2>
+      <p class="price">R$: 4,00</p>
       <button class="subscribe-button" onclick="subscribePlan('30d-2conn')">Assinar</button>
     </div>
 
     <div class="plan">
-      <h2>30 dias / 2 conexões</h2>
-      <p class="price">R$ 6,00</p>
+      <h2>60 DIAS - 1 CONEXÂO</h2>
+      <p class="price">R$: 6,00</p>
       <button class="subscribe-button" onclick="subscribePlan('30d-2conn')">Assinar</button>
     </div>
 
     <div class="plan">
-      <h2>60 dias / 1 conexão</h2>
-      <p class="price">R$ 6,00</p>
+      <h2>90 DIAS - 1 CONEXÂO</h2>
+      <p class="price">R$: 8,00</p>
       <button class="subscribe-button" onclick="subscribePlan('30d-2conn')">Assinar</button>
     </div>
 
     <div class="plan">
-      <h2>60 dias / 2 conexões</h2>
-      <p class="price">R$ 8,00</p>
+      <h2>30 DIAS - 2  CONEXÂO</h2>
+      <p class="price">R$: 6,00</p>
       <button class="subscribe-button" onclick="subscribePlan('30d-2conn')">Assinar</button>
     </div>
 
     <div class="plan">
-      <h2>90 dias / 1 conexão</h2>
-      <p class="price">R$ 8,00</p>
+      <h2>60 DIAS - 2 CONEXÂO</h2>
+      <p class="price">R$: 8,00</p>
       <button class="subscribe-button" onclick="subscribePlan('30d-2conn')">Assinar</button>
     </div>
 
     <div class="plan">
-      <h2>90 dias / 2 conexões</h2>
-      <p class="price">R$ 10,00</p>
+      <h2>90 DIAS - 2 CONEXÂO</h2>
+      <p class="price">R$: 10,00</p>
       <button class="subscribe-button" onclick="subscribePlan('30d-2conn')">Assinar</button>
     </div>
   </div>
 </body>
-<script>
-  function subscribePlan(planId) {
-      // Aqui, você pode adicionar a lógica para processar a assinatura do plano com base no "planId".
-      // Pode ser uma chamada para o seu backend que gera a conta VPN e processa o pagamento Pix.
 
-      // Exemplo: redirecionar para uma página de pagamento
-      window.location.href = `pagina_de_pagamento.php?plan=${planId}`;
-  }
-</script>
+
 </html>
