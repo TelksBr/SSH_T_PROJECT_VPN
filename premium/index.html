@@ -83,89 +83,23 @@
       max-width: 45%;
       margin: 0 auto;
       margin-bottom: 10px;
-      /* Adicione espaço (20px neste exemplo) abaixo do <hr> */
+     
     }
   </style>
 </head>
 
 <body>
   <h1>SSH T PROJECT PREMIUM</h1>
-  <div class="container">
-    <div class="plan">
-      <h2>30 DIAS - 1 CONEXÃO</h2>
-      <hr>
-      <p class="price">R$: 4,00</p>
-      <a class="subscribe-button" href="
-      https://api.whatsapp.com/send?phone=5513981569391&text=menu">
-        <i class="fab fa-whatsapp"></i> <b>WhatsApp</b>
-      </a>
-      <a class="subscribe-button" href="https://t.me/ssh_t_project_vip_bot">
-        <i class="fab fa-telegram"></i><b>Telegram</b>
-      </a>
-    </div>
-
-
-    <div class="plan">
-      <h2>60 DIAS - 1 CONEXÃO</h2>
-      <hr>
-      <p class="price">R$: 6,00</p>
-      <a class="subscribe-button" href="https://api.whatsapp.com/send?phone=5513981569391&text=menu">
-        <i class="fab fa-whatsapp"></i> <b>WhatsApp</b>
-      </a>
-      <a class="subscribe-button" href="https://t.me/ssh_t_project_vip_bot">
-        <i class="fab fa-telegram"></i><b>Telegram</b>
-      </a>
-    </div>
-
-    <div class="plan">
-      <h2>90 DIAS - 1 CONEXÃO</h2>
-      <hr>
-      <p class="price">R$: 8,00</p>
-      <a class="subscribe-button" href="https://api.whatsapp.com/send?phone=5513981569391&text=menu">
-        <i class="fab fa-whatsapp"></i> <b>WhatsApp</b>
-      </a>
-      <a class="subscribe-button" href="https://t.me/ssh_t_project_vip_bot">
-        <i class="fab fa-telegram"></i><b>Telegram</b>
-      </a>
-    </div>
-
-    <div class="plan">
-      <h2>30 DIAS - 2 CONEXÕES</h2>
-      <hr>
-      <p class="price">R$: 6,00</p>
-      <a class="subscribe-button" href="https://api.whatsapp.com/send?phone=5513981569391&text=menu">
-        <i class="fab fa-whatsapp"></i> <b>WhatsApp</b>
-      </a>
-      <a class="subscribe-button" href="https://t.me/ssh_t_project_vip_bot">
-        <i class="fab fa-telegram"></i><b>Telegram</b>
-      </a>
-    </div>
-
-    <div class="plan">
-      <h2>60 DIAS - 2 CONEXÕES</h2>
-      <hr>
-      <p class="price">R$: 8,00</p>
-      <a class="subscribe-button" href="https://api.whatsapp.com/send?phone=5513981569391&text=menu">
-        <i class="fab fa-whatsapp"></i> <b>WhatsApp</b>
-      </a>
-      <a class="subscribe-button" href="https://t.me/ssh_t_project_vip_bot">
-        <i class="fab fa-telegram"></i><b>Telegram</b>
-      </a>
-    </div>
-
-    <div class="plan">
-      <h2>90 DIAS - 2 CONEXÕES</h2>
-      <hr>
-      <p class="price">R$: 6,00</p>
-      <a class="subscribe-button" href="https://api.whatsapp.com/send?phone=5513981569391&text=menu">
-        <i class="fab fa-whatsapp"></i> <b>WhatsApp</b>
-      </a>
-      <a class="subscribe-button" href="https://t.me/ssh_t_project_vip_bot">
-        <i class="fab fa-telegram"></i><b>Telegram</b>
-      </a>
-    </div>
+  <div class="container" id="conteiner"></div>
   </div>
 </body>
 
+<script>
+  fetch('http://129.148.24.15:5001/get_plains')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("conteiner").innerHTML = data;
+    }).catch(err => { return });
+</script>
 
 </html>
