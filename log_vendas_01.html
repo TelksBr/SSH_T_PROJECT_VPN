@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,23 +8,25 @@
 </head>
 <style>
     body {
-    width: 100%;
-    height: 100%;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #14142c;
-    flex-direction: column;
-    display: flex;
-    color: #b0a8ffff;
-}
-table {
+        width: 100%;
+        height: 100%;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #14142c;
+        flex-direction: column;
+        display: flex;
+        color: #b0a8ffff;
+    }
+
+    table {
         width: 100%;
         border-collapse: collapse;
         margin-top: 20px;
     }
 
-    th, td {
+    th,
+    td {
         padding: 7px;
         text-align: left;
         border-bottom: 2px dashed #232342;
@@ -36,20 +39,54 @@ table {
     tr:hover {
         background-color: #262646;
     }
+    #search-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 20px;
+    }
+
+    #search-input {
+        width: 200px;
+        padding: 10px; /* Aumenta o espaço interno para melhorar a aparência */
+        border: none;
+        border-radius: 5px; /* Adiciona cantos arredondados */
+        background-color: #232342; /* Cor de fundo */
+        color: white; /* Cor do texto */
+        transition: background-color 0.3s, color 0.3s; /* Transição suave de cores */
+    }
+
+    /* Estiliza o campo de pesquisa quando o usuário passa o mouse sobre ele */
+    #search-input:hover {
+        background-color: #33335c;
+    }
+
+    /* Estiliza o campo de pesquisa quando está focado (clicado) */
+    #search-input:focus {
+        background-color: #434367;
+        color: #b0a8ffff;
+        outline: none; /* Remove a borda de foco padrão */
+    }
 </style>
+
 <body>
     <header>
         <h1>LOG DE VENDAS</h1>
     </header>
     <main>
+        <div id="search-container">
+            <input type="text" id="search-input" placeholder="Pesquisar...">
+        </div>
+
         <table>
             <thead>
                 <tr>
-                    <th>Plano</th>
+                    <th>Nome do Plano</th>
                     <th>Valor</th>
-                    <th>User</th>
-                    <th>Número</th>
+                    <th>Comprador</th>
+                    <th>ID</th>
                     <th>Data</th>
+                    <th>Plataforma</th>
                 </tr>
             </thead>
             <tbody>
@@ -60,57 +97,68 @@ table {
 
 </body>
 <script>
-    const albumsData = [
-        // Os dados dos álbuns vêm da sua fonte de dados (banco de dados, API, etc.).
-        {
-            "name": "login-1",
-            "value": "$4",
-            "user_name": "login00782",
-            "user_contact": "123-456-789",
-            "date": "2023-09-10"
-        },
-        {
-            "name": "login2",
-            "value": "$6",
-            "user_name": "login00782",
-            "user_contact": "987-654-321",
-            "date": "2023-09-11"
-        },
-        // Adicione mais álbuns conforme necessário
-    ];
+    fetch('/value').then(resp => resp.json()).then(data => {
+        // Faça algo com os dados recebidos
 
-    const tableBody = document.querySelector('tbody');
+        const albumsData = data
 
-    // Loop através dos dados e crie linhas na tabela para cada álbum
-    albumsData.forEach(album => {
-        const row = document.createElement('tr');
+        const tableBody = document.querySelector('tbody');
 
-        // Crie as células da tabela para exibir os dados do álbum
-        const nameCell = document.createElement('td');
-        nameCell.textContent = album.name;
+        // Loop através dos dados e crie linhas na tabela para cada álbum
+        albumsData.forEach(album => {
+            const row = document.createElement('tr');
 
-        const valueCell = document.createElement('td');
-        valueCell.textContent = album.value;
+            // Crie as células da tabela para exibir os dados do álbum
+            const nameCell = document.createElement('td');
+            nameCell.textContent = album.name;
 
-        const userNameCell = document.createElement('td');
-        userNameCell.textContent = album.user_name;
+            const valueCell = document.createElement('td');
+            valueCell.textContent = album.value;
 
-        const userContactCell = document.createElement('td');
-        userContactCell.textContent = album.user_contact;
+            const userNameCell = document.createElement('td');
+            userNameCell.textContent = album.user_name;
 
-        const dateCell = document.createElement('td');
-        dateCell.textContent = album.date;
+            const userContactCell = document.createElement('td');
+            userContactCell.textContent = album.user_contact;
 
-        // Anexe as células à linha
-        row.appendChild(nameCell);
-        row.appendChild(valueCell);
-        row.appendChild(userNameCell);
-        row.appendChild(userContactCell);
-        row.appendChild(dateCell);
+            const dateCell = document.createElement('td');
+            dateCell.textContent = album.date;
 
-        // Anexe a linha à tabela
-        tableBody.appendChild(row);
+            const plataform = document.createElement('td');
+            plataform.textContent = album.plataform
+
+            // Anexe as células à linha
+            row.appendChild(nameCell);
+            row.appendChild(valueCell);
+            row.appendChild(userNameCell);
+            row.appendChild(userContactCell);
+            row.appendChild(dateCell);
+            row.appendChild(plataform)
+
+            // Anexe a linha à tabela
+            tableBody.appendChild(row);
+        });
+        console.log(albumsData)
     });
 
+    const searchInput = document.getElementById('search-input');
+    searchInput.addEventListener('input', () => {
+        // Obtenha o valor do campo de pesquisa
+        const searchValue = searchInput.value.trim().toLowerCase();
+
+        // Selecione todas as linhas da tabela
+        const rows = document.querySelectorAll('tbody tr');
+
+        // Itere sobre as linhas e mostre/oculte com base no valor de pesquisa
+        rows.forEach(row => {
+            const rowData = row.textContent.toLowerCase();
+            if (rowData.includes(searchValue)) {
+                row.style.display = 'table-row';
+            } else {
+                row.style.display = 'none';
+            }
+        });
+    });
 </script>
+
 </html>
