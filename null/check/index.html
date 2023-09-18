@@ -82,13 +82,31 @@
             border: 2px solid #b0a8ffff;
             /* Adiciona uma borda quando está focado */
         }
+
+        /* Estilos para o contêiner do retorno da API */
+        .user-info {
+            background-color: #232342;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 400px;
+            /* Largura máxima para responsividade */
+            margin: 20px auto;
+            /* Centraliza o contêiner horizontalmente e adiciona espaçamento na parte superior e inferior */
+        }
+
+        /* Estilos para os elementos de texto no retorno da API */
+        .user-info p {
+            color: white;
+            margin: 10px 0;
+        }
     </style>
 </head>
 
 <body>
     <div id="result-container">
         <h2>Verificar Usuário</h2>
-        <label for="username">Digite o nome de usuário:</label>
         <input type="text" id="username" placeholder="Digite o nome de usuário">
         <button id="check-button">Verificar</button>
         <div id="user-info"></div>
@@ -106,16 +124,20 @@
                 return;
             }
 
-            fetch(`http://check.sshtproject.com:5000/check/${username}`)
+            fetch(`https://check.sshtproject.com:5000/check/${username}`)
                 .then(response => response.json())
                 .then(data => {
                     const userInformation = `
-                        <p>Nome de Usuário: ${data.username}</p>
-                        <p>Limite de Conexões: ${data.limit_connections}</p>
-                        <p>Contagem de Conexões: ${data.count_connections}</p>
-                        <p>Data de Expiração: ${data.expiration_date}</p>
-                        <p>Dias de Expiração: ${data.expiration_days}</p>
+                        <div class="user-info">
+                            <h2>Informações do Usuário</h2>
+                            <p>Nome de Usuário: ${data.username}</p>
+                            <p>Limite de Conexões: ${data.limit_connections}</p>
+                            <p>Conexões Atuais: ${data.count_connections}</p>
+                            <p>Data de Expiração: ${data.expiration_date}</p>
+                            <p>Dias: ${data.expiration_days}</p>
+                        </div>
                     `;
+
                     userInfoDiv.innerHTML = userInformation;
                 })
                 .catch(error => {
