@@ -124,7 +124,7 @@
                 return;
             }
 
-            fetch(`https://bot.sshtproject.com:5000/check/${username}`)
+            fetch(`https://check.sshtproject.com:5000/check/${username}`)
                 .then(response => response.json())
                 .then(data => {
                     const userInformation = `
