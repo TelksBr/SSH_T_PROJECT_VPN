@@ -82,13 +82,8 @@
 
         }
 
-        .emoji-green {
-            color: green;
-        }
+        
 
-        .emoji-red {
-            color: red;
-        }
     </style>
 </head>
 
@@ -157,37 +152,37 @@
 <script>
     async function updateServerStatus() {
         const serverStatusElements = [{
-                url: 'http://premium.sshtproject.com:8888/servers/online',
-                elementId: 'premium1-status',
-            },
-            {
-                url: 'http://premium2.sshtproject.com:8888/servers/online',
-                elementId: 'premium2-status',
-            },
-            {
-                url: 'http://free1.sshtproject.com:8888/servers/online',
-                elementId: 'free1-status',
-            },
-            {
-                url: 'http://free2.sshtproject.com:8888/servers/online',
-                elementId: 'free2-status',
-            },
-            {
-                url: 'http://free3.sshtproject.com:8888/server/online',
-                elementId: 'free3-status',
-            },
-            {
-                url: 'http://free4.sshtproject.com:8888/server/online',
-                elementId: 'free4-status',
-            },
-            {
-                url: 'http://free5.sshtproject.com:8888/servers/online',
-                elementId: 'free5-status',
-            },
-            {
-                url: 'http://free6.sshtproject.com:8888/servers/online',
-                elementId: 'free6-status',
-            },
+            url: 'http://premium.sshtproject.com:8888/servers/online',
+            elementId: 'premium1-status',
+        },
+        {
+            url: 'http://premium2.sshtproject.com:8888/servers/online',
+            elementId: 'premium2-status',
+        },
+        {
+            url: 'http://free1.sshtproject.com:8888/servers/online',
+            elementId: 'free1-status',
+        },
+        {
+            url: 'http://free2.sshtproject.com:8888/servers/online',
+            elementId: 'free2-status',
+        },
+        {
+            url: 'http://free3.sshtproject.com:8888/server/online',
+            elementId: 'free3-status',
+        },
+        {
+            url: 'http://free4.sshtproject.com:8888/server/online',
+            elementId: 'free4-status',
+        },
+        {
+            url: 'http://free5.sshtproject.com:8888/servers/online',
+            elementId: 'free5-status',
+        },
+        {
+            url: 'http://free6.sshtproject.com:8888/servers/online',
+            elementId: 'free6-status',
+        },
         ];
 
         let totalOnline = 0;
@@ -197,9 +192,11 @@
             try {
                 const onlineCount = await fetchServerStatus(server.url, server.elementId);
                 totalOnline += onlineCount;
+
+                // Atualize o total de usuários aqui, a cada solicitação concluída
+                document.getElementById('total-status').textContent = `${totalOnline}`;
             } catch (error) {
                 console.error(`Erro ao buscar dados do servidor (${server.url}):`, error);
-
                 // Caso ocorra um erro, você pode definir um valor padrão ou tratar de outra forma
                 document.getElementById(server.elementId).textContent = 'Erro';
             }
@@ -208,10 +205,7 @@
         // Aguarde que todas as promessas sejam resolvidas
         await Promise.all(serverStatusPromises);
 
-        document.getElementById('total-status').textContent = `${totalOnline}`;
     }
-    
-
 
     updateServerStatus();
 
