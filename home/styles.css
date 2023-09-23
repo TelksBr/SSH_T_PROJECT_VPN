@@ -1,16 +1,53 @@
 /* styles.css */
-body {
-    width: 100%;
-    height: 100%;
-    font-family: Arial, sans-serif;
+
+/* Reset de estilos padrão */
+* {
     margin: 0;
     padding: 0;
-    background-color: #14142c;
-    
-    flex-direction: column;
-    display: flex;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
 }
 
+body {
+    animation: fade-in 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #14142c;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.background {
+    background-color: #14142c;
+}
+
+.container {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #b0a8ffff;
+    border-radius: 5px;
+    background-color: #14142c;
+    width: 70%;
+    max-width: 400px;
+    min-width: 250px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: #b0a8ffff;
+}
+
+h1 {
+    color: #b0a8ffff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Barra de Navegação */
 header {
     background-color: #2521476b;
     color: #b0a8ffff;
@@ -23,39 +60,23 @@ header {
     font-family: Roboto;
 }
 
-  
-main {
-    flex: 1;
-    /* Remova o max-width: 100%; */
-    margin: 0 auto;
-    padding: 2rem;
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
 }
 
+nav li {
+    margin-right: 20px;
+}
 
-.tutorial {
-    margin-bottom: 2rem;
-    padding: 1rem;
-    border: 1px solid #b0a8ffff;
-    border-radius: 5px;
+nav a {
     color: #b0a8ffff;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    max-width: 600px;
-    background-color: #1f1c3a6b;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.footer-text {
-    /* Remova position: fixed; */
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    padding: 1rem 0;
-    background-color: #201d3d6b;
-    color: #b0a8ffff;
-}
-
-
-
+/* Estilos do Menu de Hambúrguer */
 .modal {
     display: none;
     padding: 20px;
@@ -82,7 +103,7 @@ main {
 
 .open-modal,
 .close-modal {
-    margin:  0 auto;
+    margin: 0 auto;
     display: block;
     background-color: #2521476b;
     color: #b0a8ffff;
@@ -101,50 +122,18 @@ main {
 
 .modal-link {
     display: inline-block;
-    margin:  0 auto;
+    margin: 0 auto;
     padding: 0.7rem 1rem;
     background-color: #2521476b;
     color: #b0a8ffff;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
-    margin-right: 5%
+    margin-right: 5%;
 }
 
 hr {
     border: none;
-    border-top: 2px solid #b0a8ffff;
+    border-top: 1px solid #b0a8ffff;
     margin: 20px 0;
 }
-
-.iframe-container {
-    text-align: center;
-}
-
-.iframe {
-    width: 80%;
-    height: 100%;
-    height: 450px;
-    border: 2px solid #b0a8ffff;
-    border-radius: 10px;
-    padding-right: 2px;
-    
-}
-
-.img-hotspot {
-    max-width: 100%;
-    height: auto;
-    width: 90%;
-    border: 2px solid #b0a8ffff;
-    border-radius: 10px;
-}
-
-.gif-hotspot {
-    width: 80%;
-    height: 90%;
-    border: 2px solid #b0a8ffff;
-    border-radius: 10px;
-    padding-right: 2px;
-    
-}
-

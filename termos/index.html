@@ -12,6 +12,17 @@
       padding: 0;
       background-color: #14142c;
       color: rgb(228, 225, 255);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .footer-text {
+      width: 100%;
+      text-align: center;
+      padding: 1rem 0;
+      background-color: #201d3d6b;
+      color: #b0a8ffff;
     }
 
     h1 {
@@ -25,10 +36,9 @@
     }
 
     .container {
+      flex: 1;
       padding: 20px;
       background-color: #14142c;
-
-      
     }
 
     h2 {
@@ -40,7 +50,7 @@
     }
 
     .background {
-      
+      overflow-y: auto;
     }
   </style>
 </head>
@@ -101,6 +111,9 @@
     <hr>
     <p>Agradecemos por escolher nosso aplicativo de conexão VPN e esperamos que sua experiência seja satisfatória.</p>
   </div>
+  <footer>
+    <p class="footer-text">&copy; 2023 SSH T PROJECT VPN. Todos os direitos reservados.</p>
+  </footer>
 </body>
 
 </html>

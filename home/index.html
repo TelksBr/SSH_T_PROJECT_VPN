@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Minha Página Inicial</title>
+  <style>
+    /* Estilos gerais */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+    }
+
+    body {
+      font-family: sans-serif;
+      background-color: #14142c;
+      color: #b0a8ffff;
+    }
+
+    /* Estilos da barra de navegação */
+    header {
+      background-color: #2521476b;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      
+    }
+
+    nav li {
+      margin-right: 20px;
+      
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #b0a8ffff;
+      font-weight: bold;
+    }
+
+    /* Estilos do menu de hambúrguer */
+    .menu-icon {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .menu-icon {
+        display: block;
+      }
+
+      nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #252147;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      nav li {
+        text-align: center;
+        margin: 10px 0;
+        background-color: rgba(24, 23, 34, 0.11);
+      }
+    }
+
+    /* Estilos do conteúdo da página */
+    .container {
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid #b0a8ffff;
+      border-radius: 5px;
+      background-color: #1f1c3a;
+      text-align: center;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      color: #b0a8ffff;
+      padding: 20px;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    .buttons {
+      margin-top: 10px;
+    }
+
+    .button {
+      flex-direction: row;
+      display: inline-block;
+      background-color: #30295cd2;
+      color: #241f47e0;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    hr {
+      border: none;
+      border-top: 2px solid rgb(196, 191, 238);
+      max-width: 45%;
+      margin: 0 auto;
+      margin-bottom: 10px;
+
+    }
+
+    a {
+      text-decoration: none;
+      /* Remover sublinhado padrão */
+      color: #b0a8ffff;
+      /* Cor padrão para links não visitados */
+      transition: color 0.3s;
+      /* Transição de cor suave */
+    }
+
+    /* Estilo para links não visitados */
+    a:link {
+      color: #b0a8ffff
+    }
+
+    /* Estilo para links visitados */
+    a:visited {
+      color: #b0a8ffff
+        /* Cor para links visitados */
+    }
+
+    /* Estilo para links em foco (quando clicados ou navegados usando o teclado) */
+    a:focus {
+      outline: none;
+      /* Remover a borda de foco padrão (pode personalizar como desejar) */
+      color: #6205d5;
+      /* Cor ao focar */
+    }
+
+    /* Estilo para links ao passar o mouse sobre eles */
+    a:hover {
+      color: #6205d5;
+      /* Cor ao passar o mouse */
+    }
+
+    .footer-text {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      padding: 1rem 0;
+      background-color: #201d3d6b;
+      color: #b0a8ffff;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Barra de Navegação -->
+  <header>
+    <h1>SSH T PROJECT VPN</h1>
+    <div class="menu-icon" id="menu-icon">&#9776;</div>
+    <nav>
+      <ul id="menu" class="modal-content">
+        <li><a href="/servers/index.html">Servers</a></li>
+        <li><a href="/premium/index.html">Premium</a></li>
+        <li><a href="/tutoriais/index.html">Tutoriais</a></li>
+        <li><a href="/termos/index.html">Termos</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <h2>O que é SSH T PROJECT VPN??</h2>
+      <hr>
+      <br>
+      <h3>
+        SSH T PROJECT é um projeto que foi criado visando ajudar as pessoas mais carentes a ter acesso a internet
+        movel!!<br>
+        Voce pode comçar utilizar agora mesmo sem pagar nada!
+      </h3>
+      <br>
+      <p>Entre nos grupos a abaixo e venha participar da nossa comunidade!</p>
+      <p>Compartilhe a liberdade com sua familia e amigos!</p>
+
+
+    </div>
+    <div class="buttons, container">
+      <a class="button" href="
+      https://chat.whatsapp.com/KOs4IT5FsC1FVOyysOC17f">
+        <i class="fab fa-whatsapp"></i> <b>WhatsApp</b>
+      </a>
+      <a class="button" href="https://t.me/ssh_t_project_grupo">
+        <i class="fab fa-telegram"></i><b>Telegram</b>
+      </a>
+      <a class="button" href="https://play.google.com/store/apps/details?id=app.sshtproject">
+        <i class="fas fa-download"></i><b>Aplicativo Oficial</b>
+      </a>
+
+    </div>
+  </main>
+  <footer>
+    <p class="footer-text">&copy; 2023 SSH T PROJECT VPN. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- JavaScript para o Menu de Hambúrguer -->
+  <script>
+    const menuIcon = document.getElementById("menu-icon");
+    const menu = document.getElementById("menu");
+
+    menuIcon.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+  </script>
+</body>
+
+</html>
