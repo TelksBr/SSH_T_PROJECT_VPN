@@ -9,7 +9,6 @@
 </head>
 
 <body>
-    <iframe src="../navbar.html" frameborder="0" scrolling="no"></iframe>
     <main>
         <section class="tutorial" id="1">
             <h2 class="tutorial-heading">Tutorial de Introdução ao App!!</h2>
@@ -207,6 +206,11 @@
         });
     });
 </script>
-
+<script>
+    function toggleMenu() {
+        var nav = document.querySelector('nav');
+        nav.classList.toggle('active');
+    }
+</script>
 
 </html>
