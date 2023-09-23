@@ -1,4 +1,3 @@
-<!-- navbar.html -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,7 +21,7 @@
         nav ul {
             list-style: none;
             display: flex;
-
+            padding: 0; /* Removemos o padding */
         }
 
         nav li {
@@ -48,7 +47,7 @@
                 display: block;
             }
 
-            nav ul {
+            nav {
                 display: none;
                 flex-direction: column;
                 position: absolute;
@@ -58,49 +57,44 @@
                 background-color: #252147;
             }
 
-            nav ul.active {
+            nav.active {
                 display: flex;
+            }
+
+            nav ul {
+                margin: 0; /* Adicionamos margem 0 para remover o espaçamento */
             }
 
             nav li {
                 text-align: center;
-                margin: 10px 0;
+                margin: 0; /* Removemos a margem direita */
+                padding: 10px 0; /* Adicionamos espaçamento interno */
                 background-color: rgba(24, 23, 34, 0.11);
+                width: 100%;
             }
         }
 
         a {
             text-decoration: none;
-            /* Remover sublinhado padrão */
             color: #b0a8ffff;
-            /* Cor padrão para links não visitados */
             transition: color 0.3s;
-            /* Transição de cor suave */
         }
 
-        /* Estilo para links não visitados */
         a:link {
-            color: #b0a8ffff
+            color: #b0a8ffff;
         }
 
-        /* Estilo para links visitados */
         a:visited {
-            color: #b0a8ffff
-                /* Cor para links visitados */
+            color: #b0a8ffff;
         }
 
-        /* Estilo para links em foco (quando clicados ou navegados usando o teclado) */
         a:focus {
             outline: none;
-            /* Remover a borda de foco padrão (pode personalizar como desejar) */
             color: #6205d5;
-            /* Cor ao focar */
         }
 
-        /* Estilo para links ao passar o mouse sobre eles */
         a:hover {
             color: #6205d5;
-            /* Cor ao passar o mouse */
         }
     </style>
 </head>
@@ -109,7 +103,7 @@
     <header>
         <h1>SSH T PROJECT VPN</h1>
         <div class="menu-icon" id="menu-icon">&#9776;</div>
-        <nav>
+        <nav id="nav">
             <ul id="menu" class="modal-content">
                 <li><a href="/servers/">Servers</a></li>
                 <li><a href="/premium/">Premium</a></li>
@@ -121,10 +115,10 @@
     <script>
         // JavaScript para o Menu de Hambúrguer
         const menuIcon = document.getElementById("menu-icon");
-        const menu = document.getElementById("menu");
+        const nav = document.getElementById("nav");
 
         menuIcon.addEventListener("click", () => {
-            menu.classList.toggle("active");
+            nav.classList.toggle("active");
         });
     </script>
 </body>
