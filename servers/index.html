@@ -368,29 +368,21 @@
         });
     }
 
-    function updateLayout() {
-        const content = document.querySelector('.background');
-        const footer = document.querySelector('.footer-text');
+    document.addEventListener('DOMContentLoaded', function () {
+        updateServerStatus(); // Atualiza os status dos servidores ao carregar a página
+        updatePortStatus(); // Atualiza os status das portas ao carregar a página
+    });
 
-        // Calcule a altura do conteúdo para que o footer não se sobreponha
-        const contentHeight = content.offsetHeight;
-        const windowHeight = window.innerHeight;
-
-        if (contentHeight < windowHeight) {
-            // Se o conteúdo for menor que a altura da janela, ajuste a altura mínima do conteúdo
-            content.style.minHeight = windowHeight - footer.offsetHeight + 'px';
-        } else {
-            // Caso contrário, redefina a altura mínima do conteúdo
-            content.style.minHeight = 'auto';
-        }
+    function fetchServerStatus(serverUrl, elementId) {
+        return new Promise((resolve, reject) => {
+            $.get(serverUrl, function (data) {
+                document.getElementById(elementId).textContent = `${data}`;
+                resolve(parseInt(data));
+            });
+        });
     }
 
-    // Chame a função de atualização do layout ao carregar a página
-    document.addEventListener('DOMContentLoaded', function () {
-        updateServerStatus();
-        updatePortStatus();
-        updateLayout();
-    });
+
 
     // Update the server status when the button is clicked
     document.getElementById("refresh-button").addEventListener("click", function () {
