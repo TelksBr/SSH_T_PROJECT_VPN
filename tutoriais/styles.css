@@ -1,80 +1,28 @@
 /* styles.css */
-* {
+body {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-  }
-
-body {
-    font-family: sans-serif;
     background-color: #14142c;
-    color: #b0a8ffff;
+    
+    flex-direction: column;
+    display: flex;
 }
 
-
-/* Estilos da barra de navegação */
 header {
     background-color: #2521476b;
+    color: #b0a8ffff;
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
+    padding-right: 10px;
+    font-size: 1rem;
+    font-family: Roboto;
+}
 
-  header h1 {
-    font-size: 1.5rem;
-  }
-
-  nav ul {
-    list-style: none;
-    display: flex;
-    
-  }
-
-  nav li {
-    margin-right: 20px;
-    
-  }
-
-  nav a {
-    text-decoration: none;
-    color: #b0a8ffff;
-    font-weight: bold;
-  }
-
-  /* Estilos do menu de hambúrguer */
-  .menu-icon {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-  }
-
-  @media (max-width: 768px) {
-    .menu-icon {
-      display: block;
-    }
-
-    nav ul {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 100%;
-      background-color: #252147;
-    }
-
-    nav ul.active {
-      display: flex;
-    }
-
-    nav li {
-      text-align: center;
-      margin: 10px 0;
-      background-color: rgba(24, 23, 34, 0.11);
-    }
-  }
   
 main {
     flex-direction: column;
