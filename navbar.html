@@ -1,0 +1,132 @@
+<!-- navbar.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* Estilos da barra de navegação */
+        header {
+            background-color: #2521476b;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            color: #b0a8ffff;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #b0a8ffff;
+            font-weight: bold;
+        }
+
+        /* Estilos do menu de hambúrguer */
+        .menu-icon {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #b0a8ffff;
+        }
+
+        @media (max-width: 768px) {
+            .menu-icon {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #252147;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav li {
+                text-align: center;
+                margin: 10px 0;
+                background-color: rgba(24, 23, 34, 0.11);
+            }
+        }
+
+        a {
+            text-decoration: none;
+            /* Remover sublinhado padrão */
+            color: #b0a8ffff;
+            /* Cor padrão para links não visitados */
+            transition: color 0.3s;
+            /* Transição de cor suave */
+        }
+
+        /* Estilo para links não visitados */
+        a:link {
+            color: #b0a8ffff
+        }
+
+        /* Estilo para links visitados */
+        a:visited {
+            color: #b0a8ffff
+                /* Cor para links visitados */
+        }
+
+        /* Estilo para links em foco (quando clicados ou navegados usando o teclado) */
+        a:focus {
+            outline: none;
+            /* Remover a borda de foco padrão (pode personalizar como desejar) */
+            color: #6205d5;
+            /* Cor ao focar */
+        }
+
+        /* Estilo para links ao passar o mouse sobre eles */
+        a:hover {
+            color: #6205d5;
+            /* Cor ao passar o mouse */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>SSH T PROJECT VPN</h1>
+        <div class="menu-icon" id="menu-icon">&#9776;</div>
+        <nav>
+            <ul id="menu" class="modal-content">
+                <li><a href="./servers/index.html">Servers</a></li>
+                <li><a href="./premium/index.html">Premium</a></li>
+                <li><a href="./tutoriais/index.html">Tutoriais</a></li>
+                <li><a href="./termos/index.html">Termos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        // JavaScript para o Menu de Hambúrguer
+        const menuIcon = document.getElementById("menu-icon");
+        const menu = document.getElementById("menu");
+
+        menuIcon.addEventListener("click", () => {
+            menu.classList.toggle("active");
+        });
+    </script>
+</body>
+
+</html>
