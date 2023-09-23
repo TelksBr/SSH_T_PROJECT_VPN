@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    
     <main>
         <section class="tutorial" id="1">
             <h2 class="tutorial-heading">Tutorial de Introdução ao App!!</h2>
@@ -206,6 +207,13 @@
         });
     });
 </script>
+<script>
+    const menuIcon = document.getElementById("menu-icon");
+    const menu = document.getElementById("menu");
 
+    menuIcon.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+  </script>
 
 </html>

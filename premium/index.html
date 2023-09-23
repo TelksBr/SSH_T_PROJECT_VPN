@@ -24,7 +24,8 @@
       width: 100%;
       height: 100%;
       background-color: #14142c;
-      position: relative; /* Adicione esta linha */
+      position: relative;
+      /* Adicione esta linha */
     }
 
     .container {
@@ -39,8 +40,9 @@
       border-radius: 5px;
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
       color: #b0a8ffff;
-      min-height: calc(100vh - 100px); /* Defina a altura mínima, subtraindo a altura do footer */
-  margin-bottom: 50px;
+      min-height: calc(100vh - 100px);
+      /* Defina a altura mínima, subtraindo a altura do footer */
+      margin-bottom: 50px;
     }
 
     h1 {
@@ -86,129 +88,128 @@
       max-width: 45%;
       margin: 0 auto;
       margin-bottom: 10px;
-     
+
     }
 
     .footer-text {
-  position: absolute; /* Altere para position: absolute */
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  padding: 1rem 0;
-  color: #b0a8ffff;
-}
+      position: absolute;
+      /* Altere para position: absolute */
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      padding: 1rem 0;
+      color: #b0a8ffff;
+    }
 
-        /* Estilos da barra de navegação */
-        header {
-            background-color: #2521476b;
-            padding: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    /* Estilos da barra de navegação */
+    header {
+      background-color: #2521476b;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
 
-        header h1 {
-            font-size: 1.5rem;
-            color: #b0a8ffff;
-        }
+    header h1 {
+      font-size: 1.5rem;
+    }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            padding: 0; /* Removemos o padding */
-        }
+    nav ul {
+      list-style: none;
+      display: flex;
 
-        nav li {
-            margin-right: 20px;
-        }
+    }
 
-        nav a {
-            text-decoration: none;
-            color: #b0a8ffff;
-            font-weight: bold;
-        }
+    nav li {
+      margin-right: 20px;
 
-        /* Estilos do menu de hambúrguer */
-        .menu-icon {
-            display: none;
-            font-size: 24px;
-            cursor: pointer;
-            color: #b0a8ffff;
-        }
+    }
 
-        @media (max-width: 768px) {
-            .menu-icon {
-                display: block;
-            }
+    nav a {
+      text-decoration: none;
+      color: #b0a8ffff;
+      font-weight: bold;
+    }
 
-            nav {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                width: 100%;
-                background-color: #252147;
-            }
+    /* Estilos do menu de hambúrguer */
+    .menu-icon {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
 
-            nav.active {
-                display: flex;
-            }
+    @media (max-width: 768px) {
+      .menu-icon {
+        display: block;
+      }
 
-            nav ul {
-                margin: 0; /* Adicionamos margem 0 para remover o espaçamento */
-            }
+      nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #252147;
+      }
 
-            nav li {
-                text-align: center;
-                margin: 0; /* Removemos a margem direita */
-                padding: 10px 0; /* Adicionamos espaçamento interno */
-                background-color: rgba(24, 23, 34, 0.11);
-                width: 100%;
-            }
-        }
+      nav ul.active {
+        display: flex;
+      }
 
-        a {
-            text-decoration: none;
-            color: #b0a8ffff;
-            transition: color 0.3s;
-        }
+      nav li {
+        text-align: center;
+        margin: 10px 0;
+        background-color: rgba(24, 23, 34, 0.11);
+      }
+    }
 
-        a:link {
-            color: #b0a8ffff;
-        }
+    a {
+      text-decoration: none;
+      color: #b0a8ffff;
+      transition: color 0.3s;
+    }
 
-        a:visited {
-            color: #b0a8ffff;
-        }
+    a:link {
+      color: #b0a8ffff;
+    }
 
-        a:focus {
-            outline: none;
-            color: #6205d5;
-        }
+    a:visited {
+      color: #b0a8ffff;
+    }
 
-        a:hover {
-            color: #6205d5;
-        }
-    
+    a:focus {
+      outline: none;
+      color: #6205d5;
+    }
+
+    a:hover {
+      color: #6205d5;
+    }
+
+    .menu-icon {
+      color: #b0a8ffff;
+    }
   </style>
-      <header>
-        <h1>SSH T PROJECT VPN</h1>
-        <div class="menu-icon" id="menu-icon">&#9776;</div>
-        <nav id="nav">
-            <ul id="menu" class="modal-content">
-                <li><a href="/servers/">Servers</a></li>
-                <li><a href="/premium/">Premium</a></li>
-                <li><a href="/tutoriais/">Tutoriais</a></li>
-                <li><a href="/termos/">Termos</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1>SSH T PROJECT VPN</h1>
+    <div class="menu-icon" id="menu-icon">&#9776;</div>
+    <nav>
+      <ul id="menu" class="modal-content">
+        <li><a href="/servers/">Servers</a></li>
+        <li><a href="/premium/">Premium</a></li>
+        <li><a href="/tutoriais/">Tutoriais</a></li>
+        <li><a href="/termos/">Termos</a></li>
+      </ul>
+    </nav>
+  </header>
+
 <body>
-  
+
   <h1>SSH T PROJECT PREMIUM</h1>
-  
+
   <div class="container" id="conteiner"></div>
   </div>
   <footer>
@@ -219,12 +220,11 @@
 
 
 <script>
-  // JavaScript para o Menu de Hambúrguer
   const menuIcon = document.getElementById("menu-icon");
-  const nav = document.getElementById("nav");
+  const menu = document.getElementById("menu");
 
   menuIcon.addEventListener("click", () => {
-      nav.classList.toggle("active");
+    menu.classList.toggle("active");
   });
 </script>
 <script>

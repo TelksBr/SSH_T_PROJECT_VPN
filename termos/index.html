@@ -53,28 +53,29 @@
       overflow-y: auto;
     }
 
-            /* Estilos da barra de navegação */
-            header {
+        /* Estilos da barra de navegação */
+        header {
             background-color: #2521476b;
             padding: 10px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            width:100%;
         }
 
         header h1 {
             font-size: 1.5rem;
-            color: #b0a8ffff;
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            padding: 0; /* Removemos o padding */
+
         }
 
         nav li {
             margin-right: 20px;
+
         }
 
         nav a {
@@ -88,7 +89,6 @@
             display: none;
             font-size: 24px;
             cursor: pointer;
-            color: #b0a8ffff;
         }
 
         @media (max-width: 768px) {
@@ -96,7 +96,7 @@
                 display: block;
             }
 
-            nav {
+            nav ul {
                 display: none;
                 flex-direction: column;
                 position: absolute;
@@ -106,20 +106,14 @@
                 background-color: #252147;
             }
 
-            nav.active {
+            nav ul.active {
                 display: flex;
-            }
-
-            nav ul {
-                margin: 0; /* Adicionamos margem 0 para remover o espaçamento */
             }
 
             nav li {
                 text-align: center;
-                margin: 0; /* Removemos a margem direita */
-                padding: 10px 0; /* Adicionamos espaçamento interno */
+                margin: 10px 0;
                 background-color: rgba(24, 23, 34, 0.11);
-                width: 100%;
             }
         }
 
@@ -145,6 +139,9 @@
         a:hover {
             color: #6205d5;
         }
+        .menu-icon{
+            color: #b0a8ffff;
+        }
   </style>
 </head>
 
@@ -152,15 +149,15 @@
   <header>
     <h1>SSH T PROJECT VPN</h1>
     <div class="menu-icon" id="menu-icon">&#9776;</div>
-    <nav id="nav">
-        <ul id="menu" class="modal-content">
-            <li><a href="/servers/">Servers</a></li>
-            <li><a href="/premium/">Premium</a></li>
-            <li><a href="/tutoriais/">Tutoriais</a></li>
-            <li><a href="/termos/">Termos</a></li>
-        </ul>
+    <nav>
+      <ul id="menu" class="modal-content">
+        <li><a href="/servers/">Servers</a></li>
+        <li><a href="/premium/">Premium</a></li>
+        <li><a href="/tutoriais/">Tutoriais</a></li>
+        <li><a href="/termos/">Termos</a></li>
+    </ul>
     </nav>
-</header>
+  </header>
   <div class="container">
     <h1>Termos de Uso SSH T PROJECT VPN</h1>
     <hr>
@@ -221,12 +218,11 @@
   </footer>
 </body>
 <script>
-  // JavaScript para o Menu de Hambúrguer
   const menuIcon = document.getElementById("menu-icon");
-  const nav = document.getElementById("nav");
+  const menu = document.getElementById("menu");
 
   menuIcon.addEventListener("click", () => {
-      nav.classList.toggle("active");
+    menu.classList.toggle("active");
   });
 </script>
 </html>
