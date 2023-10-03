@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="favicon.ico" alt="Logo do SSH T PROJECT VPN" width="50">
+  <img src="favicon.ico" alt="Logo do SSH T PROJECT VPN" width="100">
 </div>
 
 <h1 align="center">SSH T PROJECT VPN</h1>
@@ -18,6 +18,10 @@
     <img src="https://img.shields.io/github/license/seu-usuario/seu-repositorio.svg?style=for-the-badge" alt="GitHub License">
   </a>
 </div>
+
+![GitHub Stars](https://img.shields.io/github/stars/seu-usuario/seu-repositorio.svg)
+![GitHub Forks](https://img.shields.io/github/forks/seu-usuario/seu-repositorio.svg)
+
 
 ## Descrição do Projeto
 
