@@ -5,22 +5,22 @@
 <h1 align="center">SSH T PROJECT VPN</h1>
 
 <div align="center">
-  <a href="https://github.com/seu-usuario/seu-repositorio/stargazers">
-    <img src="https://img.shields.io/github/stars/seu-usuario/seu-repositorio.svg?style=for-the-badge" alt="GitHub Stars">
+  <a href="https://github.com/TelksBr/SSH_T_PROJECT_PAGE/stargazers">
+    <img src="https://img.shields.io/github/stars/TelksBr/SSH_T_PROJECT_PAGE.svg?style=for-the-badge" alt="GitHub Stars">
   </a>
-  <a href="https://github.com/seu-usuario/seu-repositorio/network/members">
-    <img src="https://img.shields.io/github/forks/seu-usuario/seu-repositorio.svg?style=for-the-badge" alt="GitHub Forks">
+  <a href="https://github.com/TelksBr/SSH_T_PROJECT_PAGE/network/members">
+    <img src="https://img.shields.io/github/forks/TelksBr/SSH_T_PROJECT_PAGE.svg?style=for-the-badge" alt="GitHub Forks">
   </a>
-  <a href="https://github.com/seu-usuario/seu-repositorio/issues">
-    <img src="https://img.shields.io/github/issues/seu-usuario/seu-repositorio.svg?style=for-the-badge" alt="GitHub Issues">
+  <a href="https://github.com/TelksBr/SSH_T_PROJECT_PAGE/issues">
+    <img src="https://img.shields.io/github/issues/TelksBr/SSH_T_PROJECT_PAGE.svg?style=for-the-badge" alt="GitHub Issues">
   </a>
-  <a href="https://github.com/seu-usuario/seu-repositorio/blob/master/LICENSE">
-    <img src="https://img.shields.io/github/license/seu-usuario/seu-repositorio.svg?style=for-the-badge" alt="GitHub License">
+  <a href="https://github.com/TelksBr/SSH_T_PROJECT_PAGE/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/TelksBr/SSH_T_PROJECT_PAGE.svg?style=for-the-badge" alt="GitHub License">
   </a>
 </div>
 
-![GitHub Stars](https://img.shields.io/github/stars/seu-usuario/seu-repositorio.svg)
-![GitHub Forks](https://img.shields.io/github/forks/seu-usuario/seu-repositorio.svg)
+![GitHub Stars](https://img.shields.io/github/stars/TelksBr/SSH_T_PROJECT_PAGE.svg)
+![GitHub Forks](https://img.shields.io/github/forks/TelksBr/SSH_T_PROJECT_PAGE.svg)
 
 
 ## Descrição do Projeto
