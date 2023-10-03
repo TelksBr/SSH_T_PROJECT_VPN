@@ -18,8 +18,6 @@
     <img src="https://img.shields.io/github/license/TelksBr/SSH_T_PROJECT_PAGE.svg?style=for-the-badge" alt="GitHub License">
   </a>
   <a>
-    ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=seu-usuario&theme=blue-green)
-
   </a>
 
 </div>
