@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://sua-url-da-imagem/logo.png" alt="Logo do SSH T PROJECT VPN" width="200">
+  <img src="favicon.ico" alt="Logo do SSH T PROJECT VPN" width="200">
 </div>
 
 <h1 align="center">SSH T PROJECT VPN</h1>
