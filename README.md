@@ -17,10 +17,13 @@
   <a href="https://github.com/TelksBr/SSH_T_PROJECT_PAGE/blob/master/LICENSE">
     <img src="https://img.shields.io/github/license/TelksBr/SSH_T_PROJECT_PAGE.svg?style=for-the-badge" alt="GitHub License">
   </a>
+  <a>
+    ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=seu-usuario&theme=blue-green)
+
+  </a>
+
 </div>
 
-![GitHub Stars](https://img.shields.io/github/stars/TelksBr/SSH_T_PROJECT_PAGE.svg)
-![GitHub Forks](https://img.shields.io/github/forks/TelksBr/SSH_T_PROJECT_PAGE.svg)
 
 
 ## Descrição do Projeto
