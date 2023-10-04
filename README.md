@@ -1,6 +1,6 @@
-<div >
-  <img src="favicon.ico" alt="Logo do SSH T PROJECT VPN" width="100" >
-  <h1 align="center">SSH T PROJECT VPN</h1>
+<div style="display: flex; align-items: center;">
+  <img src="favicon.ico" alt="Logo do SSH T PROJECT VPN" width="100">
+  <h1 style="margin-left: 10px;">SSH T PROJECT VPN</h1>
 </div>
 
 
