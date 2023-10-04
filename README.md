@@ -1,8 +1,9 @@
 <div align="center">
   <img src="favicon.ico" alt="Logo do SSH T PROJECT VPN" width="100">
+  <h1 align="center">SSH T PROJECT VPN</h1>
 </div>
 
-<h1 align="center">SSH T PROJECT VPN</h1>
+
 
 <div align="center">
   <a href="https://github.com/TelksBr/SSH_T_PROJECT_PAGE/stargazers">
