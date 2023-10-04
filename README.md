@@ -34,14 +34,7 @@ Bem-vindo ao SSH T PROJECT VPN, SSH T PROJECT é um projeto que foi criado visan
 - Multiplos Servidores (BR)
 - App base (DtunnelVPN)
 
-## Captura de Tela
-
-![Captura de Tela](https://play-lh.googleusercontent.com/eKYClqWc3sPE_ZCodH-4SZTIaDIpzQrxZJYIi3Z6mHRm_wNqvoxRUbCs_rBBeDMJjg=w5120-h2880-rw)
-
 ## Como Usar
-
-1. Clone o repositório.
-2. Siga as instruções no arquivo `README.md` para configurar e usar a VPN.
 
 
 
@@ -58,23 +51,21 @@ Bem-vindo ao SSH T PROJECT VPN, SSH T PROJECT é um projeto que foi criado visan
 
 ## Contribuindo
 
-Sinta-se à vontade para contribuir para o SSH T PROJECT VPN! Siga estas etapas:
-
-1. Crie um fork do projeto.
-2. Crie uma branch com sua contribuição: `git checkout -b minha-contribuicao`.
-3. Faça as alterações desejadas e comente-as.
-4. Envie um pull request para revisão.
-
-## Licença
-
-Este projeto é licenciado sob a Licença MIT. Consulte o arquivo [LICENSE](LICENSE) para obter mais detalhes.
 
 ## Contato
 
 Se você tiver alguma dúvida ou sugestão, sinta-se à vontade para entrar em contato conosco:
 
-- Email: seu-email@gmail.com
-- Twitter: [@seu-twitter](https://twitter.com/seu-twitter)
+## :octocat: DEV
+- @TALKERA
+
+# Telegram
+```
+https://t.me/ssh_t_project
+```
+```
+https://t.me/ssh_t_project_grupo
+```
 
 Esperamos que você aproveite o SSH T PROJECT VPN! Obrigado por usar nosso projeto.
 
