@@ -4,11 +4,7 @@
 
 <h1 align="center">SSH T PROJECT VPN</h1>
 <p align="center"><i>CLIENTE VPN SSH & V2RAY FREE</i></p>
-<div align="center">
-  <a>
-    <img src="https://github-readme-stats.vercel.app/api?username=TelksBr&theme=blue-green">
-  </a>
-</div >
+
 <div align="center">
   <a href="https://github.com/TelksBr/SSH_T_PROJECT_PAGE/stargazers">
     <img src="https://img.shields.io/github/stars/TelksBr/SSH_T_PROJECT_PAGE.svg?style=for-the-badge" alt="GitHub Stars">
