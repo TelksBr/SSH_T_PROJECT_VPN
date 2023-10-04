@@ -4,14 +4,15 @@
 
 <h1 align="center">SSH T PROJECT VPN</h1>
 <p align="center"><i>CLIENTE VPN SSH & V2RAY FREE</i></p>
-<div>
-  
-</div>
+<div align="center">
+  <a>
+    <img src="https://starchart.cc/TelksBr/SSH_T_PROJECT_PAGE.svg">
+  </a>
+</div >
 <div align="center">
   <a href="https://github.com/TelksBr/SSH_T_PROJECT_PAGE/stargazers">
     <img src="https://img.shields.io/github/stars/TelksBr/SSH_T_PROJECT_PAGE.svg?style=for-the-badge" alt="GitHub Stars">
   </a>
-  
   <a href="https://github.com/TelksBr/SSH_T_PROJECT_PAGE/releases">
     <img src="https://img.shields.io/github/downloads/TelksBr/SSH_T_PROJECT_PAGE/total.svg?style=for-the-badge" alt="GitHub Downloads">
   </a>
