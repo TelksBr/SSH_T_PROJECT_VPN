@@ -38,6 +38,8 @@ Bem-vindo ao SSH T PROJECT VPN, SSH T PROJECT é um projeto que foi criado visan
 
 1. Instale o aplicativo.
 2. Abra o aplicativo e siga as instruções.
+[2. Tutoriais disponíveis aqui](https://sshtproject.com/tutoriais)
+
 
 ### :exclamation: REQUISITOS
 
@@ -51,10 +53,6 @@ Bem-vindo ao SSH T PROJECT VPN, SSH T PROJECT é um projeto que foi criado visan
 [![Download no GitHub](https://img.shields.io/badge/Download-GitHub-blue.svg)](https://github.com/TelksBr/SSH_T_PROJECT_PAGE/releases)
 
 
-### :hammer: Contribuindo
-
-Se você deseja contribuir, abra uma [issue](link_para_issues) ou envie um [pull request](link_para_pull_requests).
-
 ### :email: Contato
 
 Se você tiver alguma dúvida ou sugestão, sinta-se à vontade para entrar em contato conosco:
@@ -65,7 +63,7 @@ Se você tiver alguma dúvida ou sugestão, sinta-se à vontade para entrar em c
 
 ### :telephone_receiver: Telegram
 
-- [Telegram do Projeto](https://t.me/ssh_t_project)
+- [Canal no Telegram](https://t.me/ssh_t_project)
 - [Grupo no Telegram](https://t.me/ssh_t_project_grupo)
 
 
