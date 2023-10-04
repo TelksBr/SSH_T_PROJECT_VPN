@@ -11,7 +11,10 @@
   <a href="https://github.com/TelksBr/SSH_T_PROJECT_PAGE/releases">
     <img src="https://img.shields.io/github/downloads/TelksBr/SSH_T_PROJECT_PAGE/total.svg?style=for-the-badge" alt="GitHub Downloads">
   </a>
-  <a>
+ 
+
+<div align="center">
+ <a>
     <img src="https://img.shields.io/github/followers/TelksBr.svg?style=social&label=Follow&maxAge=2592000" alt="Follow">
   </a>
     <a href= "https://sshtproject.com">
@@ -22,7 +25,6 @@
     <img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg">
   </a>
 </div>
-
 ---
 
 ## Descrição do Projeto
