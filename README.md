@@ -11,9 +11,7 @@
   <a href="https://github.com/TelksBr/SSH_T_PROJECT_PAGE/stargazers">
     <img src="https://img.shields.io/github/stars/TelksBr/SSH_T_PROJECT_PAGE.svg?style=for-the-badge" alt="GitHub Stars">
   </a>
-  <a href="https://github.com/anuraghazra/github-readme-stats/issues">
-      <img alt="stars" src="https://img.shields.io/github/stars/telksbr/SSH-T-PROJECT-VPN.svg" />
-    </a>
+  
   <a href="https://github.com/TelksBr/SSH_T_PROJECT_PAGE/releases">
     <img src="https://img.shields.io/github/downloads/TelksBr/SSH_T_PROJECT_PAGE/total.svg?style=for-the-badge" alt="GitHub Downloads">
   </a>
