@@ -45,9 +45,11 @@ Bem-vindo ao SSH T PROJECT VPN, SSH T PROJECT é um projeto que foi criado visan
 - SIM ATIVO (sem dados)
 - Internet para atualizar o app pela primeira vez!
 
-### :arrow_down: DOWNLOAD
+### :arrow_down: Download
 
-[![Download](botao.png)](link_para_download)
+[![Download na Play Store](https://img.shields.io/badge/Download-Play%20Store-brightgreen.svg)](https://play.google.com/store/apps/details?id=app.sshtproject)
+[![Download no GitHub](https://img.shields.io/badge/Download-GitHub-blue.svg)](https://github.com/TelksBr/SSH_T_PROJECT_PAGE/releases)
+
 
 ### :hammer: Contribuindo
 
