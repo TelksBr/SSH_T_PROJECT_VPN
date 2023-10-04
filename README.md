@@ -26,28 +26,24 @@
 
 ## Descrição do Projeto
 
-Bem-vindo ao SSH T PROJECT VPN, uma solução de VPN baseada em SSH para proteger suas conexões de rede e manter seus dados seguros. Nossa VPN oferece segurança avançada e acesso remoto confiável.
-
-## Principais Recursos
-
-- **Segurança Avançada:** Usamos criptografia SSH para garantir a segurança das suas comunicações.
-- **Acesso Remoto:** Acesse recursos em rede em qualquer lugar, como se estivesse local.
-- **Fácil de Usar:** Uma interface simples e amigável torna a configuração rápida e fácil.
-
-## Captura de Tela
-
-![Captura de Tela](https://sua-url-da-imagem/captura-de-tela.png)
-
-## Como Usar
-
-1. Clone o repositório.
-2. Siga as instruções no arquivo `README.md` para configurar e usar a VPN.
+Bem-vindo ao SSH T PROJECT VPN, SSH T PROJECT é um projeto que foi criado visando ajudar as pessoas mais carentes a ter acesso a internet movel!!
 
 # Características e Funções
 
 - Conexão SSH & V2RAY
 - Multiplos Servidores (BR)
 - App base (DtunnelVPN)
+
+## Captura de Tela
+
+![Captura de Tela](https://play-lh.googleusercontent.com/eKYClqWc3sPE_ZCodH-4SZTIaDIpzQrxZJYIi3Z6mHRm_wNqvoxRUbCs_rBBeDMJjg=w5120-h2880-rw)
+
+## Como Usar
+
+1. Clone o repositório.
+2. Siga as instruções no arquivo `README.md` para configurar e usar a VPN.
+
+
 
 ## :heavy_exclamation_mark: REQUISITOS:
 
