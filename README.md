@@ -69,8 +69,8 @@ https://t.me/ssh_t_project_grupo
 
 Esperamos que você aproveite o SSH T PROJECT VPN! Obrigado por usar nosso projeto.
 
-<div align="center">
+<!-- <div align="center">
   <a>
     <img src="https://starchart.cc/TelksBr/SSH_T_PROJECT_PAGE.svg">
   </a>
-</div >
+</div > -->
