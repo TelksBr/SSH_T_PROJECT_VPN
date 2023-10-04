@@ -3,7 +3,7 @@
 </div>
 
 <h1 align="center">SSH T PROJECT VPN</h1>
-<p align="center"><i>free cliente ssh - v2ray</i></p>
+
 
 <div align="center">
   <a href="https://github.com/TelksBr/SSH_T_PROJECT_PAGE/stargazers">
@@ -23,7 +23,7 @@
     <img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg">
   </a>
 </div>
-
+<p align="center"><i>free cliente ssh - v2ray</i></p>
 ---
 
 ## Descrição do Projeto
