@@ -24,22 +24,22 @@
   </a>
 </div>
 
+---
+
 ## Descrição do Projeto
 
 Bem-vindo ao SSH T PROJECT VPN, SSH T PROJECT é um projeto que foi criado visando ajudar as pessoas mais carentes a ter acesso a internet movel!!
 
+---
+
 ### :rocket: Características e Funções
 
 - Conexão SSH & V2RAY
-- Multiplos Servidores (BR)
-- App base (DtunnelVPN)
+- Servidores Gratutito e Premium!
+- Hotspot VPN! (proxy)
+- Atualizações Frequentes!
 
-### :computer: Como Usar
-
-1. Instale o aplicativo.
-2. Abra o aplicativo e siga as instruções.
-[2. Tutoriais disponíveis aqui](https://sshtproject.com/tutoriais)
-
+---
 
 ### :exclamation: REQUISITOS
 
@@ -47,26 +47,34 @@ Bem-vindo ao SSH T PROJECT VPN, SSH T PROJECT é um projeto que foi criado visan
 - SIM ATIVO (sem dados)
 - Internet para atualizar o app pela primeira vez!
 
+---
+
+### :computer: Como Usar
+
+1. Instale o aplicativo.
+2. Abra o aplicativo e siga as instruções.
+[Tutoriais disponíveis aqui](https://sshtproject.com/tutoriais)
+
+---
+
 ### :arrow_down: Download
 
 [![Download na Play Store](https://img.shields.io/badge/Download-Play%20Store-brightgreen.svg)](https://play.google.com/store/apps/details?id=app.sshtproject)
 [![Download no GitHub](https://img.shields.io/badge/Download-GitHub-blue.svg)](https://github.com/TelksBr/SSH_T_PROJECT_PAGE/releases)
 
-
-### :email: Contato
-
-Se você tiver alguma dúvida ou sugestão, sinta-se à vontade para entrar em contato conosco:
+---
 
 ### :octocat: DEV
 
 - @TALKERA
+
+---
 
 ### :telephone_receiver: Telegram
 
 - [Canal no Telegram](https://t.me/ssh_t_project)
 - [Grupo no Telegram](https://t.me/ssh_t_project_grupo)
 
+---
 
 Esperamos que você aproveite o SSH T PROJECT VPN! Obrigado por usar nosso projeto.
-
-
