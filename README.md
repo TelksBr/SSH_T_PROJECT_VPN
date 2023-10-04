@@ -1,16 +1,8 @@
-<table style="width: 100%; text-align: center; border-collapse: collapse;">
-  <tr>
-    <td style="border: none;">
-      <img src="favicon.ico" alt="Logo do SSH T PROJECT VPN" width="100">
-    </td>
-    <td style="border: none;">
-      <h1>SSH T PROJECT VPN</h1>
-    </td>
-  </tr>
-</table>
+<div align="center">
+  <img src="favicon.ico" alt="Logo do SSH T PROJECT VPN" width="100">
+</div>
 
-
-
+<h1 align="center">SSH T PROJECT VPN</h1>
 
 <div align="center">
   <a href="https://github.com/TelksBr/SSH_T_PROJECT_PAGE/stargazers">
