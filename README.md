@@ -17,8 +17,8 @@
     <a href= "https://sshtproject.com">
     <img src="https://img.shields.io/website-up-down-green-red/http/sshtproject.com" alt="WebSite">
   </a>
-  </a>
-    <a>
+  
+  <a>
     <img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg">
   </a>
 </div>
