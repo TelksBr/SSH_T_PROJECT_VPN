@@ -6,7 +6,7 @@
 <p align="center"><i>CLIENTE VPN SSH & V2RAY FREE</i></p>
 <div align="center">
   <a>
-    <img src="https://starchart.cc/TelksBr/SSH_T_PROJECT_PAGE.svg">
+    <img src="https://github-readme-stats.vercel.app/api?username=TelksBr&theme=blue-green">
   </a>
 </div >
 <div align="center">
@@ -58,3 +58,9 @@ Se você tiver alguma dúvida ou sugestão, sinta-se à vontade para entrar em c
 - Twitter: [@seu-twitter](https://twitter.com/seu-twitter)
 
 Esperamos que você aproveite o SSH T PROJECT VPN! Obrigado por usar nosso projeto.
+
+<div align="center">
+  <a>
+    <img src="https://starchart.cc/TelksBr/SSH_T_PROJECT_PAGE.svg">
+  </a>
+</div >
