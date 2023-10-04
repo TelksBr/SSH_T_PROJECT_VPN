@@ -3,7 +3,7 @@
 </div>
 
 <h1 align="center">SSH T PROJECT VPN</h1>
-<p align="center"><i>CLIENTE VPN SSH & V2RAY FREE</i></p>
+<p align="center"><i>CLIENTE VPN ANDROID SSH & V2RAY FREE</i></p>
 
 <div align="center">
   <a href="https://github.com/TelksBr/SSH_T_PROJECT_PAGE/stargazers">
@@ -20,7 +20,7 @@
   </a>
   </a>
     <a>
-    <img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" alt="WebSite">
+    <img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg">
   </a>
 </div>
 
@@ -42,6 +42,23 @@ Bem-vindo ao SSH T PROJECT VPN, uma solução de VPN baseada em SSH para protege
 
 1. Clone o repositório.
 2. Siga as instruções no arquivo `README.md` para configurar e usar a VPN.
+
+# Características e Funções
+
+- Conexão SSH & V2RAY
+- Multiplos Servidores (BR)
+- App base (DtunnelVPN)
+
+## :heavy_exclamation_mark: REQUISITOS:
+
+* Android 5+
+* SIM ATIVO (sem dados)
+* Internet para atualizar o app pela primeira vez!
+
+
+# 💻 DOWNLOAD:
+
+
 
 ## Contribuindo
 
