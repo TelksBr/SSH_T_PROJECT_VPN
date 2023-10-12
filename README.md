@@ -28,7 +28,7 @@
 
 ---
 
-## Descrição do Projeto
+## Descrição do APP
 
 Bem-vindo ao SSH T PROJECT VPN, SSH T PROJECT é um projeto que foi criado visando ajudar as pessoas mais carentes a ter acesso a internet movel!!
 
@@ -40,6 +40,7 @@ Bem-vindo ao SSH T PROJECT VPN, SSH T PROJECT é um projeto que foi criado visan
 - Servidores Gratutito e Premium!
 - Hotspot VPN! (proxy)
 - Atualizações Frequentes!
+- Suporte UDPGW (chamdas e jogos online!)
 
 ---
 
