@@ -1,238 +1,72 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
 
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <title>SSH T PROJECT PREMIUM</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: sans-serif;
-      text-decoration: none;
-    }
-
-    body {
-      animation: fade-in 1s ease-in-out;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      height: 100%;
-      background-color: #14142c;
-      position: relative;
-      /* Adicione esta linha */
-    }
-
-    .container {
-      margin: 7px;
-      padding: 10px;
-      border: 1px solid #b0a8ffff;
-      border-radius: 5px;
-      background-color: #14142c;
-      width: 90%;
-      min-width: 250px;
-      text-align: center;
-      border-radius: 5px;
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-      color: #b0a8ffff;
-      min-height: calc(100vh - 100px);
-      /* Defina a altura mínima, subtraindo a altura do footer */
-      margin-bottom: 50px;
-    }
-
-    h1 {
-      color: #b0a8ffff;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .plan {
-      text-align: center;
-      margin: 20px;
-      padding: 20px;
-      border-radius: 5px;
-      background-color: #1F1C3A;
-      text-align: center;
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    }
-
-    .plan h2 {
-      color: #b0a8ffff;
-    }
-
-    .price {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-
-    .subscribe-button {
-      flex-direction: row;
-      display: inline-block;
-      background-color: rgba(177, 168, 255, 0.788);
-      color: #241f47e0;
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    hr {
-      border: none;
-      border-top: 2px solid rgb(196, 191, 238);
-      max-width: 45%;
-      margin: 0 auto;
-      margin-bottom: 10px;
-
-    }
-
-    .footer-text {
-      position: absolute;
-      /* Altere para position: absolute */
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      text-align: center;
-      padding: 1rem 0;
-      color: #b0a8ffff;
-    }
-
-    /* Estilos da barra de navegação */
-    header {
-      background-color: #2521476b;
-      padding: 10px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-    }
-
-    header h1 {
-      font-size: 1.5rem;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-
-    }
-
-    nav li {
-      margin-right: 20px;
-
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #b0a8ffff;
-      font-weight: bold;
-    }
-
-    /* Estilos do menu de hambúrguer */
-    .menu-icon {
-      display: none;
-      font-size: 24px;
-      cursor: pointer;
-    }
-
-    @media (max-width: 768px) {
-      .menu-icon {
-        display: block;
-      }
-
-      nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #252147;
-      }
-
-      nav ul.active {
-        display: flex;
-      }
-
-      nav li {
-        text-align: center;
-        margin: 10px 0;
-        background-color: rgba(24, 23, 34, 0.11);
-      }
-    }
-
-    a {
-      text-decoration: none;
-      color: #7429cf;
-      transition: color 0.3s;
-    }
-
-    a:link {
-      color: #7429cf;
-    }
-
-    a:visited {
-      color: #7429cf;
-    }
-
-    a:focus {
-      outline: none;
-      color: #6205d5;
-    }
-
-    a:hover {
-      color: #6205d5;
-    }
-
-    .menu-icon {
-      color: #b0a8ffff;
-    }
-  </style>
-  <header>
-    <h1>SSH T PROJECT VPN</h1>
-    <div class="menu-icon" id="menu-icon">&#9776;</div>
-    <nav>
-      <ul id="menu" class="modal-content">
-        <li><a href="/servers/">Servers</a></li>
-        <li><a href="/premium/">Premium</a></li>
-        <li><a href="/tutoriais/">Tutoriais</a></li>
-        <li><a href="/termos/">Termos</a></li>
-      </ul>
+<html lang="pt-br" data-bs-theme="dark">
+<!-- Cabeçalho -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="SSH T Project é um projeto que viabiliza usar internet movél após o esgotamento do plano/saldo convencional da operadora.">
+    <meta name="keywords" content="sshtproject, vpn, internet, gratis, internet gratis, netfree, ssht, ssh, vivo, tim, claro, fluke, v2ray, talkera, telks, telegram, playstore, operadora, creditos, ehi, sockslite, internet vpn">
+    <link rel="canonical" href="sshtproject.com"> <!-- adicionar a url do site aqui quando subir pra nuvem -->
+    <title>SSH T Project</title>
+    <link rel="stylesheet" href="../css/customcss.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  </head>
+<!-- Inicio do Site -->
+  <body class="bg-img bg-img--body-gradient">
+    <header class="fixed-top" style="backdrop-filter: blur(10px)">
+    <nav class="navbar navbar-expand-lg container">
+    <div class="container-fluid">
+    <a class="navbar-brand" href="#" title="Inicio"> <!-- adicionar url -->
+    <img src="./build/assets/brand.png" alt="SSH T Project" width="150" aria-hidden="true">
+    <h1 class="visually-hidden">SSH T PROJECT</h1>
+    </a>
+    <div class="d-flex gap-3">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    </div>
+    <div class="collapse navbar-collapse flex-lg-grow-0 pb-3 pb-lg-0" id="navbarNav">
+    <ul class="navbar-nav align-items-center-lg">
+      <li class="ms-lg-3 nav-item">
+    <a class="btn btn-primary d-block d-lg-inline-block" href="#comprar">Comprar</a> <!-- add link de comprar -->
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="#sobre">Sobre</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="#contato">Telegram</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="#app">Aplicativo</a>
+    <li class="nav-item">
+      <a class="nav-link" href="/iptv.html">IPTV</a>
+    </li>
+    </li>
+    </ul>
+    </div>
+    </div>
     </nav>
-  </header>
-
-<body>
-
-  <h1>SSH T PROJECT PREMIUM</h1>
-
-  <div class="container" id="conteiner"></div>
+    </header>
+    
+    
+    <div class="container" id="conteiner"></div>
   </div>
-  <footer>
-    <p class="footer-text">&copy; 2023 SSH T PROJECT VPN. Todos os direitos reservados.</p>
-  </footer>
-</body>
-</head>
 
-
-<script>
-  const menuIcon = document.getElementById("menu-icon");
-  const menu = document.getElementById("menu");
-
-  menuIcon.addEventListener("click", () => {
-    menu.classList.toggle("active");
-  });
-</script>
-<script>
-  fetch('https://bot.sshtproject.com/get_plains')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("conteiner").innerHTML = data;
-    }).catch(err => { return });
-</script>
-
-</html>
+    <script>
+      const menuIcon = document.getElementById("menu-icon");
+      const menu = document.getElementById("menu");
+    
+      menuIcon.addEventListener("click", () => {
+        menu.classList.toggle("active");
+      });
+    </script>
+    <script>
+      fetch('https://bot.sshtproject.com/get_plains')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("conteiner").innerHTML = data;
+        }).catch(err => { return });
+    </script>
+    
