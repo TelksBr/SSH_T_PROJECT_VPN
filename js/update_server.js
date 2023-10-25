@@ -57,49 +57,8 @@ async function updateServerStatus() {
 
 updateServerStatus();
 
-// async function fetchServerData() {
-//     try {
-//         const response = await fetch('https://ports.sshtproject.com/check_port.php');
-//         if (!response.ok) {
-//             throw new Error('Erro ao buscar dados da API');
-//         }
-//         const data = await response.json();
-//         return data;
-//     } catch (error) {
-//         console.error('Erro ao buscar dados da API:', error);
-//         return []; // Retorna um array vazio em caso de erro
-//     }
-// }
-
-// Função para atualizar os elementos das portas com emojis
-// async function updatePortStatus() {
-//     const serverData = await fetchServerData();
-//     serverData.forEach(server => {
-//         // Itere pelas portas e atualize o status das portas em uma única linha
-//         const portStatusText = [];
-
-//         // Itere pelas portas (80, 8080, 443, 7300)
-//         [80, 8080, 443].forEach(port => {
-//             if (server[`port-${port}`] === 'Online') {
-//                 portStatusText.push(`${port}: 🟢`);
-//             } else {
-//                 portStatusText.push(`${port}: 🔴`);
-//             }
-//         });
-
-//         const portId = `port-${server.id}`;
-//         const portElement = document.getElementById(portId);
-
-//         if (portElement) {
-//             portElement.textContent =
-//                 `Portas: ${portStatusText.join(' - ')}`; // Atualize o conteúdo da porta
-//         }
-//     });
-// }
-
 document.addEventListener('DOMContentLoaded', function () {
     updateServerStatus(); // Atualiza os status dos servidores ao carregar a página
-
 });
 
 function fetchServerStatus(serverUrl, elementId) {
@@ -110,7 +69,6 @@ function fetchServerStatus(serverUrl, elementId) {
         });
     });
 }
-
 
 // Update the server status when the button is clicked
 document.getElementById("refresh-button").addEventListener("click", function () {
