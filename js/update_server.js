@@ -74,3 +74,4 @@ function fetchServerStatus(serverUrl, elementId) {
 document.getElementById("refresh-button").addEventListener("click", function () {
     updateServerStatus();
 });
+
