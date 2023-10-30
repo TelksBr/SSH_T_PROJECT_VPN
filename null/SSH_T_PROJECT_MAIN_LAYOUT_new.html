@@ -1302,26 +1302,6 @@
             }
         }
 
-        class IframeServersButtonComponent extends StyledButtonComponent {
-            constructor(styles = {}) {
-                super('SERVIDORES', styles);
-
-                this.addEventListener('click', () => {
-                    const dialog = new DialogComponent();
-                    const content = new DialogContentComponent();
-                    const header = new DialogHeaderComponent();
-                    header.setTitleText('SSHT SERVERS:');
-                    header.setCloseButtonClickListener(() => dialog.close());
-
-                    const body = new IframeServerBodyComponent({}, SERVER_URL);
-                    content.setHeader(header);
-                    content.setBody(body);
-                    dialog.setOnCloseEvent(() => body.setUrl(''));
-                    dialog.setContent(content);
-                    dialog.show();
-                });
-            }
-        }
 
 
         class ButtonHostPotComponent extends StyledButtonComponent {
