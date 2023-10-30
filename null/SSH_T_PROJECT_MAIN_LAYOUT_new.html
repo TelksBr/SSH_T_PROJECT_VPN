@@ -94,7 +94,7 @@
 
         const DIALOG_HEADER_TITLE_COLOR = '#b0a8ffff'
         const DIALOG_HEADER_CLOSE_BUTTON_COLOR = '#b0a8ffff'
-        const DIALOG_CONTENT_BACKGROUND_COLOR = '#14142c'
+        const DIALOG_CONTENT_BACKGROUND_COLOR = 'linear-gradient(45deg, rgba(20, 20, 44, 1), rgb(27, 27, 27), rgba(31, 28, 58, 1))'
         const DIALOG_FOOTER_BUTTON_COLOR = '#14142c'
         const DIALOG_FOOTER_BUTTON_TEXT_COLOR = '#b0a8ffff'
 
@@ -729,7 +729,7 @@
                     fontSize: '14px',
                     fontWeight: 'bold',
                     color: DIALOG_FOOTER_BUTTON_TEXT_COLOR,
-                    background: DIALOG_FOOTER_BUTTON_COLOR,
+                    background: '#6205D5',
                     border: 'none',
                     borderRadius: '3px',
                     padding: '5px 10px',
@@ -883,13 +883,14 @@
 
             setNameStyles() {
                 this.name.style.width = '100%';
-                this.name.style.borderRadius = '50px';
+                
                 this.name.style.fontSize = '16px'
                 this.name.style.fontFamily = 'Ubuntu';
                 this.name.style.color = '#b0a8ffff';
-                this.name.style.background = 'rgba(187, 132, 255, 0.13)';
+                this.name.style.background = '#1e1c2f50';
                 this.name.style.padding = '5px';
                 this.name.style.fontWeight = 'bold';
+                this.name.style.filter = 'drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2))';
             }
 
             setName(value) {
