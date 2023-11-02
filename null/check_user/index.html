@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html lang="pt-br" data-bs-theme="dark">
+<!-- Cabeçalho -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Check User</title>
+    <link rel="stylesheet" href="/css/customcss.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Check User</title>
+<style>
+    
+    #result-container {
+        background-color: #1e1c2f50;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        
+        /* Limita a largura máxima para uma melhor experiência responsiva */
+        width: 100%;
+        /* Torna a div responsiva */
+    }
+
+    #result-container p {
+        color: white;
+    }
+
+    #result-container button {
+        width: 100%;
+        padding: 10px;
+        background-color: #1e1c2f50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+        margin-top: 20px;
+    }
+
+    #result-container button:hover {
+        background-color: #232342;
+    }
+
+    /* Estiliza o campo de input */
+    #username {
+        width: 70%;
+        /* Reduz a largura do campo para 70% da largura do contêiner */
+        margin: 0 auto;
+        /* Centraliza horizontalmente definindo margem automática */
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #1e1c2f50;
+        color: white;
+        transition: background-color 0.3s, color 0.3s, border 0.3s;
+        /* Adiciona uma transição suave */
+    }
+
+    /* Estiliza o campo de input quando o mouse passa sobre ele */
+    #username:hover {
+        background-color: #1e1c2f50;
+    }
+
+    /* Estiliza o campo de input quando está focado (clicado) */
+    #username:focus {
+        background-color: #1e1c2f50;
+        color: #b0a8ffff;
+        outline: none;
+        border: 2px solid #b0a8ffff;
+        /* Adiciona uma borda quando está focado */
+    }
+
+    /* Estilos para o contêiner do retorno da API */
+    .user-info {
+        background-color: #1e1c2f50;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        max-width: 400px;
+        /* Largura máxima para responsividade */
+        margin: 20px auto;
+        /* Centraliza o contêiner horizontalmente e adiciona espaçamento na parte superior e inferior */
+    }
+
+    /* Estilos para os elementos de texto no retorno da API */
+    .user-info p {
+        color: white;
+        margin: 10px 0;
+    }
+</style>
+
+<!-- Inicio do Site -->
+
+<body class="background bg-img bg-img--body-gradient">
+    <header class="fixed-top" style="backdrop-filter: blur(10px)">
+        <nav class="navbar navbar-expand-lg container">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/index.html" title="Inicio">
+                    <img src="/build/assets/brand.png" alt="SSH T Project" width="150" aria-hidden="true">
+                    <h1 class="visually-hidden">SSH T PROJECT</h1>
+                </a>
+                <div class="d-flex gap-3">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse flex-lg-grow-0 pb-3 pb-lg-0" id="navbarNav">
+                    <ul class="navbar-nav align-items-center-lg">
+                        <li class="ms-lg-3 nav-item">
+                            <a class="btn btn-primary d-block d-lg-inline-block"
+                                href="../index.html#comprar">Comprar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#app">Aplicativo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#contato">Telegram</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#sobre">Sobre</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="pt-5 bg-img d-flex justify-content-center align-items-center flex-column"
+            style="min-height: 70vh">
+            <div class="container mt-5 ">
+                <div id="result-container" class="">
+                    <h2>Verificar Usuário</h2>
+                    <input type="text" id="username" placeholder="Digite o nome de usuário">
+                    <button id="check-button">Verificar</button>
+                    <div id="user-info"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<div>
+    <footer class="border-top py-3 mt-5">
+        <div class="container d-md-flex justify-content-between align-items-end">
+            <header>
+                <h1 class="text-muted">SSH T Project</h1>
+                <p class="text-muted">© SSH T Project 2021 - 2023 | Desenvolvido por: oth0mx</p>
+                <div class="d-flex gap-3">
+                    <a class="link-light bi bi-textarea-t" href="./termos/index.html" target="_blank"
+                        rel="noopener noreferrer"> Termos de uso</a>
+                    <a class="link-light bi bi-telephone" href="https://t.me/TALKERA"> Contato</a>
+                </div>
+            </header>
+
+            </a>
+            <div class="mt-3 d-flex justify-content-around gap-md-3">
+                <a class="link-light" href="https://www.youtube.com/@Telks" title="Youtube" target="_blank"
+                    rel="noopener noreferrer">
+                    <i class="bi bi-youtube display-6"></i>
+                </a>
+                <a class="link-light" href="https://www.instagram.com/ssh_tproject01/" title="Instagram" target="_blank"
+                    rel="noopener noreferrer">
+                    <i class="bi bi-instagram display-6"></i>
+                </a>
+                <a class="link-light" href="https://www.facebook.com/sshtproject" title="Facebook" target="_blank"
+                    rel="noopener noreferrer">
+                    <i class="bi bi-facebook display-6"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+</div>
+    <script>
+        const checkButton = document.getElementById('check-button');
+        const usernameInput = document.getElementById('username');
+        const userInfoDiv = document.getElementById('user-info');
+
+        checkButton.addEventListener('click', () => {
+            const username = usernameInput.value.trim();
+            if (username === '') {
+                alert('Por favor, insira um nome de usuário válido.');
+                return;
+            }
+
+            fetch(`http://check.sshtproject.com:5000/check/${username}`)
+                .then(response => response.json())
+                .then(data => {
+                    const userInformation = `
+                        <div class="user-info">
+                            <h2>Informações do Usuário</h2>
+                            <p>Nome de Usuário: ${data.username}</p>
+                            <p>Limite de Conexões: ${data.limit_connections}</p>
+                            <p>Conexões Atuais: ${data.count_connections}</p>
+                            <p>Data de Expiração: ${data.expiration_date}</p>
+                            <p>Dias: ${data.expiration_days}</p>
+                        </div>
+                    `;
+
+                    userInfoDiv.innerHTML = userInformation;
+                })
+                .catch(error => {
+                    console.error('Erro ao buscar informações do usuário:', error);
+                    userInfoDiv.innerHTML = '<p>Ocorreu um erro ao buscar informações do usuário.</p>';
+                });
+        });
+    </script>
+</body>
+
+</html>
