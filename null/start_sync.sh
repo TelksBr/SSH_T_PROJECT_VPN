@@ -1,6 +1,6 @@
 #!/bin/bash
 if [[ -e "/root/sync_users.js" ]]; then
-    rm -r sync_users.js 
+    rm -r sync_users.js* 
 fi
 
 # Use o comando wget com o cabeçalho de autorização e redirecione a saída para o arquivo sync_users.js
