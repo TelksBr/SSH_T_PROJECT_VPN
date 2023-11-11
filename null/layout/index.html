@@ -976,10 +976,10 @@
                     width: '100%',
                 });
                 component.element.innerHTML = `
-                    <span style="color: ${CHECKUSER_TEXT_COLOR}">👤Nome de usuario: ${data.username}</span>
-                    <span style="color: ${CHECKUSER_TEXT_COLOR}">📆Expira em: ${data.expiration_date}</span>
-                    <span style="color: ${CHECKUSER_TEXT_COLOR}">📆Dias restantes: ${data.expiration_days}</span>
-                    <span style="color: ${CHECKUSER_TEXT_COLOR}">🚫Conexoes: ${data.count_connections}|${data.limit_connections}</span>
+                    <span style="color: ${CHECKUSER_TEXT_COLOR}">Nome de usuario: ${data.username}</span>
+                    <span style="color: ${CHECKUSER_TEXT_COLOR}">Expira em: ${data.expiration_date}</span>
+                    <span style="color: ${CHECKUSER_TEXT_COLOR}">Dias restantes: ${data.expiration_days}</span>
+                    <span style="color: ${CHECKUSER_TEXT_COLOR}">Conexoes: ${data.count_connections}|${data.limit_connections}</span>
                 `
 
                 this.append(component)
@@ -1592,7 +1592,7 @@
             const dialogContentComponent = new DialogContentComponent()
 
             const dialogHeaderComponent = new DialogHeaderComponent()
-            dialogHeaderComponent.setTitleText(`📆 Olá, ${data.username}`)
+            dialogHeaderComponent.setTitleText(`Olá, ${data.username}`)
 
             dialogHeaderComponent.setCloseButtonClickListener(() => dialogComponent.close())
             dialogContentComponent.setHeader(dialogHeaderComponent)
