@@ -54,6 +54,18 @@ async function updateServerStatus() {
     {
         url: 'http://free12.sshtproject.com:8888/servers/online',
         elementId: 'free12-status',
+    },
+    {
+        url: 'http://free13.sshtproject.com:8888/servers/online',
+        elementId: 'free13-status',
+    },
+    {
+        url: 'http://free14.sshtproject.com:8888/servers/online',
+        elementId: 'free14-status',
+    },
+    {
+        url: 'http://free15.sshtproject.com:8888/servers/online',
+        elementId: 'free15-status',
     }
     ];
 
