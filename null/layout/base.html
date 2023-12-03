@@ -543,7 +543,7 @@
             }
         }
 
-        
+
         class BuyIconComponet extends IconComponent {
             constructor(styles = {}) {
                 super(styles,
@@ -1021,157 +1021,194 @@
         }
 
         class ConfigComponent extends StyledComponent {
-            constructor(styles = {}) {
-                super(document.createElement('div'), {
-                    display: 'flex',
-                    gap: '5px',
-                    alignItems: 'center',
-                    textAlign: 'left',
-                    marginTop: '5px',
-                    padding: '5px',
-                    background: 'rgba(116, 35, 217, 0.1)',
-                    width: '100%',
-                    borderRadius: '15px',
-                    filter: 'drop-shadow rgba(0, 0, 0, 0.1)',
-                    ...styles
-                });
+    constructor(styles = {}) {
+        super(document.createElement('div'), {
+            display: 'flex',
+            flexDirection: 'flex', // Adiciona a propriedade flex-direction para exibir os itens em coluna
+            gap: '10px',
+            alignItems: 'center',
+            textAlign: 'left',
+            marginTop: '5px',
+            padding: '5px',
+            background: 'rgba(116, 35, 217, 0.1)',
+            width: '100%',
+            borderRadius: '15px',
+            filter: 'drop-shadow rgba(0, 0, 0, 0.1)',
+            ...styles
+        });
 
-                this.image = document.createElement('img');
-                this.name = document.createElement('span');
-                this.description = document.createElement('span');
-                this.mode = document.createElement('span');
+        this.image = document.createElement('img');
+        this.name = document.createElement('span');
+        this.description = document.createElement('span');
+        this.mode = document.createElement('span');
 
-                this.initialize();
-            }
+        this.initialize();
+    }
 
-            setImage(url) {
-                this.image.src = url;
-            }
+    setImage(url) {
+        this.image.src = url;
+    }
 
-            setName(name) {
-                this.name.innerHTML = name;
-            }
+    setName(name) {
+        this.name.innerHTML = name;
+    }
 
-            setDescription(description) {
-                this.description.innerHTML = description;
-            }
+    setDescription(description) {
+        this.description.innerHTML = description;
+    }
 
-            setMode(mode) {
-                this.mode.innerHTML = mode;
-            }
+    setMode(mode) {
+        this.mode.innerHTML = mode;
+    }
 
-            initialize() {
-                this.setImageStyles();
-                this.setNameStyles();
-                this.setDescriptionStyles();
-                this.setModeStyles();
-                const startArea = this.createStartArea();
-                const endArea = this.createEndArea();
-                this.appendElements(startArea, endArea);
-            }
+    initialize() {
+        this.setImageStyles();
+        this.setNameStyles();
+        this.setDescriptionStyles();
+        this.setModeStyles();
+        const startArea = this.createStartArea();
+        const endArea = this.createEndArea();
+        this.appendElements(startArea, endArea);
+    }
 
-            setImageStyles() {
-                this.image.style.width = '40px';
-                this.image.style.height = '40px';
-            }
+    setImageStyles() {
+        this.image.style.width = '40px';
+        this.image.style.height = '40px';
+    }
 
-            setNameStyles() {
-                this.name.style.fontSize = '12px';
-                this.name.style.fontFamily = 'Ubuntu', 'Ubuntu;';
-                this.name.style.color = '#b0a8ffff';
-                this.name.style.fontWeight = 'bold';
-            }
+    setNameStyles() {
+        this.name.style.fontSize = '12px';
+        this.name.style.fontFamily = 'Ubuntu';
+        this.name.style.color = '#b0a8ffff';
+        this.name.style.fontWeight = 'bold';
+    }
 
-            setDescriptionStyles() {
-                this.description.style.fontSize = '12px';
-                this.description.style.fontFamily = 'Ubuntu', 'Ubuntu;';
-                this.description.style.color = '#b0a8ffff';
-                this.description.style.fontWeight = 'bold';
+    setDescriptionStyles() {
+        this.description.style.fontSize = '12px';
+        this.description.style.fontFamily = 'Ubuntu';
+        this.description.style.color = '#b0a8ffff';
+        this.description.style.fontWeight = 'bold';
+    }
 
-            }
+    setModeStyles() {
+        this.mode.style.fontSize = '12px';
+        this.mode.style.fontFamily = 'Ubuntu';
+        this.mode.style.color = '#b0a8ffff';
+        this.mode.style.fontWeight = 'bold';
+        this.mode.style.whiteSpace = 'nowrap';
+    }
 
-            setModeStyles() {
-                this.mode.style.fontSize = '12px';
-                this.mode.style.fontFamily = 'Ubuntu', 'Ubuntu;';
-                this.mode.style.color = '#b0a8ffff'
-                this.mode.style.fontWeight = 'bold';
-                this.mode.style.whiteSpace = 'nowrap';
-            }
+    createStartArea() {
+        const startArea = document.createElement('div');
+        startArea.style.display = 'flex';
+        startArea.style.flexDirection = 'column'; // Adiciona a propriedade flex-direction para exibir os itens em coluna
+        startArea.style.width = '100%';
+        startArea.style.gap = '10px';
+        startArea.appendChild(this.name);
+        startArea.appendChild(this.description);
+        return startArea;
+    }
 
-            createStartArea() {
-                const startArea = document.createElement('div');
-                startArea.style.display = 'flex';
-                startArea.style.width = '100%';
-                startArea.style.gap = '10px';
-                startArea.style.flexDirection = 'column';
-                startArea.appendChild(this.name);
-                startArea.appendChild(this.description);
-                return startArea;
-            }
+    createEndArea() {
+        const endArea = document.createElement('div');
+        endArea.style.display = 'flex';
+        endArea.style.flexDirection = 'column'; // Adiciona a propriedade flex-direction para exibir os itens em coluna
+        endArea.style.alignItems = 'end';
+        endArea.style.alignSelf = 'end';
+        endArea.style.width = '50%';
+        endArea.appendChild(this.mode);
+        return endArea;
+    }
 
-            createEndArea() {
-                const endArea = document.createElement('div');
-                endArea.style.display = 'flex';
-                endArea.style.flexDirection = 'column';
-                endArea.style.alignItems = 'end';
-                endArea.style.alignSelf = 'end';
-                endArea.style.width = '50%';
-                endArea.appendChild(this.mode);
-                return endArea;
-            }
+    appendElements(startArea, endArea) {
+        this.appendChild(this.image);
+        this.appendChild(startArea);
+        this.appendChild(endArea);
+    }
+    
+    getElement() {
+        return this.element; // Adiciona o método para obter o elemento DOM
+    }
+}
 
-            appendElements(startArea, endArea) {
-                this.appendChild(this.image);
-                this.appendChild(startArea);
-                this.appendChild(endArea);
-            }
-        }
 
         class CategoryComponent extends StyledComponent {
-            constructor(styles = {}, items = []) {
-                super(document.createElement('div'), {
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    flexDirection: 'column',
-                    textAlign: 'center',
-                    padding: '1px',
-                    width: '100%',
-                    ...styles
-                });
+    constructor(styles = {}, items = []) {
+        super(document.createElement('div'), {
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            flexDirection: 'column',
+            textAlign: 'center',
+            padding: '3px',
+            width: '100%',
+            borderRadius: '10px', // Adicionando borda ao contêiner da categoria
+            border: '2px solid #6205D5', // Adicionando uma borda sólida à categoria
+            ...styles,
+        });
 
-                this.items = items;
-                this.name = document.createElement('span');
-                this.setNameStyles();
+        this.itemsContainer = document.createElement('div');
+        this.itemsContainer.style.display = 'none'; // Inicialmente, os itens da categoria estão ocultos
 
-                this.initialize();
-                this.setItems(items);
+        this.name = document.createElement('span');
+        this.setNameStyles();
+
+        this.initialize();
+        this.setItems(items);
+
+        // Adicionar evento de clique à categoria
+        this.name.addEventListener('click', () => {
+            this.toggleItemsVisibility();
+        });
+    }
+
+    setNameStyles() {
+        this.name.style.width = '100%';
+        this.name.style.fontSize = '16px';
+        this.name.style.fontFamily = 'Ubuntu';
+        this.name.style.color = '#b0a8ffff';
+        this.name.style.background = 'rgba(116, 35, 217, 0,1)';
+        this.name.style.padding = '5px';
+        this.name.style.fontWeight = 'bold';
+        this.name.style.filter = 'drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1))';
+        this.name.style.cursor = 'pointer'; // Adicionar estilo de cursor para indicar que é clicável
+    }
+
+    setName(value) {
+        this.name.innerHTML = value;
+    }
+
+    setItems(items) {
+        items.forEach((item) => {
+            const itemElement = item.getElement(); // Certifique-se de que seus componentes têm este método
+            if (itemElement) {
+                const configItem = document.createElement('div');
+                configItem.style.display = 'flex';
+                
+                configItem.appendChild(itemElement);
+                this.itemsContainer.appendChild(configItem);
             }
+        });
 
-            setNameStyles() {
-                this.name.style.width = '100%';
+        this.appendChild(this.name);
+        this.appendChild(this.itemsContainer);
+    }
 
-                this.name.style.fontSize = '16px'
-                this.name.style.fontFamily = 'Ubuntu';
-                this.name.style.color = '#b0a8ffff';
-                this.name.style.background = 'rgba(116, 35, 217, 0.1)';
-                this.name.style.padding = '5px';
-                this.name.style.fontWeight = 'bold';
-                this.name.style.filter = 'drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1))';
-            }
+    initialize() {
+        // Não precisa mais adicionar o nome aqui
+    }
 
-            setName(value) {
-                this.name.innerHTML = value;
-            }
+    // Método para alternar a visibilidade dos itens da categoria
+    toggleItemsVisibility() {
+        const areItemsVisible = this.itemsContainer.style.display !== 'none';
+        this.setItemsVisibility(!areItemsVisible);
+    }
 
-            setItems(items) {
-                items.forEach(item => this.append(item));
-            }
-
-            initialize() {
-                this.appendChild(this.name);
-            }
-        }
+    // Método para definir a visibilidade dos itens da categoria
+    setItemsVisibility(visible) {
+        this.itemsContainer.style.display = visible ? '' : 'none';
+    }
+}
 
         class ConfigBodyComponent extends DialogBodyComponent {
             constructor(items) {
@@ -1184,6 +1221,7 @@
                 items.forEach(item => this.append(item));
             }
         }
+
 
         class LoggerItemComponent extends StyledComponent {
             constructor(styles = {}, message) {
@@ -1317,14 +1355,26 @@
                 this.append(this.meterDownContainer);
                 this.append(this.meterUpContainer);
 
-                this.getNetworkDownloadFn = () => window?.DtGetNetworkDownloadBytes?.execute() ?? 0;
-                this.getNetworkUploadFn = () => window?.DtGetNetworkUploadBytes?.execute() ?? 0;
+                this.getNetworkDownloadFn = () => {
+                    const value = window?.DtGetNetworkDownloadBytes?.execute() ?? 0;
+                    return isNaN(value) ? 0 : value;
+                };
 
-                this.currentNetworkDownload = parseFloat(localStorage.getItem('networkDownload') ?? this.getNetworkDownloadFn());
-                this.currentNetworkUpload = parseFloat(localStorage.getItem('networkUpload') ?? this.getNetworkUploadFn());
+                this.getNetworkUploadFn = () => {
+                    const value = window?.DtGetNetworkUploadBytes?.execute() ?? 0;
+                    return isNaN(value) ? 0 : value;
+                };
 
-                localStorage.setItem('networkDownload', this.currentNetworkDownload);
-                localStorage.setItem('networkUpload', this.currentNetworkUpload);
+                this.currentNetworkDownload = parseFloat(localStorage.getItem('networkDownload')) || this.getNetworkDownloadFn();
+                this.currentNetworkUpload = parseFloat(localStorage.getItem('networkUpload')) || this.getNetworkUploadFn();
+
+                if (isFinite(this.currentNetworkDownload)) {
+                    localStorage.setItem('networkDownload', this.currentNetworkDownload);
+                }
+
+                if (isFinite(this.currentNetworkUpload)) {
+                    localStorage.setItem('networkUpload', this.currentNetworkUpload);
+                }
 
                 this.showMeter();
                 setInterval(() => this.showMeter(), 1000);
@@ -1359,8 +1409,16 @@
                 const newNetworkDownload = this.getNetworkDownloadFn();
                 const newNetworkUpload = this.getNetworkUploadFn();
 
-                this.meterDownText.element.innerHTML = this.formatBytes(newNetworkDownload - this.currentNetworkDownload);
-                this.meterUpText.element.innerHTML = this.formatBytes(newNetworkUpload - this.currentNetworkUpload);
+                if (!isNaN(newNetworkDownload) && !isNaN(newNetworkUpload)) {
+                    this.meterDownText.element.innerHTML = this.formatBytes(newNetworkDownload - this.currentNetworkDownload);
+                    this.meterUpText.element.innerHTML = this.formatBytes(newNetworkUpload - this.currentNetworkUpload);
+
+                    this.currentNetworkDownload = newNetworkDownload;
+                    this.currentNetworkUpload = newNetworkUpload;
+
+                    localStorage.setItem('networkDownload', this.currentNetworkDownload);
+                    localStorage.setItem('networkUpload', this.currentNetworkUpload);
+                }
             }
         }
 
@@ -1500,12 +1558,12 @@
                             .setAutoRemove(true)
                             .setBody(new IframeBodyComponent({}, URL_SPEEDTEST))
                             .show()
-                            
-                            
+
+
                     })
-                    
+
             }
-            
+
         }
 
         class ButtonServersComponent extends StyledButtonComponent {
@@ -1617,7 +1675,7 @@
                     'HOTSPOT',
                     new RouterIconComponent(),
                     () => this.toggleHotSpot())
-              
+
             }
 
             startHotSpot() {
@@ -1851,7 +1909,7 @@
                     background: 'transparent',
                     boxShadow: 'none',
                     filter: 'drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1))',
-                    
+
                 });
 
                 this.loggerBody = new LoggerBodyComponent({});
@@ -1911,8 +1969,8 @@
                                 .addRowButtons(
                                     new ButtonTutorialComponent(),
                                     new SpeedTestStyledButtonComponent(),
-                                   
-                                    
+
+
                                 )
                                 .addRowButtons(
                                     new HotSpotStyledButtonComponent(),

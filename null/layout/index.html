@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
     <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q2HPLXNHN0"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q2HPLXNHN0"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'G-Q2HPLXNHN0');
-  </script>
+        gtag('config', 'G-Q2HPLXNHN0');
+    </script>
 </head>
 <style>
     * {
@@ -889,7 +889,7 @@
 
             setNameStyles() {
                 this.name.style.width = '100%';
-                
+
                 this.name.style.fontSize = '16px'
                 this.name.style.fontFamily = 'Ubuntu';
                 this.name.style.color = '#b0a8ffff';
@@ -1069,14 +1069,26 @@
                 this.append(this.meterDownContainer);
                 this.append(this.meterUpContainer);
 
-                this.getNetworkDownloadFn = () => window?.DtGetNetworkDownloadBytes?.execute() ?? 0;
-                this.getNetworkUploadFn = () => window?.DtGetNetworkUploadBytes?.execute() ?? 0;
+                this.getNetworkDownloadFn = () => {
+                    const value = window?.DtGetNetworkDownloadBytes?.execute() ?? 0;
+                    return isNaN(value) ? 0 : value;
+                };
 
-                this.currentNetworkDownload = parseFloat(localStorage.getItem('networkDownload') ?? this.getNetworkDownloadFn());
-                this.currentNetworkUpload = parseFloat(localStorage.getItem('networkUpload') ?? this.getNetworkUploadFn());
+                this.getNetworkUploadFn = () => {
+                    const value = window?.DtGetNetworkUploadBytes?.execute() ?? 0;
+                    return isNaN(value) ? 0 : value;
+                };
 
-                localStorage.setItem('networkDownload', this.currentNetworkDownload);
-                localStorage.setItem('networkUpload', this.currentNetworkUpload);
+                this.currentNetworkDownload = parseFloat(localStorage.getItem('networkDownload')) || this.getNetworkDownloadFn();
+                this.currentNetworkUpload = parseFloat(localStorage.getItem('networkUpload')) || this.getNetworkUploadFn();
+
+                if (isFinite(this.currentNetworkDownload)) {
+                    localStorage.setItem('networkDownload', this.currentNetworkDownload);
+                }
+
+                if (isFinite(this.currentNetworkUpload)) {
+                    localStorage.setItem('networkUpload', this.currentNetworkUpload);
+                }
 
                 this.showMeter();
                 setInterval(() => this.showMeter(), 1000);
@@ -1114,11 +1126,15 @@
                 if (!isNaN(newNetworkDownload) && !isNaN(newNetworkUpload)) {
                     this.meterDownText.element.innerHTML = this.formatBytes(newNetworkDownload - this.currentNetworkDownload);
                     this.meterUpText.element.innerHTML = this.formatBytes(newNetworkUpload - this.currentNetworkUpload);
+
+                    this.currentNetworkDownload = newNetworkDownload;
+                    this.currentNetworkUpload = newNetworkUpload;
+
+                    localStorage.setItem('networkDownload', this.currentNetworkDownload);
+                    localStorage.setItem('networkUpload', this.currentNetworkUpload);
                 }
             }
-
         }
-
         class PingComponent extends StyledComponent {
             constructor(styles = {}) {
                 super(document.createElement('span'), {
@@ -1299,7 +1315,7 @@
             }
         }
 
-        
+
 
         class ButtonTutoriasComponent extends StyledButtonComponent {
             constructor(styles = {}) {
@@ -1472,7 +1488,7 @@
             bottom: '5%',
             background: 'transparent',
             boxShadow: 'none',
-            
+
         })
 
         const calanderIconComponent = new CalanderIconComponent()
@@ -1549,7 +1565,7 @@
             bottom: '13%',
             background: 'transparent',
             boxShadow: 'none',
-            
+
         })
 
         const buttonHostPotCard = new CardComponent({
