@@ -49,7 +49,7 @@ async function updateServerStatus() {
         elementId: 'free10-status',
       },
       {
-        url: 'http://free11.sshtproject.com:8880/servers/online',
+        url: 'http://free11.sshtproject.com:8888/servers/online',
         elementId: 'free11-status',
       },
       {
