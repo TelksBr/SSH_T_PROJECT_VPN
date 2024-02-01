@@ -1,7 +1,7 @@
 async function updateServerStatus() {
     const _0x20a06f = [
       {
-        url: 'http://premium1.sshtproject.com:8888/servers/online',
+        url: 'http://premium.sshtproject.com:8888/servers/online',
         elementId: 'premium1-status',
       },
       {
