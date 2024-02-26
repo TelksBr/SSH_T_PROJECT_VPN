@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="pt-br" data-bs-theme="dark">
 <!-- Cabeçalho -->
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,7 +21,23 @@
         gtag('config', 'G-Q2HPLXNHN0');
     </script>
 </head>
+<style>
+    .server-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #6205D5;
+        /* Cor de fundo do ícone */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+
+        /* Ajuste conforme necessário */
+    }
+</style>
 <!-- Inicio do Site -->
+
 <body onload="updateServerStatus()" class="background bg-img bg-img--body-gradient">
     <header class="fixed-top" style="backdrop-filter: blur(10px)">
         <nav class="navbar navbar-expand-lg container">
@@ -56,139 +73,246 @@
         </nav>
     </header>
     <div>
-        <section class="pt-5 bg-img d-flex justify-content-center align-items-center flex-column"
-            style="">
+        <section class="pt-3 bg-img d-flex justify-content-center align-items-center flex-column">
             <div class="container py-5 h-screen" style="max-width: 800px; ">
                 <h1 class="display-1 text-center mb-0 lh-1">
                     Servers
                 </h1>
-                <p class="lead my-3 text-md-center">
-                    <strong>Aqui você pode conferir o status de nossos servidores.
-                    </strong>
+                <p class="lead my-3 pt-3 text-md-center text-center">
+                    <strong><b><i>Aqui você pode conferir o status de nossos servidores:
+                        </b></i></strong>
                 </p>
             </div>
         </section>
-        <section class="pt-5 gap-3 flex-grow- d-lg-flex py-5 align-items-start justify-content-center align-items-center flex-column">
+        <section
+            class="pt-1 gap-3 flex-grow- d-lg-flex py-5 align-items-start justify-content-center align-items-center flex-column">
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-lg-4">
                         <div class="py-3 rounded-4 bg-img bg-img--card-gradient text-center mb-3">
                             <h2 style="padding: 10px;">TOTAL: <span id="total-status">Carregando...</span></h2>
                         </div>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <div class="py-3 rounded-4 bg-img bg-img--card-gradient text-center mb-3">
-                            <h2 style="padding: 10px;">Premium 1</h2>
-                            <p style="padding: 3px;">Onlines: <span id="premium1-status">Carregando...</span></p>
+                        <div class="col-12 col-lg-4">
+                            <div class="py-3 rounded-4 bg-img bg-img--card-gradient text-center mb-3">
+                                <h2 style="display: flex; align-items: center; justify-content: center;">
+                                    <!-- Ícone representando a região do servidor -->
+                                    <div class="server-icon">
+                                        <img src="/build/assets/br_flag.png" alt="Flag of Canada" class="icone-flag">
+                                    </div>
+                                    Premium 1
+                                </h2>
+                                <p style="padding: 3px;">Onlines: <span id="premium1-status">Carregando...</span></p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <div class="py-3 rounded-4 bg-img bg-img--card-gradient text-center mb-3">
-                            <h2 style="padding: 10px;">Premium 2</h2>
-                            <p style="padding: 3px;">Onlines: <span id="premium2-status">Carregando...</span></p>
+                        <div class="col-12 col-lg-4">
+                            <div class="py-3 rounded-4 bg-img bg-img--card-gradient text-center mb-3">
+                                <h2 style="display: flex; align-items: center; justify-content: center;">
+                                    <!-- Ícone representando a região do servidor -->
+                                    <div class="server-icon">
+                                        <img src="/build/assets/br_flag.png" alt="Flag of Canada" class="icone-flag">
+                                    </div>
+                                    Premium 2
+                                </h2>
+                                <p style="padding: 3px;">Onlines: <span id="premium2-status">Carregando...</span></p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <div class="py-3 rounded-4 bg-img bg-img--card-gradient text-center mb-3">
-                            <h2 style="padding: 10px;">Premium 3</h2>
-                            <p style="padding: 3px;">Onlines: <span id="premium3-status">Carregando...</span></p>
+                        <div class="col-12 col-lg-4">
+                            <div class="py-3 rounded-4 bg-img bg-img--card-gradient text-center mb-3">
+                                <h2 style="display: flex; align-items: center; justify-content: center;">
+                                    <!-- Ícone representando a região do servidor -->
+                                    <div class="server-icon">
+                                        <img src="/build/assets/br_flag.png" alt="Flag of Canada" class="icone-flag">
+                                    </div>
+                                    Premium 3
+                                </h2>
+                                <p style="padding: 3px;">Onlines: <span id="premium3-status">Carregando...</span></p>
+                            </div>
                         </div>
-                    </div>
-                    <!-- Servidores Free -->
-                    <div class="col-12 col-lg-4">
-                        <div class="py-3 rounded-4 bg-img bg-img--card-gradient text-center mb-3">
-                            <h2 style="padding: 10px;">Free 1</h2>
-                            <p style="padding: 3px;">Onlines: <span id="free1-status">Carregando...</span></p>
+                        <div class="col-12 col-lg-4">
+                            <div class="py-3 rounded-4 bg-img bg-img--card-gradient text-center mb-3">
+                                <h2 style="display: flex; align-items: center; justify-content: center;">
+                                    <!-- Ícone representando a região do servidor -->
+                                    <div class="server-icon">
+                                        <img src="/build/assets/ca_flag.png" alt="Flag of Canada" class="icone-flag">
+                                    </div>
+                                    FREE 1
+                                </h2>
+                                <p style="padding: 3px;">Onlines: <span id="free1-status">Carregando...</span></p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <div class="py-3 rounded-4 bg-img bg-img--card-gradient text-center mb-3">
-                            <h2 style="padding: 10px;">Free 2</h2>
-                            <p style="padding: 3px;">Onlines: <span id="free2-status">Carregando...</span></p>
+                        <div class="col-12 col-lg-4">
+                            <div class="py-3 rounded-4 bg-img bg-img--card-gradient text-center mb-3">
+                                <h2 style="display: flex; align-items: center; justify-content: center;">
+                                    <!-- Ícone representando a região do servidor -->
+                                    <div class="server-icon">
+                                        <img src="/build/assets/ca_flag.png" alt="Flag of Canada" class="icone-flag">
+                                    </div>
+                                    FREE 2
+                                </h2>
+                                <p style="padding: 3px;">Onlines: <span id="free2-status">Carregando...</span></p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <div class="py-3 rounded-4 bg-img bg-img--card-gradient text-center mb-3">
-                            <h2 style="padding: 10px;">Free 3</h2>
-                            <p style="padding: 3px;">Onlines: <span id="free3-status">Carregando...</span></p>
+                        <div class="col-12 col-lg-4">
+                            <div class="py-3 rounded-4 bg-img bg-img--card-gradient text-center mb-3">
+                                <h2 style="display: flex; align-items: center; justify-content: center;">
+                                    <!-- Ícone representando a região do servidor -->
+                                    <div class="server-icon">
+                                        <img src="/build/assets/ca_flag.png" alt="Flag of Canada" class="icone-flag">
+                                    </div>
+                                    FREE 3
+                                </h2>
+                                <p style="padding: 3px;">Onlines: <span id="free3-status">Carregando...</span></p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <div class="py-3 rounded-4 bg-img bg-img--card-gradient text-center mb-3">
-                            <h2 style="padding: 10px;">Free 4</h2>
-                            <p style="padding: 3px;">Onlines: <span id="free4-status">Carregando...</span></p>
+                        <div class="col-12 col-lg-4">
+                            <div class="py-3 rounded-4 bg-img bg-img--card-gradient text-center mb-3">
+                                <h2 style="display: flex; align-items: center; justify-content: center;">
+                                    <!-- Ícone representando a região do servidor -->
+                                    <div class="server-icon">
+                                        <img src="/build/assets/ca_flag.png" alt="Flag of Canada" class="icone-flag">
+                                    </div>
+                                    FREE 4
+                                </h2>
+                                <p style="padding: 3px;">Onlines: <span id="free4-status">Carregando...</span></p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <div class="py-3 rounded-4 bg-img bg-img--card-gradient text-center mb-3">
-                            <h2 style="padding: 10px;">Free 5</h2>
-                            <p style="padding: 3px;">Onlines: <span id="free5-status">Carregando...</span></p>
+                        <div class="col-12 col-lg-4">
+                            <div class="py-3 rounded-4 bg-img bg-img--card-gradient text-center mb-3">
+                                <h2 style="display: flex; align-items: center; justify-content: center;">
+                                    <!-- Ícone representando a região do servidor -->
+                                    <div class="server-icon">
+                                        <img src="/build/assets/ca_flag.png" alt="Flag of Canada" class="icone-flag">
+                                    </div>
+                                    FREE 5
+                                </h2>
+                                <p style="padding: 3px;">Onlines: <span id="free5-status">Carregando...</span></p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <div class="py-3 rounded-4 bg-img bg-img--card-gradient text-center mb-3">
-                            <h2 style="padding: 10px;">Free 6</h2>
-                            <p style="padding: 3px;">Onlines: <span id="free6-status">Carregando...</span></p>
+                        <div class="col-12 col-lg-4">
+                            <div class="py-3 rounded-4 bg-img bg-img--card-gradient text-center mb-3">
+                                <h2 style="display: flex; align-items: center; justify-content: center;">
+                                    <!-- Ícone representando a região do servidor -->
+                                    <div class="server-icon">
+                                        <img src="/build/assets/ca_flag.png" alt="Flag of Canada" class="icone-flag">
+                                    </div>
+                                    FREE 6
+                                </h2>
+                                <p style="padding: 3px;">Onlines: <span id="free6-status">Carregando...</span></p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <div class="py-3 rounded-4 bg-img bg-img--card-gradient text-center mb-3">
-                            <h2 style="padding: 10px;">Free 7</h2>
-                            <p style="padding: 3px;">Onlines: <span id="free7-status">Carregando...</span></p>
+                        <div class="col-12 col-lg-4">
+                            <div class="py-3 rounded-4 bg-img bg-img--card-gradient text-center mb-3">
+                                <h2 style="display: flex; align-items: center; justify-content: center;">
+                                    <!-- Ícone representando a região do servidor -->
+                                    <div class="server-icon">
+                                        <img src="/build/assets/ca_flag.png" alt="Flag of Canada" class="icone-flag">
+                                    </div>
+                                    FREE 7
+                                </h2>
+                                <p style="padding: 3px;">Onlines: <span id="free7-status">Carregando...</span></p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <div class="py-3 rounded-4 bg-img bg-img--card-gradient text-center mb-3">
-                            <h2 style="padding: 10px;">Free 8</h2>
-                            <p style="padding: 3px;">Onlines: <span id="free8-status">Carregando...</span></p>
+                        <div class="col-12 col-lg-4">
+                            <div class="py-3 rounded-4 bg-img bg-img--card-gradient text-center mb-3">
+                                <h2 style="display: flex; align-items: center; justify-content: center;">
+                                    <!-- Ícone representando a região do servidor -->
+                                    <div class="server-icon">
+                                        <img src="/build/assets/ca_flag.png" alt="Flag of Canada" class="icone-flag">
+                                    </div>
+                                    FREE 8
+                                </h2>
+                                <p style="padding: 3px;">Onlines: <span id="free8-status">Carregando...</span></p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <div class="py-3 rounded-4 bg-img bg-img--card-gradient text-center mb-3">
-                            <h2 style="padding: 10px;">Free 9</h2>
-                            <p style="padding: 3px;">Onlines: <span id="free9-status">Carregando...</span></p>
+                        <div class="col-12 col-lg-4">
+                            <div class="py-3 rounded-4 bg-img bg-img--card-gradient text-center mb-3">
+                                <h2 style="display: flex; align-items: center; justify-content: center;">
+                                    <!-- Ícone representando a região do servidor -->
+                                    <div class="server-icon">
+                                        <img src="/build/assets/ca_flag.png" alt="Flag of Canada" class="icone-flag">
+                                    </div>
+                                    FREE 9
+                                </h2>
+                                <p style="padding: 3px;">Onlines: <span id="free9-status">Carregando...</span></p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <div class="py-3 rounded-4 bg-img bg-img--card-gradient text-center mb-3">
-                            <h2 style="padding: 10px;">Free 10</h2>
-                            <p style="padding: 3px;">Onlines: <span id="free10-status">Carregando...</span></p>
+                        <div class="col-12 col-lg-4">
+                            <div class="py-3 rounded-4 bg-img bg-img--card-gradient text-center mb-3">
+                                <h2 style="display: flex; align-items: center; justify-content: center;">
+                                    <!-- Ícone representando a região do servidor -->
+                                    <div class="server-icon">
+                                        <img src="/build/assets/ca_flag.png" alt="Flag of Canada" class="icone-flag">
+                                    </div>
+                                    FREE 10
+                                </h2>
+                                <p style="padding: 3px;">Onlines: <span id="free10-status">Carregando...</span></p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <div class="py-3 rounded-4 bg-img bg-img--card-gradient text-center mb-3">
-                            <h2 style="padding: 10px;">Free 11</h2>
-                            <p style="padding: 3px;">Onlines: <span id="free11-status">Carregando...</span></p>
+                        <div class="col-12 col-lg-4">
+                            <div class="py-3 rounded-4 bg-img bg-img--card-gradient text-center mb-3">
+                                <h2 style="display: flex; align-items: center; justify-content: center;">
+                                    <!-- Ícone representando a região do servidor -->
+                                    <div class="server-icon">
+                                        <img src="/build/assets/ca_flag.png" alt="Flag of Canada" class="icone-flag">
+                                    </div>
+                                    FREE 11
+                                </h2>
+                                <p style="padding: 3px;">Onlines: <span id="free11-status">Carregando...</span></p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <div class="py-3 rounded-4 bg-img bg-img--card-gradient text-center mb-3">
-                            <h2 style="padding: 10px;">Free 12</h2>
-                            <p style="padding: 3px;">Onlines: <span id="free12-status">Carregando...</span></p>
+                        <div class="col-12 col-lg-4">
+                            <div class="py-3 rounded-4 bg-img bg-img--card-gradient text-center mb-3">
+                                <h2 style="display: flex; align-items: center; justify-content: center;">
+                                    <!-- Ícone representando a região do servidor -->
+                                    <div class="server-icon">
+                                        <img src="/build/assets/ca_flag.png" alt="Flag of Canada" class="icone-flag">
+                                    </div>
+                                    FREE 12
+                                </h2>
+                                <p style="padding: 3px;">Onlines: <span id="free12-status">Carregando...</span></p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <div class="py-3 rounded-4 bg-img bg-img--card-gradient text-center mb-3">
-                            <h2 style="padding: 10px;">Free 13</h2>
-                            <p style="padding: 3px;">Onlines: <span id="free13-status">Carregando...</span></p>
+                        <div class="col-12 col-lg-4">
+                            <div class="py-3 rounded-4 bg-img bg-img--card-gradient text-center mb-3">
+                                <h2 style="display: flex; align-items: center; justify-content: center;">
+                                    <!-- Ícone representando a região do servidor -->
+                                    <div class="server-icon">
+                                        <img src="/build/assets/ca_flag.png" alt="Flag of Canada" class="icone-flag">
+                                    </div>
+                                    FREE 13
+                                </h2>
+                                <p style="padding: 3px;">Onlines: <span id="free13-status">Carregando...</span></p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <div class="py-3 rounded-4 bg-img bg-img--card-gradient text-center mb-3">
-                            <h2 style="padding: 10px;">Free 14</h2>
-                            <p style="padding: 3px;">Onlines: <span id="free14-status">Carregando...</span></p>
+                        <div class="col-12 col-lg-4">
+                            <div class="py-3 rounded-4 bg-img bg-img--card-gradient text-center mb-3">
+                                <h2 style="display: flex; align-items: center; justify-content: center;">
+                                    <!-- Ícone representando a região do servidor -->
+                                    <div class="server-icon">
+                                        <img src="/build/assets/ca_flag.png" alt="Flag of Canada" class="icone-flag">
+                                    </div>
+                                    FREE 14
+                                </h2>
+                                <p style="padding: 3px;">Onlines: <span id="free14-status">Carregando...</span></p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <div class="py-3 rounded-4 bg-img bg-img--card-gradient text-center mb-3">
-                            <h2 style="padding: 10px;">Free 15</h2>
-                            <p style="padding: 3px;">Onlines: <span id="free15-status">Carregando...</span></p>
+                        <div class="col-12 col-lg-4">
+                            <div class="py-3 rounded-4 bg-img bg-img--card-gradient text-center mb-3">
+                                <h2 style="display: flex; align-items: center; justify-content: center;">
+                                    <!-- Ícone representando a região do servidor -->
+                                    <div class="server-icon">
+                                        <img src="/build/assets/ca_flag.png" alt="Flag of Canada" class="icone-flag">
+                                    </div>
+                                    FREE 15
+                                </h2>
+                                <p style="padding: 3px;">Onlines: <span id="free15-status">Carregando...</span></p>
+                            </div>
                         </div>
+
                     </div>
                 </div>
-            </div>
         </section>
-        
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -227,4 +351,5 @@
         </div>
     </footer>
 </div>
+
 </html>
