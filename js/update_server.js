@@ -5,13 +5,13 @@ async function updateServerStatus() {
         elementId: 'premium1-status',
       },
       {
-        url: 'http://premium2.sshtproject.com:8888/servers/online',
+        url: 'http://premium2.sshtproject.com:2082/servers/online',
         elementId: 'premium2-status',
       },
-      {
-        url: 'http://premium3.sshtproject.com:2082/servers/online',
-        elementId: 'premium3-status',
-      },
+      // {
+      //   url: 'http://premium3.sshtproject.com:2082/servers/online',
+      //   elementId: 'premium3-status',
+      // },
       {
         url: 'http://free1.sshtproject.com:8888/servers/online',
         elementId: 'free1-status',
