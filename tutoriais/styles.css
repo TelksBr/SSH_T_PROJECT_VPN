@@ -23,7 +23,7 @@ main {
 .tutorial {
     margin-bottom: 2rem;
     padding: 1rem;
-    border: 1px solid #b0a8ffff;
+    border: 1px solid #6205D5;
     border-radius: 5px;
     color: #b0a8ffff;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -45,6 +45,10 @@ main {
     border-radius: 5px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.tutorial-text {
+    font-family:monospace
 }
 
 .modal.active {
