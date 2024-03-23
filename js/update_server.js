@@ -5,7 +5,7 @@ async function updateServerStatus() {
         elementId: 'premium1-status',
       },
       {
-        url: 'http://premium2.sshtproject.com:2082/servers/online',
+        url: 'http://premium2.sshtproject.com:8888/servers/online',
         elementId: 'premium2-status',
       },
       // {
