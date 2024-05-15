@@ -1,38 +1,67 @@
 #!/bin/bash
 
-# Instale o Apache e ative o módulo headers
-apt update
-apt install apache2 -y
-a2enmod headers
-sed -i 's/Listen 80/Listen 8888/' /etc/apache2/ports.conf
+# Atualiza os repositórios
+sudo apt update
 
-# Crie o diretório para os servidores
-mkdir -p /var/www/html/servers
-chown -R www-data:www-data /var/www/html/servers
+# Instala o Node.js e o npm
+sudo apt install nodejs npm -y
 
-# Adicione as configurações CORS no apache2.conf
+# Instala o Express globalmente
+sudo npm install -g express
 
-sed -i '/<Directory \/var\/www\/>/,/<\/Directory>/ {
-    /<Directory \/var\/www\/>/,/<\/Directory>/ {
-        /<\/Directory>/ {
-            # Configurações CORS
-            s/.*/    Header set Access-Control-Allow-Origin "*"\n    Header set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"\n    Header set Access-Control-Allow-Headers "Content-Type"\n&/
-        }
-    }
-}' /etc/apache2/apache2.conf
+# Instala o PM2 globalmente
+sudo npm install -g pm2
 
+# Cria o diretório para o servidor
+mkdir -p ~/api-server
 
-# Reinicie o Apache
-systemctl restart apache2
+# Navega até o diretório do servidor
+cd ~/api-server
 
-# Crie o arquivo .htaccess com as configurações CORS
+# Inicializa um novo projeto Node.js
+npm init -y
+
+# Instala o Express localmente no projeto
+npm install express
+
+# Cria o arquivo do servidor
+touch server.js
+
+# Adiciona o código do servidor
 echo '
-Header set Access-Control-Allow-Origin "*"
-Header set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
-Header set Access-Control-Allow-Headers "Content-Type"
-' > /var/www/html/servers/.htaccess
+const express = require("express");
+const fs = require("fs");
+const app = express();
+const PORT = process.env.PORT || 8888;
+const ONLINE_FILE_PATH = __dirname + "/online.txt";
 
-# Crie o arquivo online.sh para o monitoramento
+// Middleware para habilitar o CORS
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  res.header("Access-Control-Allow-Headers", "Content-Type");
+  next();
+});
+
+// Rota para obter o número de usuários online
+app.get("/online", (req, res) => {
+  fs.readFile(ONLINE_FILE_PATH, "utf8", (err, data) => {
+    if (err) {
+      console.error("Erro ao ler o número de usuários online:", err);
+      res.status(500).send("Erro ao ler o número de usuários online");
+      return;
+    }
+    const onlineUsers = parseInt(data.trim());
+    res.json({ onlineUsers });
+  });
+});
+
+app.listen(PORT, () => {
+  console.log(`Servidor API rodando na porta ${PORT}`);
+});
+' > server.js
+
+# Cria o script shell para atualizar os valores
 echo '#!/bin/bash
 
 fun_online() {
@@ -42,8 +71,7 @@ fun_online() {
     _onli=$(($_ons + $_onop + $_ondrp))
     _onlin=$(printf '"'"'%-5s'"'"' "$_onli")
     CURRENT_ONLINES="$(echo -e "${_onlin}" | sed -e '"'"'s/[[:space:]]*$//'"'"')"
-    echo "{\"onlines\":\"$CURRENT_ONLINES\",\"limite\":\"2500\"}" > /var/www/html/servers/online_app
-    echo $CURRENT_ONLINES  > /var/www/html/servers/online
+    echo $CURRENT_ONLINES > ~/api-server/online.txt
 }
 
 while true; do
@@ -51,26 +79,24 @@ while true; do
     fun_online > /dev/null 2>&1
     sleep 15s
 done
-' > /usr/local/bin/online.sh
+' > update_online.sh
 
-# Dê permissão de execução ao arquivo online.sh
-chmod +x /usr/local/bin/online.sh
+# Dá permissão de execução ao script shell
+chmod +x update_online.sh
 
-# Crie o serviço systemd para o arquivo online.sh
-echo '[Unit]
-Description=Online Monitoring Service
-After=network.target
+# Cria o arquivo de configuração do PM2
+echo '
+{
+  "apps": [{
+    "name": "api-server",
+    "script": "server.js",
+    "watch": true,
+    "restart_delay": 3000
+  }]
+}
+' > pm2.config.json
 
-[Service]
-ExecStart=/usr/local/bin/online.sh
-Restart=always
-
-[Install]
-WantedBy=multi-user.target
-' > /etc/systemd/system/online-monitor.service
-
-# Habilite e inicie o serviço
-systemctl enable online-monitor
-systemctl start online-monitor
+# Inicia a API com PM2
+pm2 start pm2.config.json
 
 echo "Instalação e configuração concluídas!"
