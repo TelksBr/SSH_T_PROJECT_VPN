@@ -77,12 +77,30 @@ fun_online() {
 while true; do
     echo '"'"'verificando...'"'"'
     fun_online > /dev/null 2>&1
-    sleep 15s
+    sleep 5s
 done
 ' > update_online.sh
 
 # Dá permissão de execução ao script shell
 chmod +x update_online.sh
+
+# Cria o serviço systemd para o script shell
+echo '[Unit]
+Description=Atualização de usuários online
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /home/user/api-server/update_online.sh
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
+' | sudo tee /etc/systemd/system/online-update.service
+
+# Habilita e inicia o serviço
+sudo systemctl enable online-update
+sudo systemctl start online-update
 
 # Cria o arquivo de configuração do PM2
 echo '
