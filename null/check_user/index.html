@@ -190,7 +190,7 @@
                 return;
             }
 
-            fetch(`http://bot.sshtproject.com/check/${username}`)
+            fetch(`https://bot.sshtproject.com/check/${username}`)
                 .then(response => response.json())
                 .then(data => {
                     const userInformation = `
