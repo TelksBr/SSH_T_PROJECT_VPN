@@ -134,6 +134,6 @@ echo '
 ' >pm2.config.json
 
 # Inicia a API e o script shell com PM2
-pm2 start pm2.config.json
+pm2 start pm2.config.json ; pm2 save ; pm2 startup
 
 echo "Instalação e configuração concluídas!"
