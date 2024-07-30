@@ -2,17 +2,16 @@
 
 #!/bin/bash
 
-mkdir /online_api
-wget -p /online_api https://raw.githubusercontent.com/TelksBr/SSH_T_PROJECT_VPN/page/null/tools/api/onlines_api
+mkdir /root/online_api
+wget -p /root/online_api https://raw.githubusercontent.com/TelksBr/SSH_T_PROJECT_VPN/page/null/tools/api/onlines_api
 chmod +x onlines_api
 
 SERVICE_NAME="api-server"
 SERVICE_FILE="/etc/systemd/system/${SERVICE_NAME}.service"
-BINARY_PATH="/online_api/onlines_api"
-WORKING_DIR="/online_api"
+BINARY_PATH="/root/online_api/onlines_api"
+WORKING_DIR=/root"/online_api"
 USER="root"  # Substitua pelo nome do usuário que executará o serviço
 GROUP="root"  # Substitua pelo grupo do usuário
-PORT=8880
 
 # Função para criar o arquivo de serviço
 create_service_file() {
@@ -29,7 +28,7 @@ WorkingDirectory=${WORKING_DIR}
 Restart=always
 User=${USER}
 Group=${GROUP}
-Environment=PORT=${PORT}
+
 
 [Install]
 WantedBy=multi-user.target
