@@ -33,7 +33,7 @@ const express = require("express");
 const { exec } = require("child_process");
 const fs = require("fs");
 const app = express();
-const PORT = process.env.PORT || 8888;
+const PORT = process.env.PORT || 8880;
 const ONLINE_FILE_PATH = __dirname + "/online.txt";
 
 // Middleware para habilitar o CORS
@@ -96,19 +96,16 @@ app.listen(PORT, () => {
 echo '#!/bin/bash
 
 fun_online() {
-    _ons=$(ps -x | grep sshd | grep -v root | grep priv | wc -l)
-    [[ -e /etc/openvpn/openvpn-status.log ]] && _onop=$(grep -c "10.8.0" /etc/openvpn/openvpn-status.log) || _onop="0"
-    [[ -e /etc/default/dropbear ]] && _drp=$(ps aux | grep dropbear | grep -v grep | wc -l) _ondrp=$(($_drp - 1)) || _ondrp="0"
-    _onli=$(($_ons + $_onop + $_ondrp))
-    _onlin=$(printf '"'"'%-5s'"'"' "$_onli")
-    CURRENT_ONLINES="$(echo -e "${_onlin}" | sed -e '"'"'s/[[:space:]]*$//'"'"')"
-    echo $CURRENT_ONLINES > ~/api-server/online.txt
+    local _ons=$(ps -x | grep sshd | grep -v root | grep priv | wc -l)
+    local CURRENT_ONLINES=$(echo "$_ons" | sed -e 's/[[:space:]]*$//')
+    echo "$CURRENT_ONLINES" > ~/api-server/online.txt
 }
+
 
 while true; do
     echo '"'"'verificando...'"'"'
     fun_online > /dev/null 2>&1
-    sleep 15s
+    sleep 60s
 done
 ' >update_online.sh
 
@@ -123,7 +120,8 @@ echo '
       "name": "api-server",
       "script": "server.js",
       "watch": true,
-      "restart_delay": 3000
+      "restart_delay": 3000,
+      "ignore_watch": ["online.txt"]
     },
     {
       "name": "update-online",
