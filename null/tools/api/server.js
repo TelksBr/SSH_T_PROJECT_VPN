@@ -4,7 +4,7 @@ import { promises as fs } from 'fs';
 import path from 'path';
 
 const app = express();
-const PORT = process.env.PORT || 8880;
+const PORT = process.env.PORT || 2095;
 const ONLINE_FILE_PATH = path.join(__dirname, 'online.txt');
 
 // Token secreto para autenticação

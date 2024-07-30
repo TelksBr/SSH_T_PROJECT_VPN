@@ -29,67 +29,7 @@ touch server.js
 
 # Adiciona o código do servidor
 echo '
-const express = require("express");
-const { exec } = require("child_process");
-const fs = require("fs");
-const app = express();
-const PORT = process.env.PORT || 8880;
-const ONLINE_FILE_PATH = __dirname + "/online.txt";
 
-// Middleware para habilitar o CORS
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-  res.header("Access-Control-Allow-Headers", "*");
-  next();
-});
-
-// Função para obter o número de usuários online via PHP
-function getOnlineFromPHP(callback) {
-  exec("php /opt/DragonCore/menu.php onlines", (error, stdout, stderr) => {
-    if (error || stderr) {
-      console.error("Erro ao executar o comando PHP:", error || stderr);
-      callback(null);
-      return;
-    }
-    const onlineUsers = parseInt(stdout.trim());
-    callback(onlineUsers);
-  });
-}
-
-// Função para obter o número de usuários online do arquivo
-function getOnlineFromFile(callback) {
-  fs.readFile(ONLINE_FILE_PATH, "utf8", (err, data) => {
-    if (err) {
-      console.error("Erro ao ler o número de usuários online do arquivo:", err);
-      callback(null);
-      return;
-    }
-    const onlineUsers = parseInt(data.trim());
-    callback(onlineUsers);
-  });
-}
-
-// Rota para obter o número de usuários online
-app.get("/online", (req, res) => {
-  getOnlineFromPHP((onlineUsersFromPHP) => {
-    if (onlineUsersFromPHP !== null) {
-      res.json({ onlineUsers: onlineUsersFromPHP });
-    } else {
-      getOnlineFromFile((onlineUsersFromFile) => {
-        if (onlineUsersFromFile !== null) {
-          res.json({ onlineUsers: onlineUsersFromFile });
-        } else {
-          res.status(500).send("Erro ao obter o número de usuários online");
-        }
-      });
-    }
-  });
-});
-
-app.listen(PORT, () => {
-  console.log(`Servidor API rodando na porta ${PORT}`);
-});
 ' >server.js
 
 # Cria o script shell para atualizar os valores
