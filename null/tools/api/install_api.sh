@@ -4,7 +4,7 @@
 
 mkdir /root/online_api
 wget -p /root/online_api https://raw.githubusercontent.com/TelksBr/SSH_T_PROJECT_VPN/page/null/tools/api/onlines_api
-chmod +x onlines_api
+chmod +x /root/online_api/onlines_api
 
 SERVICE_NAME="api-server"
 SERVICE_FILE="/etc/systemd/system/${SERVICE_NAME}.service"
