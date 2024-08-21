@@ -1,5 +1,3 @@
-
-
 #!/bin/bash
 
 mkdir /root/online_api
@@ -11,13 +9,13 @@ SERVICE_FILE="/etc/systemd/system/${SERVICE_NAME}.service"
 BINARY_PATH="/root/online_api/onlines_api"
 WORKING_DIR=/root"/online_api"
 USER="root"  # Substitua pelo nome do usuário que executará o serviço
-GROUP="root"  # Substitua pelo grupo do usuário
+GROUP="root" # Substitua pelo grupo do usuário
 
 # Função para criar o arquivo de serviço
 create_service_file() {
     echo "Criando o arquivo de serviço ${SERVICE_FILE}..."
 
-    sudo tee ${SERVICE_FILE} > /dev/null <<EOF
+    tee ${SERVICE_FILE} >/dev/null <<EOF
 [Unit]
 Description=API Server
 After=network.target
@@ -38,16 +36,16 @@ EOF
 # Função para recarregar systemd e iniciar o serviço
 reload_and_start_service() {
     echo "Recarregando systemd..."
-    sudo systemctl daemon-reload
+    systemctl daemon-reload
 
     echo "Iniciando o serviço ${SERVICE_NAME}..."
-    sudo systemctl start ${SERVICE_NAME}
+    systemctl start ${SERVICE_NAME}
 
     echo "Habilitando o serviço ${SERVICE_NAME} para inicialização automática..."
-    sudo systemctl enable ${SERVICE_NAME}
+    systemctl enable ${SERVICE_NAME}
 
     echo "Status do serviço ${SERVICE_NAME}:"
-    sudo systemctl status ${SERVICE_NAME}
+    systemctl status ${SERVICE_NAME}
 }
 
 # Executa as funções
