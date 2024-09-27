@@ -1,0 +1,67 @@
+{
+    "stats": {},
+    "api": {
+        "tag": "api",
+        "services": [
+            "StatsService"
+        ]
+    },
+    "policy": {
+        "levels": {
+            "0": {
+                "statsUserUplink": true,
+                "statsUserDownlink": true
+            }
+        }
+    },
+    "inbounds": [
+        {
+            "tag": "direct",
+            "port": 8080,
+            "protocol": "vmess",
+            "settings": {
+                "clients": [
+                    {
+                        "id": "9e978e26-e9f1-4d77-bfd3-06d6a3a8ae6f",
+                        "alterId": 0,
+                        "email": "TESTE@gmail.com"
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "tcp",
+                "wsSettings": {
+                    "path": "/ws/"
+                }
+            }
+        },
+        {
+            "listen": "127.0.0.1",
+            "port": 1085,
+            "protocol": "dokodemo-door",
+            "settings": {
+                "address": "127.0.0.1"
+            },
+            "tag": "api"
+        }
+    ],
+    "outbounds": [
+        {
+            "tag": "direct",
+            "protocol": "freedom",
+            "settings": {}
+        }
+    ],
+    "routing": {
+        "rules": [
+            {
+                "inboundTag": [
+                    "api"
+                ],
+                "outboundTag": "api",
+                "type": "field"
+            }
+        ],
+        "domainStrategy": "AsIs"
+    }
+}
