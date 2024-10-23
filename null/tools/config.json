@@ -1,7 +1,6 @@
 {
   "log": {
     "access": "/var/log/v2ray/access.log",
-    "error": "/var/log/v2ray/error.log",
     "loglevel": "info"
   },
   "inbounds": [
@@ -21,29 +20,7 @@
         "wsSettings": {
           "path": "/ssht/",
           "headers": {
-            "Host": "v2premium.sshtproject.com"
-          }
-        },
-        "quicSettings": {}
-      }
-    },
-    {
-      "port": 32278,
-      "protocol": "vmess",
-      "settings": {
-        "clients": []
-      },
-      "streamSettings": {
-        "network": "ws",
-        "security": "none",
-        "tlsSettings": {},
-        "tcpSettings": {},
-        "kcpSettings": {},
-        "httpSettings": {},
-        "wsSettings": {
-          "path": "/ssht/",
-          "headers": {
-            "Host": "v2premium.sshtproject.com"
+            "Host": ""
           }
         },
         "quicSettings": {}
@@ -65,10 +42,28 @@
         "wsSettings": {
           "path": "/ssht/",
           "headers": {
-            "Host": "v2.ssht.cloud"
+            "Host": ""
           }
         },
         "quicSettings": {}
+      }
+    },
+    {
+      "port": 8080,
+      "protocol": "vmess",
+      "settings": {
+        "clients": []
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none",
+        "tlsSettings": {},
+        "tcpSettings": {},
+        "kcpSettings": {},
+        "wsSettings": {},
+        "httpSettings": {},
+        "quicSettings": {},
+        "grpcSettings": {}
       }
     }
   ],
