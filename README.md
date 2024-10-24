@@ -46,7 +46,7 @@ Bem-vindo ao SSH T PROJECT VPN, SSH T PROJECT é um projeto que foi criado visan
 
 ### :exclamation: REQUISITOS
 
-- Android 5+
+- Android 8+
 - SIM ATIVO (sem dados)
 - Internet para atualizar o app pela primeira vez!
 
