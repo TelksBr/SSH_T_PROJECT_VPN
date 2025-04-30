@@ -1,6 +1,4 @@
-<div align="center">
-  <img src="https://raw.githubusercontent.com/TelksBr/SSH_T_PROJECT_VPN/page/null/IC/icon.png" alt="Logo do SSH T PROJECT VPN" width="100">
-</div>
+<div align="center"> <img src="https://raw.githubusercontent.com/TelksBr/SSH_T_PROJECT_VPN/page/null/IC/icon.png" alt="Logo do SSH T PROJECT VPN" width="100"> </div> <h1 align="center">SSH T PROJECT VPN</h1> <div align="center"> <a href="https://github.com/TelksBr/SSH_T_PROJECT_PAGE/stargazers"> <img src="https://img.shields.io/github/stars/TelksBr/SSH_T_PROJECT_PAGE.svg?style=for-the-badge" alt="GitHub Stars"> </a> <a href="https://github.com/TelksBr/SSH_T_PROJECT_PAGE/releases"> <img src="https://img.shields.io/github/downloads/TelksBr/SSH_T_PROJECT_PAGE/total.svg?style=for-the-badge" alt="GitHub Downloads"> </a> <a href="https://sshtproject.com"> <img src="https://img.shields.io/website-up-down-green-red/http/sshtproject.com?style=for-the-badge" alt="Website Status"> </a> </div> <div align="center" style="margin-top: 10px;"> <img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"> <img src="https://img.shields.io/github/followers/TelksBr.svg?style=social&label=Follow"> </div>
 
 <h1 align="center">SSH T PROJECT VPN</h1>
 
@@ -11,7 +9,7 @@
   <a href="https://github.com/TelksBr/SSH_T_PROJECT_PAGE/releases">
     <img src="https://img.shields.io/github/downloads/TelksBr/SSH_T_PROJECT_PAGE/total.svg?style=for-the-badge" alt="GitHub Downloads">
   </a>
- 
+
 </div>
 <div align="center">
  <a>
